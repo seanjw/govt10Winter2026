@@ -1,0 +1,5 @@
+member_id,name,party,chamber,state,years_served,age,committee_chair,leadership_position
+1,Pelosi,Democratic,House,CA,36,82,FALSE,Speaker
+2,Schumer,Democratic,Senate,NY,24,72,FALSE,Majority Leader
+3,McConnell,Republican,Senate,KY,38,80,FALSE,Minority Leader
+4,McCarthy,Republican,House,CA,16,58,FALSE,Minority Leader

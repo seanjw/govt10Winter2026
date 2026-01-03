@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Hidden files
+._*
+.Spotlight-V100
+.Trashes
+
+# Thumbnails
+*.Trashes
+ehthumbs.db
+Thumbs.db
