@@ -34,7 +34,13 @@ margin <- 81283501 - 74223975
 percentage <- margin / 155507476 * 100
 ```
 
-Line 1: \_\_\_\_\_ Line 2: \_\_\_\_\_ Line 3: \_\_\_\_\_ Line 4: \_\_\_\_\_
+Line 1:
+
+Line 2:
+
+Line 3:
+
+Line 4:
 
 ## 2. Historical Example: John Snow
 
@@ -45,7 +51,7 @@ b)  Bad air (miasma)
 c)  Person-to-person contact
 d)  Poor nutrition
 
-Answer: \_\_\_\_\_
+Answer:
 
 ### 2.2 Data-Driven Decision Making
 
@@ -81,7 +87,19 @@ Answer:
 
 **Description**: Simulates a nationally representative survey measuring political attitudes, ideology, and demographics.
 
-**Variables**: - `respondent_id`: Unique respondent ID (int) - `age`: Age in years, 18-90 (int) - `gender`: male, female, nonbinary (factor) - `race_ethnicity`: White, Black, Latino, Asian, Other (factor) - `education`: Less than HS, HS, Some College, BA, Postgrad (ordered) - `income_bracket`: Ten brackets from \<\$10k to \>\$200k (ordered) - `ideology`: 1 (very liberal) to 7 (very conservative) (int) - `party_id`: Democrat, Republican, Independent, Other (factor) - `trust_gov`: 0-10 political trust scale (int) - `policy_support_env`: Support for environmental regulation, 0/1 (binary) - `policy_support_guns`: Support for stricter gun laws, 0/1 (binary)
+**Variables**:
+
+- `respondent_id`: Unique respondent ID (int)
+- `age`: Age in years, 18-90 (int)
+- `gender`: male, female, nonbinary (factor)
+- `race_ethnicity`: White, Black, Latino, Asian, Other (factor)
+- `education`: Less than HS, HS, Some College, BA, Postgrad (ordered)
+- `income_bracket`: Ten brackets from <$10k to >$200k (ordered)
+- `ideology`: 1 (very liberal) to 7 (very conservative) (int)
+- `party_id`: Democrat, Republican, Independent, Other (factor)
+- `trust_gov`: 0-10 political trust scale (int)
+- `policy_support_env`: Support for environmental regulation, 0/1 (binary)
+- `policy_support_guns`: Support for stricter gun laws, 0/1 (binary)
 
 ### 5.1 Data Exploration
 
@@ -93,23 +111,13 @@ nat_pol_attitudes <- read_csv("nat_pol_attitudes.csv")
 glimpse(nat_pol_attitudes)
 ```
 
-Using Claude, explore this political attitudes dataset. Ask it to help you understand if ideology varies by income bracket. (Bonus: Try to do this without using Claude.)
-
 ```{r}
 
 ```
 
 ### 5.2 Basic Summary Statistics
 
-Work with Claude to calculate the average age and political trust score by party affiliation. (Bonus: Try to do this without using Claude.)
-
-```{r}
-
-```
-
-### 5.3 Understanding Relationships
-
-Ask Claude to help you explore the relationship between ideology and trust in government using summary statistics (not visualizations). What patterns do you discover? (Bonus: Try to do this without using Claude.)
+Work with Claude to calculate average age by party affiliation. (Bonus: Try to do this without using Claude.)
 
 ```{r}
 
@@ -121,7 +129,20 @@ Ask Claude to help you explore the relationship between ideology and trust in go
 
 **Description**: Precinct-level election returns with demographics.
 
-**Variables**: - `state`: Two-letter state abbreviation (factor) - `county`: County name (string) - `precinct_id`: Unique precinct identifier (int) - `year`: Election year (int) - `reg_voters`: Number of registered voters (int) - `turnout`: Voter turnout percentage (num) - `dem_votes`: Democratic candidate votes (int) - `rep_votes`: Republican candidate votes (int) - `median_income`: Precinct median household income (num) - `pct_bachelor`: Percentage with bachelor's degree (num) - `race_black`: Percentage Black population (num) - `race_hispanic`: Percentage Hispanic population (num)
+**Variables**:
+
+- `state`: Two-letter state abbreviation (factor)
+- `county`: County name (string)
+- `precinct_id`: Unique precinct identifier (int)
+- `year`: Election year (int)
+- `reg_voters`: Number of registered voters (int)
+- `turnout`: Voter turnout percentage (num)
+- `dem_votes`: Democratic candidate votes (int)
+- `rep_votes`: Republican candidate votes (int)
+- `median_income`: Precinct median household income (num)
+- `pct_bachelor`: Percentage with bachelor's degree (num)
+- `race_black`: Percentage Black population (num)
+- `race_hispanic`: Percentage Hispanic population (num)
 
 ### 6.1 Loading and Initial Analysis
 
@@ -133,11 +154,9 @@ precinct_elections <- read_csv("precinct_elections.csv")
 glimpse(precinct_elections)
 ```
 
-Use Claude to help you understand the structure of this election data and calculate basic summary statistics about voter turnout across precincts.
-
 ### 6.2 Calculating Turnout
 
-Ask Claude to help you calculate voter turnout (total votes / registered voters) and identify which precincts had the highest and lowest turnout.
+Ask Claude to help you calculate voter turnout (total votes / registered voters).
 
 ```{r}
 
@@ -149,7 +168,18 @@ Ask Claude to help you calculate voter turnout (total votes / registered voters)
 
 **Description**: Corpus of press releases issued by U.S. legislators.
 
-**Variables**: - `release_id`: Unique press-release ID (int) - `member_id`: Legislator ID (int) - `chamber`: House, Senate (factor) - `party`: Democrat, Republican, Independent (factor) - `ideology_score`: DW-NOMINATE first dimension (num) - `state`: Two-letter abbreviation (factor) - `date`: Release date (date) - `topic`: Ten topics like Health, Economy, Foreign Policy, etc. (factor) - `sentiment_score`: -1 to 1 sentiment scale (num) - `contains_attack`: Indicator of partisan attack language (binary)
+**Variables**:
+
+- `release_id`: Unique press-release ID (int)
+- `member_id`: Legislator ID (int)
+- `chamber`: House, Senate (factor)
+- `party`: Democrat, Republican, Independent (factor)
+- `ideology_score`: DW-NOMINATE first dimension (num)
+- `state`: Two-letter abbreviation (factor)
+- `date`: Release date (date)
+- `topic`: Ten topics like Health, Economy, Foreign Policy, etc. (factor)
+- `sentiment_score`: -1 to 1 sentiment scale (num)
+- `contains_attack`: Indicator of partisan attack language (binary)
 
 ### 7.1 Understanding Press Release Patterns
 
@@ -161,48 +191,11 @@ congress_press <- read_csv("congress_press.csv")
 glimpse(congress_press)
 ```
 
-Work with Claude to explore patterns in Congressional press releases. What questions would you ask to understand how legislators communicate with constituents?
-
 ### 7.2 Party Differences
 
-Work with Claude to compare how Democrats and Republicans differ in their press release topics and sentiment.
+Work with Claude to compare how Democrats and Republicans differ in press release topics.
 
 ```{r}
 
 ```
 
-## 8. Economic Indicators and Politics
-
-**Dataset: county_econ.csv**
-
-**Description**: Balanced panel of U.S. counties, 2010-2020, with economic & demographic metrics.
-
-**Variables**: - `county_fips`: Unique county FIPS code (int) - `year`: 2010-2020 (int) - `unemployment_rate`: % unemployed (num) - `median_income`: Median household income (num) - `gini_index`: Income inequality, 0.2-0.6 (num) - `poverty_rate`: % below poverty line (num) - `pop_density`: Persons per square mile (num) - `percent_white`: % non-Hispanic White (num) - `percent_black`: % Black (num) - `percent_hispanic`: % Hispanic (num) - `urban_rural`: Urban, Suburban, Rural (factor)
-
-### 8.1 Economic Trends Over Time
-
-```{r}
-# Load the dataset
-county_econ <- read_csv("county_econ.csv")
-
-# Examine the panel structure
-glimpse(county_econ)
-```
-
-This is panel data (same counties observed over multiple years). Ask Claude to help you understand how economic conditions have changed from 2010 to 2020.
-
-### 8.2 Urban vs Rural Differences
-
-Ask Claude to help you compare economic conditions between urban, suburban, and rural counties.
-
-```{r}
-
-```
-
-### 8.3 Creating a Summary Report
-
-Work with Claude to create a brief summary of key economic differences across county types over the decade.
-
-```{r}
-
-```
