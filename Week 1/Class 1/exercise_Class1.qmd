@@ -34,7 +34,7 @@ margin <- 81283501 - 74223975
 percentage <- margin / 155507476 * 100
 ```
 
-Line 1:
+Line 1: 
 
 Line 2:
 
@@ -120,7 +120,9 @@ glimpse(nat_pol_attitudes)
 Work with Claude to calculate average age by party affiliation. (Bonus: Try to do this without using Claude.)
 
 ```{r}
-
+nat_pol_attitudes %>%
+  group_by(party_id) %>%
+  summarize(mean_age = mean(age))
 ```
 
 ## 6. Understanding Election Data
@@ -159,7 +161,10 @@ glimpse(precinct_elections)
 Ask Claude to help you calculate voter turnout (total votes / registered voters).
 
 ```{r}
+precinct_elections <- precinct_elections %>%
+  mutate(turnout_rate = turnout / reg_voters)
 
+precinct_elections$turnout_rate
 ```
 
 ## 7. Congressional Data Analysis
