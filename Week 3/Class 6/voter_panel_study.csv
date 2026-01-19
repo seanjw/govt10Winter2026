@@ -1,0 +1,901 @@
+respondent_id,wave,age,education,ideology,political_interest,social_media_use,participated_protest,protest_issue,voted_last_election
+1,1,18,Some College,Liberal,9,Never,FALSE,NA,TRUE
+1,2,19,Some College,Conservative,1,Always,FALSE,Immigration,FALSE
+1,3,20,Some College,Very Conservative,7,Sometimes,FALSE,NA,TRUE
+2,1,21,BA,Conservative,4,Rarely,FALSE,NA,FALSE
+2,2,22,BA,Moderate,2,Never,FALSE,Economy,FALSE
+2,3,23,BA,Very Liberal,7,Sometimes,FALSE,NA,TRUE
+3,1,26,High School,Liberal,9,Rarely,FALSE,NA,TRUE
+3,2,27,High School,Liberal,8,Always,FALSE,NA,TRUE
+3,3,28,High School,Liberal,8,Sometimes,TRUE,Immigration,TRUE
+4,1,69,BA,Conservative,9,Rarely,FALSE,NA,TRUE
+4,2,70,BA,Very Conservative,2,Always,TRUE,NA,TRUE
+4,3,71,BA,Liberal,8,Sometimes,FALSE,NA,TRUE
+5,1,37,Some College,Conservative,4,Sometimes,FALSE,NA,TRUE
+5,2,38,Some College,Very Conservative,3,Always,FALSE,NA,TRUE
+5,3,39,Some College,Very Conservative,10,Never,FALSE,NA,TRUE
+6,1,38,Graduate,Moderate,10,Often,FALSE,NA,TRUE
+6,2,39,Graduate,Moderate,7,Sometimes,FALSE,NA,TRUE
+6,3,40,Graduate,Very Liberal,6,Often,FALSE,NA,TRUE
+7,1,60,High School,Moderate,6,Sometimes,FALSE,NA,FALSE
+7,2,61,High School,Liberal,7,Rarely,FALSE,NA,FALSE
+7,3,62,High School,Very Conservative,7,Often,FALSE,NA,FALSE
+8,1,51,Some College,Very Liberal,2,Always,FALSE,NA,TRUE
+8,2,52,Some College,Very Liberal,2,Sometimes,FALSE,NA,FALSE
+8,3,53,Some College,Moderate,3,Always,FALSE,NA,FALSE
+9,1,71,High School,Very Liberal,7,Never,FALSE,NA,FALSE
+9,2,72,High School,Liberal,5,Rarely,FALSE,NA,TRUE
+9,3,73,High School,Liberal,8,Rarely,FALSE,NA,TRUE
+10,1,53,Some College,Conservative,4,Sometimes,FALSE,NA,TRUE
+10,2,54,Some College,Very Liberal,5,Never,FALSE,NA,TRUE
+10,3,55,Some College,Liberal,1,Sometimes,FALSE,NA,TRUE
+11,1,21,High School,Very Liberal,9,Always,FALSE,NA,TRUE
+11,2,22,High School,Very Conservative,3,Never,TRUE,NA,TRUE
+11,3,23,High School,Conservative,1,Always,FALSE,NA,FALSE
+12,1,49,BA,Liberal,10,Often,FALSE,NA,TRUE
+12,2,50,BA,Conservative,7,Never,FALSE,NA,FALSE
+12,3,51,BA,Moderate,5,Often,FALSE,NA,TRUE
+13,1,59,High School,Moderate,3,Never,TRUE,NA,TRUE
+13,2,60,High School,Moderate,6,Rarely,FALSE,Economy,TRUE
+13,3,61,High School,Liberal,9,Never,FALSE,NA,TRUE
+14,1,53,BA,Liberal,1,Often,FALSE,NA,FALSE
+14,2,54,BA,Very Conservative,4,Sometimes,TRUE,NA,TRUE
+14,3,55,BA,Liberal,2,Always,FALSE,NA,TRUE
+15,1,28,High School,Liberal,9,Rarely,FALSE,NA,TRUE
+15,2,29,High School,Moderate,7,Always,TRUE,NA,TRUE
+15,3,30,High School,Conservative,8,Sometimes,FALSE,NA,TRUE
+16,1,64,High School,Liberal,2,Sometimes,FALSE,NA,TRUE
+16,2,65,High School,Very Conservative,9,Always,FALSE,Immigration,TRUE
+16,3,66,High School,Very Liberal,8,Rarely,FALSE,NA,TRUE
+17,1,61,Graduate,Liberal,5,Often,FALSE,NA,FALSE
+17,2,62,Graduate,Moderate,1,Never,FALSE,NA,TRUE
+17,3,63,Graduate,Moderate,8,Often,FALSE,NA,TRUE
+18,1,67,Some College,Liberal,6,Often,FALSE,NA,FALSE
+18,2,68,Some College,Moderate,1,Rarely,FALSE,NA,TRUE
+18,3,69,Some College,Very Liberal,4,Always,FALSE,NA,TRUE
+19,1,51,Graduate,Very Conservative,9,Sometimes,TRUE,NA,TRUE
+19,2,52,Graduate,Very Liberal,8,Always,FALSE,NA,TRUE
+19,3,53,Graduate,Conservative,4,Often,FALSE,NA,FALSE
+20,1,68,High School,Liberal,7,Always,FALSE,NA,TRUE
+20,2,69,High School,Liberal,1,Sometimes,FALSE,NA,TRUE
+20,3,70,High School,Moderate,2,Rarely,FALSE,NA,TRUE
+21,1,66,Some College,Liberal,3,Rarely,FALSE,Climate,FALSE
+21,2,67,Some College,Very Conservative,7,Never,FALSE,Climate,TRUE
+21,3,68,Some College,Liberal,1,Sometimes,TRUE,NA,FALSE
+22,1,50,Graduate,Liberal,2,Sometimes,TRUE,NA,FALSE
+22,2,51,Graduate,Liberal,2,Often,FALSE,Racial Justice,TRUE
+22,3,52,Graduate,Conservative,6,Never,FALSE,NA,TRUE
+23,1,31,Some College,Conservative,6,Often,FALSE,NA,TRUE
+23,2,32,Some College,Moderate,9,Often,FALSE,Racial Justice,TRUE
+23,3,33,Some College,Conservative,10,Always,TRUE,NA,FALSE
+24,1,70,High School,Liberal,7,Never,FALSE,NA,TRUE
+24,2,71,High School,Very Conservative,7,Rarely,FALSE,NA,TRUE
+24,3,72,High School,Liberal,9,Never,FALSE,NA,FALSE
+25,1,37,High School,Liberal,4,Rarely,FALSE,NA,TRUE
+25,2,38,High School,Moderate,1,Always,FALSE,Climate,FALSE
+25,3,39,High School,Moderate,3,Often,FALSE,NA,TRUE
+26,1,18,Graduate,Liberal,7,Always,TRUE,NA,TRUE
+26,2,19,Graduate,Liberal,7,Never,FALSE,NA,TRUE
+26,3,20,Graduate,Conservative,2,Sometimes,FALSE,NA,TRUE
+27,1,54,Some College,Very Conservative,3,Always,FALSE,NA,TRUE
+27,2,55,Some College,Liberal,8,Rarely,FALSE,NA,TRUE
+27,3,56,Some College,Moderate,4,Sometimes,FALSE,NA,TRUE
+28,1,40,BA,Very Conservative,9,Never,TRUE,Racial Justice,FALSE
+28,2,41,BA,Conservative,6,Rarely,FALSE,NA,FALSE
+28,3,42,BA,Conservative,3,Rarely,FALSE,NA,FALSE
+29,1,49,High School,Liberal,2,Often,FALSE,NA,TRUE
+29,2,50,High School,Conservative,10,Rarely,FALSE,NA,FALSE
+29,3,51,High School,Conservative,4,Never,FALSE,NA,TRUE
+30,1,27,BA,Liberal,10,Rarely,FALSE,NA,FALSE
+30,2,28,BA,Moderate,6,Sometimes,FALSE,Climate,FALSE
+30,3,29,BA,Very Conservative,2,Sometimes,FALSE,NA,TRUE
+31,1,47,Graduate,Very Liberal,7,Always,FALSE,NA,FALSE
+31,2,48,Graduate,Very Liberal,10,Always,FALSE,NA,TRUE
+31,3,49,Graduate,Liberal,2,Never,FALSE,NA,TRUE
+32,1,51,Graduate,Moderate,9,Often,TRUE,NA,TRUE
+32,2,52,Graduate,Liberal,9,Rarely,TRUE,NA,TRUE
+32,3,53,Graduate,Moderate,8,Often,FALSE,NA,FALSE
+33,1,37,BA,Very Conservative,9,Often,FALSE,NA,TRUE
+33,2,38,BA,Very Conservative,7,Sometimes,FALSE,Racial Justice,TRUE
+33,3,39,BA,Liberal,8,Never,TRUE,Immigration,TRUE
+34,1,64,BA,Very Conservative,2,Rarely,TRUE,NA,FALSE
+34,2,65,BA,Conservative,4,Never,FALSE,NA,TRUE
+34,3,66,BA,Very Liberal,1,Often,FALSE,NA,TRUE
+35,1,49,BA,Liberal,5,Always,FALSE,NA,FALSE
+35,2,50,BA,Very Liberal,2,Never,FALSE,NA,TRUE
+35,3,51,BA,Very Conservative,1,Sometimes,FALSE,Racial Justice,TRUE
+36,1,44,BA,Very Liberal,9,Rarely,TRUE,NA,FALSE
+36,2,45,BA,Liberal,7,Rarely,FALSE,Economy,FALSE
+36,3,46,BA,Moderate,9,Rarely,FALSE,Immigration,TRUE
+37,1,36,Graduate,Liberal,9,Never,TRUE,NA,TRUE
+37,2,37,Graduate,Moderate,6,Always,FALSE,NA,TRUE
+37,3,38,Graduate,Very Conservative,10,Never,FALSE,NA,TRUE
+38,1,20,Graduate,Conservative,3,Often,FALSE,NA,FALSE
+38,2,21,Graduate,Moderate,4,Rarely,FALSE,NA,FALSE
+38,3,22,Graduate,Moderate,5,Often,FALSE,NA,FALSE
+39,1,37,Some College,Conservative,10,Always,TRUE,NA,FALSE
+39,2,38,Some College,Conservative,6,Often,FALSE,NA,TRUE
+39,3,39,Some College,Conservative,2,Rarely,FALSE,Racial Justice,FALSE
+40,1,40,BA,Moderate,9,Always,FALSE,NA,TRUE
+40,2,41,BA,Liberal,8,Always,FALSE,NA,TRUE
+40,3,42,BA,Very Conservative,4,Often,FALSE,NA,FALSE
+41,1,64,Graduate,Liberal,4,Sometimes,FALSE,NA,TRUE
+41,2,65,Graduate,Conservative,9,Never,FALSE,NA,FALSE
+41,3,66,Graduate,Conservative,6,Sometimes,FALSE,NA,TRUE
+42,1,42,Some College,Conservative,9,Rarely,FALSE,NA,FALSE
+42,2,43,Some College,Moderate,1,Rarely,FALSE,Economy,TRUE
+42,3,44,Some College,Very Conservative,8,Always,FALSE,NA,TRUE
+43,1,38,Graduate,Very Liberal,8,Never,FALSE,NA,TRUE
+43,2,39,Graduate,Conservative,2,Rarely,FALSE,NA,TRUE
+43,3,40,Graduate,Liberal,6,Sometimes,TRUE,Racial Justice,TRUE
+44,1,37,BA,Moderate,1,Sometimes,FALSE,NA,TRUE
+44,2,38,BA,Conservative,3,Rarely,FALSE,NA,FALSE
+44,3,39,BA,Liberal,2,Rarely,FALSE,NA,TRUE
+45,1,67,BA,Conservative,3,Always,FALSE,NA,TRUE
+45,2,68,BA,Very Conservative,2,Often,TRUE,NA,TRUE
+45,3,69,BA,Liberal,1,Sometimes,FALSE,NA,TRUE
+46,1,28,Graduate,Conservative,4,Sometimes,FALSE,NA,TRUE
+46,2,29,Graduate,Conservative,5,Sometimes,FALSE,NA,TRUE
+46,3,30,Graduate,Very Liberal,10,Sometimes,FALSE,Climate,TRUE
+47,1,44,Graduate,Very Liberal,10,Always,FALSE,Economy,FALSE
+47,2,45,Graduate,Very Liberal,10,Always,FALSE,NA,TRUE
+47,3,46,Graduate,Conservative,7,Never,TRUE,NA,TRUE
+48,1,27,Some College,Very Liberal,3,Never,FALSE,NA,TRUE
+48,2,28,Some College,Very Conservative,10,Sometimes,FALSE,NA,TRUE
+48,3,29,Some College,Very Conservative,4,Always,FALSE,NA,FALSE
+49,1,70,Some College,Very Conservative,4,Rarely,FALSE,NA,FALSE
+49,2,71,Some College,Very Liberal,2,Never,FALSE,Climate,FALSE
+49,3,72,Some College,Very Liberal,3,Never,FALSE,NA,FALSE
+50,1,20,BA,Liberal,8,Sometimes,FALSE,NA,FALSE
+50,2,21,BA,Very Liberal,2,Sometimes,FALSE,NA,TRUE
+50,3,22,BA,Conservative,3,Always,FALSE,NA,TRUE
+51,1,27,Graduate,Very Conservative,10,Always,FALSE,NA,FALSE
+51,2,28,Graduate,Liberal,6,Always,FALSE,NA,TRUE
+51,3,29,Graduate,Moderate,2,Often,FALSE,NA,FALSE
+52,1,54,Graduate,Moderate,7,Always,FALSE,Racial Justice,FALSE
+52,2,55,Graduate,Conservative,1,Never,FALSE,NA,FALSE
+52,3,56,Graduate,Moderate,4,Rarely,TRUE,Immigration,TRUE
+53,1,38,Graduate,Very Liberal,2,Sometimes,FALSE,NA,TRUE
+53,2,39,Graduate,Very Liberal,9,Sometimes,FALSE,NA,TRUE
+53,3,40,Graduate,Liberal,1,Never,FALSE,NA,TRUE
+54,1,47,High School,Very Liberal,2,Rarely,FALSE,NA,FALSE
+54,2,48,High School,Liberal,1,Often,FALSE,NA,TRUE
+54,3,49,High School,Very Liberal,4,Rarely,FALSE,NA,TRUE
+55,1,46,High School,Conservative,4,Always,FALSE,NA,TRUE
+55,2,47,High School,Very Conservative,5,Rarely,TRUE,NA,TRUE
+55,3,48,High School,Very Conservative,9,Often,FALSE,NA,FALSE
+56,1,58,Graduate,Conservative,10,Sometimes,FALSE,NA,TRUE
+56,2,59,Graduate,Conservative,1,Rarely,FALSE,NA,FALSE
+56,3,60,Graduate,Very Liberal,7,Never,FALSE,NA,FALSE
+57,1,24,Graduate,Moderate,5,Rarely,FALSE,Climate,TRUE
+57,2,25,Graduate,Liberal,6,Never,FALSE,NA,FALSE
+57,3,26,Graduate,Moderate,7,Always,FALSE,NA,TRUE
+58,1,28,High School,Liberal,1,Sometimes,FALSE,Racial Justice,FALSE
+58,2,29,High School,Liberal,2,Rarely,FALSE,Economy,FALSE
+58,3,30,High School,Liberal,1,Rarely,FALSE,NA,TRUE
+59,1,41,BA,Conservative,5,Rarely,FALSE,NA,FALSE
+59,2,42,BA,Liberal,1,Always,FALSE,NA,TRUE
+59,3,43,BA,Very Conservative,4,Never,FALSE,NA,TRUE
+60,1,44,Some College,Very Liberal,4,Rarely,FALSE,NA,TRUE
+60,2,45,Some College,Very Conservative,2,Never,FALSE,Immigration,TRUE
+60,3,46,Some College,Liberal,8,Often,TRUE,NA,TRUE
+61,1,24,BA,Liberal,2,Sometimes,FALSE,NA,TRUE
+61,2,25,BA,Very Conservative,5,Never,TRUE,Climate,TRUE
+61,3,26,BA,Liberal,6,Sometimes,FALSE,Racial Justice,TRUE
+62,1,66,BA,Very Liberal,4,Sometimes,FALSE,NA,TRUE
+62,2,67,BA,Very Conservative,1,Often,FALSE,NA,TRUE
+62,3,68,BA,Very Conservative,9,Rarely,FALSE,NA,FALSE
+63,1,65,Graduate,Liberal,4,Rarely,FALSE,Immigration,FALSE
+63,2,66,Graduate,Very Conservative,7,Often,FALSE,NA,TRUE
+63,3,67,Graduate,Very Conservative,4,Sometimes,FALSE,NA,TRUE
+64,1,58,BA,Very Liberal,9,Sometimes,TRUE,Climate,FALSE
+64,2,59,BA,Moderate,6,Sometimes,FALSE,NA,TRUE
+64,3,60,BA,Moderate,10,Always,FALSE,NA,FALSE
+65,1,62,BA,Moderate,7,Often,FALSE,NA,FALSE
+65,2,63,BA,Very Conservative,2,Always,FALSE,NA,TRUE
+65,3,64,BA,Very Conservative,4,Often,FALSE,NA,TRUE
+66,1,39,Graduate,Moderate,9,Sometimes,FALSE,NA,FALSE
+66,2,40,Graduate,Conservative,5,Sometimes,TRUE,Immigration,FALSE
+66,3,41,Graduate,Liberal,7,Never,FALSE,NA,TRUE
+67,1,75,Some College,Very Conservative,2,Sometimes,FALSE,NA,TRUE
+67,2,76,Some College,Very Conservative,1,Often,FALSE,NA,FALSE
+67,3,77,Some College,Conservative,7,Often,FALSE,NA,TRUE
+68,1,26,High School,Liberal,1,Never,FALSE,NA,FALSE
+68,2,27,High School,Moderate,9,Often,FALSE,Climate,FALSE
+68,3,28,High School,Conservative,3,Rarely,TRUE,NA,TRUE
+69,1,21,BA,Very Liberal,5,Sometimes,FALSE,NA,FALSE
+69,2,22,BA,Very Conservative,5,Sometimes,TRUE,NA,TRUE
+69,3,23,BA,Very Liberal,1,Often,FALSE,NA,TRUE
+70,1,69,High School,Liberal,6,Often,FALSE,NA,FALSE
+70,2,70,High School,Very Conservative,5,Often,FALSE,NA,TRUE
+70,3,71,High School,Very Conservative,9,Often,FALSE,NA,TRUE
+71,1,72,High School,Very Liberal,9,Sometimes,FALSE,Racial Justice,FALSE
+71,2,73,High School,Very Liberal,10,Often,FALSE,NA,FALSE
+71,3,74,High School,Very Conservative,6,Never,FALSE,NA,TRUE
+72,1,22,High School,Very Liberal,10,Never,FALSE,NA,FALSE
+72,2,23,High School,Conservative,10,Rarely,FALSE,NA,TRUE
+72,3,24,High School,Liberal,9,Never,FALSE,NA,TRUE
+73,1,41,High School,Very Conservative,2,Often,FALSE,NA,TRUE
+73,2,42,High School,Very Conservative,6,Never,FALSE,NA,TRUE
+73,3,43,High School,Liberal,9,Often,FALSE,NA,FALSE
+74,1,57,High School,Very Liberal,7,Sometimes,FALSE,NA,TRUE
+74,2,58,High School,Very Conservative,10,Rarely,FALSE,Racial Justice,TRUE
+74,3,59,High School,Moderate,4,Sometimes,FALSE,NA,TRUE
+75,1,68,Some College,Very Liberal,7,Never,FALSE,NA,TRUE
+75,2,69,Some College,Conservative,8,Sometimes,FALSE,NA,TRUE
+75,3,70,Some College,Liberal,8,Sometimes,FALSE,Climate,TRUE
+76,1,29,Graduate,Very Conservative,3,Never,FALSE,NA,TRUE
+76,2,30,Graduate,Very Liberal,6,Often,FALSE,NA,TRUE
+76,3,31,Graduate,Very Liberal,2,Sometimes,TRUE,NA,TRUE
+77,1,61,Graduate,Very Liberal,3,Often,FALSE,NA,TRUE
+77,2,62,Graduate,Very Conservative,8,Never,FALSE,NA,FALSE
+77,3,63,Graduate,Conservative,9,Often,TRUE,NA,TRUE
+78,1,60,High School,Liberal,5,Always,FALSE,NA,TRUE
+78,2,61,High School,Conservative,1,Often,FALSE,NA,FALSE
+78,3,62,High School,Conservative,7,Sometimes,FALSE,NA,TRUE
+79,1,42,High School,Conservative,10,Rarely,FALSE,NA,TRUE
+79,2,43,High School,Moderate,2,Sometimes,TRUE,NA,TRUE
+79,3,44,High School,Conservative,10,Always,FALSE,NA,TRUE
+80,1,59,High School,Moderate,2,Sometimes,TRUE,NA,TRUE
+80,2,60,High School,Liberal,7,Sometimes,FALSE,NA,TRUE
+80,3,61,High School,Moderate,5,Rarely,FALSE,NA,FALSE
+81,1,62,Graduate,Very Liberal,8,Often,FALSE,NA,FALSE
+81,2,63,Graduate,Liberal,10,Rarely,FALSE,NA,FALSE
+81,3,64,Graduate,Very Liberal,7,Often,TRUE,NA,FALSE
+82,1,28,BA,Very Conservative,10,Never,FALSE,NA,TRUE
+82,2,29,BA,Conservative,1,Rarely,FALSE,NA,TRUE
+82,3,30,BA,Very Liberal,1,Often,TRUE,NA,FALSE
+83,1,70,BA,Very Liberal,4,Always,TRUE,NA,TRUE
+83,2,71,BA,Very Conservative,7,Always,FALSE,NA,FALSE
+83,3,72,BA,Liberal,9,Rarely,FALSE,NA,TRUE
+84,1,63,High School,Moderate,5,Always,FALSE,Climate,FALSE
+84,2,64,High School,Moderate,10,Sometimes,FALSE,NA,TRUE
+84,3,65,High School,Moderate,4,Never,FALSE,NA,FALSE
+85,1,60,Graduate,Conservative,3,Rarely,FALSE,NA,TRUE
+85,2,61,Graduate,Very Conservative,10,Rarely,FALSE,Economy,TRUE
+85,3,62,Graduate,Very Liberal,6,Sometimes,TRUE,NA,FALSE
+86,1,46,High School,Conservative,1,Never,FALSE,NA,FALSE
+86,2,47,High School,Very Liberal,1,Never,FALSE,NA,TRUE
+86,3,48,High School,Moderate,3,Rarely,FALSE,NA,TRUE
+87,1,73,Some College,Moderate,1,Always,FALSE,NA,TRUE
+87,2,74,Some College,Liberal,5,Always,FALSE,Immigration,TRUE
+87,3,75,Some College,Moderate,3,Rarely,FALSE,NA,TRUE
+88,1,47,BA,Moderate,7,Sometimes,FALSE,NA,TRUE
+88,2,48,BA,Conservative,10,Often,FALSE,NA,FALSE
+88,3,49,BA,Moderate,9,Sometimes,FALSE,NA,FALSE
+89,1,74,Graduate,Liberal,4,Sometimes,FALSE,NA,TRUE
+89,2,75,Graduate,Very Conservative,8,Rarely,TRUE,NA,TRUE
+89,3,76,Graduate,Conservative,2,Rarely,TRUE,Climate,TRUE
+90,1,68,BA,Very Conservative,1,Always,FALSE,NA,FALSE
+90,2,69,BA,Very Conservative,10,Never,FALSE,NA,FALSE
+90,3,70,BA,Conservative,1,Sometimes,TRUE,NA,TRUE
+91,1,60,High School,Conservative,6,Always,FALSE,NA,TRUE
+91,2,61,High School,Moderate,10,Rarely,FALSE,NA,TRUE
+91,3,62,High School,Moderate,4,Rarely,FALSE,NA,TRUE
+92,1,22,BA,Very Liberal,2,Never,FALSE,NA,TRUE
+92,2,23,BA,Very Conservative,1,Rarely,FALSE,NA,TRUE
+92,3,24,BA,Conservative,6,Always,TRUE,Economy,TRUE
+93,1,57,High School,Very Conservative,6,Often,TRUE,NA,TRUE
+93,2,58,High School,Conservative,4,Often,FALSE,NA,FALSE
+93,3,59,High School,Moderate,6,Often,FALSE,NA,TRUE
+94,1,41,Some College,Very Conservative,8,Rarely,FALSE,NA,TRUE
+94,2,42,Some College,Liberal,5,Sometimes,FALSE,Economy,TRUE
+94,3,43,Some College,Liberal,1,Sometimes,TRUE,Racial Justice,TRUE
+95,1,42,High School,Moderate,10,Never,FALSE,NA,TRUE
+95,2,43,High School,Conservative,5,Often,FALSE,NA,TRUE
+95,3,44,High School,Liberal,3,Rarely,FALSE,NA,TRUE
+96,1,63,Some College,Very Conservative,2,Always,FALSE,NA,TRUE
+96,2,64,Some College,Liberal,5,Never,FALSE,NA,TRUE
+96,3,65,Some College,Moderate,7,Sometimes,FALSE,NA,FALSE
+97,1,28,BA,Very Conservative,10,Rarely,TRUE,NA,TRUE
+97,2,29,BA,Liberal,4,Rarely,FALSE,NA,TRUE
+97,3,30,BA,Conservative,8,Sometimes,FALSE,Climate,TRUE
+98,1,26,BA,Very Conservative,10,Rarely,FALSE,NA,FALSE
+98,2,27,BA,Conservative,6,Rarely,FALSE,Racial Justice,TRUE
+98,3,28,BA,Liberal,9,Often,FALSE,Immigration,FALSE
+99,1,27,Some College,Very Conservative,8,Never,FALSE,NA,TRUE
+99,2,28,Some College,Conservative,3,Rarely,FALSE,NA,TRUE
+99,3,29,Some College,Moderate,1,Sometimes,FALSE,NA,TRUE
+100,1,60,Graduate,Moderate,10,Always,FALSE,NA,TRUE
+100,2,61,Graduate,Liberal,4,Rarely,FALSE,NA,TRUE
+100,3,62,Graduate,Conservative,7,Sometimes,FALSE,NA,FALSE
+101,1,47,BA,Moderate,4,Always,FALSE,Immigration,FALSE
+101,2,48,BA,Liberal,9,Always,FALSE,NA,TRUE
+101,3,49,BA,Very Conservative,5,Never,FALSE,NA,TRUE
+102,1,71,BA,Liberal,7,Rarely,FALSE,Immigration,FALSE
+102,2,72,BA,Very Conservative,9,Always,FALSE,Immigration,TRUE
+102,3,73,BA,Very Conservative,4,Often,FALSE,NA,TRUE
+103,1,45,Graduate,Moderate,5,Rarely,FALSE,NA,TRUE
+103,2,46,Graduate,Moderate,8,Always,FALSE,NA,FALSE
+103,3,47,Graduate,Very Conservative,5,Always,FALSE,NA,TRUE
+104,1,64,BA,Very Conservative,3,Rarely,FALSE,Immigration,TRUE
+104,2,65,BA,Very Liberal,4,Always,FALSE,NA,FALSE
+104,3,66,BA,Moderate,1,Sometimes,FALSE,NA,FALSE
+105,1,33,High School,Very Liberal,10,Sometimes,FALSE,Immigration,FALSE
+105,2,34,High School,Moderate,4,Always,FALSE,NA,FALSE
+105,3,35,High School,Conservative,9,Sometimes,FALSE,NA,TRUE
+106,1,73,Some College,Very Conservative,2,Always,FALSE,NA,TRUE
+106,2,74,Some College,Very Liberal,3,Sometimes,TRUE,NA,TRUE
+106,3,75,Some College,Liberal,9,Rarely,FALSE,NA,FALSE
+107,1,72,BA,Very Liberal,4,Rarely,TRUE,NA,TRUE
+107,2,73,BA,Liberal,3,Never,FALSE,NA,TRUE
+107,3,74,BA,Very Liberal,6,Rarely,FALSE,NA,FALSE
+108,1,71,High School,Very Conservative,6,Often,FALSE,NA,FALSE
+108,2,72,High School,Moderate,9,Sometimes,FALSE,Climate,FALSE
+108,3,73,High School,Very Conservative,7,Never,FALSE,NA,TRUE
+109,1,73,Graduate,Very Conservative,1,Rarely,FALSE,NA,TRUE
+109,2,74,Graduate,Liberal,7,Sometimes,FALSE,NA,TRUE
+109,3,75,Graduate,Liberal,4,Often,FALSE,NA,TRUE
+110,1,32,Some College,Liberal,7,Always,FALSE,NA,TRUE
+110,2,33,Some College,Liberal,2,Never,FALSE,NA,FALSE
+110,3,34,Some College,Very Conservative,5,Sometimes,FALSE,Economy,FALSE
+111,1,60,High School,Conservative,7,Always,FALSE,NA,TRUE
+111,2,61,High School,Very Liberal,4,Always,FALSE,NA,FALSE
+111,3,62,High School,Moderate,5,Often,TRUE,NA,TRUE
+112,1,31,High School,Moderate,6,Rarely,FALSE,Climate,FALSE
+112,2,32,High School,Moderate,3,Never,FALSE,NA,TRUE
+112,3,33,High School,Very Conservative,9,Always,FALSE,NA,TRUE
+113,1,39,High School,Liberal,10,Always,FALSE,NA,TRUE
+113,2,40,High School,Very Conservative,4,Never,TRUE,NA,FALSE
+113,3,41,High School,Liberal,6,Never,FALSE,Immigration,TRUE
+114,1,61,Some College,Liberal,8,Rarely,FALSE,NA,TRUE
+114,2,62,Some College,Very Liberal,4,Rarely,FALSE,NA,FALSE
+114,3,63,Some College,Very Conservative,10,Often,FALSE,Economy,TRUE
+115,1,57,Graduate,Conservative,7,Sometimes,FALSE,Climate,TRUE
+115,2,58,Graduate,Liberal,2,Sometimes,FALSE,NA,TRUE
+115,3,59,Graduate,Conservative,8,Never,FALSE,NA,TRUE
+116,1,71,BA,Moderate,9,Often,FALSE,NA,FALSE
+116,2,72,BA,Very Liberal,6,Always,TRUE,NA,TRUE
+116,3,73,BA,Very Conservative,6,Always,FALSE,Climate,TRUE
+117,1,31,BA,Liberal,10,Rarely,FALSE,NA,FALSE
+117,2,32,BA,Very Liberal,1,Always,FALSE,NA,TRUE
+117,3,33,BA,Conservative,6,Rarely,FALSE,NA,FALSE
+118,1,47,Graduate,Very Liberal,6,Always,TRUE,NA,FALSE
+118,2,48,Graduate,Conservative,2,Never,FALSE,NA,TRUE
+118,3,49,Graduate,Very Liberal,5,Always,FALSE,NA,FALSE
+119,1,70,BA,Very Liberal,3,Never,FALSE,Immigration,FALSE
+119,2,71,BA,Very Liberal,4,Sometimes,FALSE,NA,TRUE
+119,3,72,BA,Liberal,10,Rarely,FALSE,NA,TRUE
+120,1,61,BA,Conservative,2,Never,FALSE,NA,FALSE
+120,2,62,BA,Liberal,3,Sometimes,FALSE,Immigration,TRUE
+120,3,63,BA,Very Conservative,10,Never,FALSE,Immigration,TRUE
+121,1,70,Graduate,Liberal,10,Always,TRUE,NA,TRUE
+121,2,71,Graduate,Moderate,6,Rarely,FALSE,NA,TRUE
+121,3,72,Graduate,Conservative,10,Never,TRUE,NA,TRUE
+122,1,62,High School,Very Conservative,6,Always,FALSE,NA,TRUE
+122,2,63,High School,Very Liberal,2,Rarely,FALSE,Climate,FALSE
+122,3,64,High School,Moderate,10,Always,TRUE,NA,TRUE
+123,1,75,Some College,Very Liberal,3,Always,FALSE,Immigration,TRUE
+123,2,76,Some College,Liberal,10,Sometimes,FALSE,NA,TRUE
+123,3,77,Some College,Liberal,1,Often,FALSE,NA,TRUE
+124,1,62,High School,Very Conservative,1,Rarely,FALSE,Immigration,TRUE
+124,2,63,High School,Moderate,7,Rarely,FALSE,Immigration,FALSE
+124,3,64,High School,Very Conservative,1,Sometimes,FALSE,Climate,FALSE
+125,1,54,Graduate,Moderate,4,Never,FALSE,NA,TRUE
+125,2,55,Graduate,Liberal,4,Never,FALSE,NA,TRUE
+125,3,56,Graduate,Liberal,10,Rarely,FALSE,Immigration,TRUE
+126,1,21,BA,Liberal,4,Rarely,FALSE,NA,FALSE
+126,2,22,BA,Conservative,9,Never,FALSE,NA,TRUE
+126,3,23,BA,Conservative,10,Never,FALSE,NA,TRUE
+127,1,74,Graduate,Very Conservative,3,Never,TRUE,NA,TRUE
+127,2,75,Graduate,Very Liberal,5,Always,TRUE,NA,TRUE
+127,3,76,Graduate,Moderate,7,Sometimes,FALSE,NA,FALSE
+128,1,22,Graduate,Very Liberal,9,Sometimes,FALSE,NA,TRUE
+128,2,23,Graduate,Liberal,2,Always,FALSE,NA,FALSE
+128,3,24,Graduate,Moderate,1,Often,FALSE,NA,FALSE
+129,1,75,Graduate,Conservative,8,Never,FALSE,NA,TRUE
+129,2,76,Graduate,Liberal,8,Sometimes,FALSE,Economy,TRUE
+129,3,77,Graduate,Moderate,10,Always,TRUE,NA,FALSE
+130,1,39,Some College,Moderate,5,Always,FALSE,NA,TRUE
+130,2,40,Some College,Very Liberal,4,Rarely,FALSE,Climate,FALSE
+130,3,41,Some College,Very Conservative,1,Rarely,FALSE,NA,TRUE
+131,1,18,Graduate,Very Conservative,4,Always,FALSE,NA,TRUE
+131,2,19,Graduate,Moderate,10,Never,FALSE,NA,TRUE
+131,3,20,Graduate,Very Liberal,8,Sometimes,FALSE,NA,FALSE
+132,1,43,High School,Moderate,3,Sometimes,FALSE,NA,FALSE
+132,2,44,High School,Very Liberal,7,Never,FALSE,NA,FALSE
+132,3,45,High School,Moderate,5,Never,FALSE,Climate,FALSE
+133,1,29,High School,Moderate,10,Always,FALSE,NA,FALSE
+133,2,30,High School,Very Liberal,1,Sometimes,FALSE,NA,FALSE
+133,3,31,High School,Very Conservative,9,Sometimes,FALSE,NA,FALSE
+134,1,45,Graduate,Very Conservative,8,Always,FALSE,NA,TRUE
+134,2,46,Graduate,Very Conservative,1,Never,FALSE,Racial Justice,FALSE
+134,3,47,Graduate,Very Liberal,7,Sometimes,TRUE,NA,TRUE
+135,1,39,Some College,Very Conservative,10,Rarely,FALSE,NA,TRUE
+135,2,40,Some College,Moderate,8,Rarely,FALSE,NA,TRUE
+135,3,41,Some College,Very Liberal,9,Always,FALSE,NA,TRUE
+136,1,36,Some College,Moderate,10,Rarely,FALSE,NA,TRUE
+136,2,37,Some College,Conservative,2,Often,FALSE,NA,FALSE
+136,3,38,Some College,Very Conservative,5,Sometimes,TRUE,NA,TRUE
+137,1,53,Some College,Very Liberal,10,Always,FALSE,NA,TRUE
+137,2,54,Some College,Very Conservative,1,Always,TRUE,NA,TRUE
+137,3,55,Some College,Very Liberal,5,Always,FALSE,NA,FALSE
+138,1,26,BA,Moderate,3,Never,TRUE,NA,FALSE
+138,2,27,BA,Moderate,2,Never,FALSE,NA,TRUE
+138,3,28,BA,Very Liberal,1,Rarely,FALSE,Racial Justice,TRUE
+139,1,66,Some College,Very Liberal,7,Always,FALSE,NA,FALSE
+139,2,67,Some College,Conservative,10,Never,FALSE,NA,TRUE
+139,3,68,Some College,Moderate,10,Sometimes,FALSE,NA,TRUE
+140,1,65,Graduate,Liberal,6,Never,FALSE,NA,TRUE
+140,2,66,Graduate,Moderate,7,Sometimes,FALSE,NA,TRUE
+140,3,67,Graduate,Very Conservative,3,Always,FALSE,NA,FALSE
+141,1,66,High School,Very Conservative,3,Always,FALSE,NA,TRUE
+141,2,67,High School,Very Liberal,3,Always,FALSE,NA,TRUE
+141,3,68,High School,Conservative,1,Never,FALSE,NA,TRUE
+142,1,23,Some College,Very Conservative,2,Often,FALSE,NA,TRUE
+142,2,24,Some College,Liberal,9,Sometimes,FALSE,NA,FALSE
+142,3,25,Some College,Very Conservative,5,Rarely,TRUE,NA,TRUE
+143,1,23,Some College,Conservative,10,Sometimes,FALSE,NA,TRUE
+143,2,24,Some College,Moderate,8,Often,FALSE,NA,TRUE
+143,3,25,Some College,Conservative,3,Sometimes,FALSE,NA,FALSE
+144,1,46,Graduate,Very Conservative,9,Sometimes,FALSE,Racial Justice,FALSE
+144,2,47,Graduate,Conservative,8,Never,FALSE,NA,TRUE
+144,3,48,Graduate,Moderate,6,Never,FALSE,NA,FALSE
+145,1,33,Some College,Very Conservative,3,Never,TRUE,Immigration,TRUE
+145,2,34,Some College,Moderate,4,Often,FALSE,NA,FALSE
+145,3,35,Some College,Very Conservative,8,Often,FALSE,NA,FALSE
+146,1,20,Some College,Conservative,5,Often,FALSE,NA,TRUE
+146,2,21,Some College,Liberal,9,Rarely,TRUE,NA,TRUE
+146,3,22,Some College,Very Conservative,5,Often,FALSE,Racial Justice,TRUE
+147,1,20,High School,Liberal,3,Always,TRUE,NA,TRUE
+147,2,21,High School,Moderate,2,Sometimes,TRUE,NA,FALSE
+147,3,22,High School,Very Conservative,4,Rarely,FALSE,Immigration,TRUE
+148,1,73,Graduate,Moderate,4,Often,FALSE,NA,FALSE
+148,2,74,Graduate,Very Conservative,4,Sometimes,FALSE,NA,TRUE
+148,3,75,Graduate,Liberal,10,Always,FALSE,NA,TRUE
+149,1,47,High School,Very Conservative,3,Sometimes,FALSE,NA,FALSE
+149,2,48,High School,Very Conservative,4,Rarely,FALSE,NA,TRUE
+149,3,49,High School,Very Conservative,6,Never,FALSE,Economy,TRUE
+150,1,43,Graduate,Conservative,4,Rarely,FALSE,NA,TRUE
+150,2,44,Graduate,Very Liberal,8,Always,FALSE,Climate,TRUE
+150,3,45,Graduate,Very Conservative,7,Often,FALSE,NA,TRUE
+151,1,62,Graduate,Conservative,7,Sometimes,FALSE,NA,TRUE
+151,2,63,Graduate,Conservative,1,Always,FALSE,NA,TRUE
+151,3,64,Graduate,Very Conservative,3,Rarely,FALSE,NA,TRUE
+152,1,22,BA,Moderate,10,Often,FALSE,Racial Justice,FALSE
+152,2,23,BA,Very Liberal,8,Sometimes,FALSE,NA,TRUE
+152,3,24,BA,Conservative,8,Often,FALSE,NA,TRUE
+153,1,68,BA,Liberal,1,Always,FALSE,NA,FALSE
+153,2,69,BA,Moderate,3,Sometimes,FALSE,NA,TRUE
+153,3,70,BA,Liberal,10,Always,FALSE,NA,TRUE
+154,1,62,Some College,Conservative,7,Always,FALSE,NA,TRUE
+154,2,63,Some College,Very Liberal,7,Rarely,FALSE,Immigration,TRUE
+154,3,64,Some College,Very Liberal,2,Never,FALSE,NA,FALSE
+155,1,74,High School,Liberal,4,Always,FALSE,NA,FALSE
+155,2,75,High School,Very Liberal,9,Rarely,FALSE,NA,TRUE
+155,3,76,High School,Liberal,9,Often,FALSE,NA,TRUE
+156,1,35,Graduate,Liberal,1,Rarely,FALSE,NA,TRUE
+156,2,36,Graduate,Very Liberal,8,Sometimes,FALSE,NA,FALSE
+156,3,37,Graduate,Conservative,10,Sometimes,FALSE,NA,FALSE
+157,1,22,Some College,Very Liberal,3,Rarely,FALSE,NA,TRUE
+157,2,23,Some College,Liberal,1,Always,FALSE,NA,TRUE
+157,3,24,Some College,Liberal,4,Never,FALSE,NA,TRUE
+158,1,46,High School,Conservative,4,Rarely,FALSE,NA,TRUE
+158,2,47,High School,Very Conservative,6,Always,FALSE,NA,TRUE
+158,3,48,High School,Liberal,1,Sometimes,TRUE,NA,FALSE
+159,1,26,Graduate,Very Conservative,9,Sometimes,FALSE,NA,FALSE
+159,2,27,Graduate,Very Liberal,6,Often,FALSE,NA,FALSE
+159,3,28,Graduate,Very Liberal,8,Rarely,FALSE,NA,TRUE
+160,1,36,High School,Moderate,1,Often,FALSE,NA,TRUE
+160,2,37,High School,Liberal,3,Always,FALSE,Climate,FALSE
+160,3,38,High School,Very Conservative,1,Rarely,FALSE,NA,TRUE
+161,1,45,Graduate,Very Conservative,10,Never,FALSE,NA,FALSE
+161,2,46,Graduate,Moderate,8,Often,FALSE,Economy,TRUE
+161,3,47,Graduate,Liberal,9,Rarely,FALSE,NA,FALSE
+162,1,67,High School,Very Liberal,4,Often,FALSE,NA,FALSE
+162,2,68,High School,Liberal,9,Rarely,FALSE,NA,FALSE
+162,3,69,High School,Liberal,2,Always,FALSE,NA,TRUE
+163,1,42,Graduate,Very Liberal,10,Always,FALSE,NA,FALSE
+163,2,43,Graduate,Moderate,7,Often,FALSE,NA,FALSE
+163,3,44,Graduate,Conservative,6,Often,FALSE,NA,TRUE
+164,1,54,High School,Very Conservative,8,Often,FALSE,NA,TRUE
+164,2,55,High School,Very Conservative,4,Never,FALSE,NA,TRUE
+164,3,56,High School,Liberal,3,Often,FALSE,NA,TRUE
+165,1,53,Some College,Moderate,6,Always,FALSE,NA,FALSE
+165,2,54,Some College,Liberal,1,Rarely,FALSE,NA,FALSE
+165,3,55,Some College,Liberal,10,Never,FALSE,NA,TRUE
+166,1,57,Some College,Very Conservative,2,Often,TRUE,NA,FALSE
+166,2,58,Some College,Liberal,7,Often,FALSE,Immigration,TRUE
+166,3,59,Some College,Liberal,3,Often,FALSE,NA,TRUE
+167,1,54,High School,Very Conservative,1,Rarely,FALSE,NA,TRUE
+167,2,55,High School,Very Conservative,7,Sometimes,FALSE,Economy,FALSE
+167,3,56,High School,Very Liberal,7,Always,FALSE,NA,FALSE
+168,1,40,BA,Very Conservative,6,Never,FALSE,NA,TRUE
+168,2,41,BA,Very Conservative,3,Rarely,FALSE,NA,FALSE
+168,3,42,BA,Conservative,10,Sometimes,TRUE,NA,TRUE
+169,1,51,Graduate,Very Liberal,9,Always,FALSE,NA,TRUE
+169,2,52,Graduate,Liberal,10,Often,FALSE,NA,TRUE
+169,3,53,Graduate,Moderate,2,Always,TRUE,Racial Justice,FALSE
+170,1,20,BA,Moderate,3,Never,FALSE,NA,FALSE
+170,2,21,BA,Liberal,10,Often,TRUE,NA,TRUE
+170,3,22,BA,Very Liberal,8,Never,FALSE,NA,FALSE
+171,1,29,Graduate,Liberal,8,Often,FALSE,NA,TRUE
+171,2,30,Graduate,Very Conservative,1,Rarely,FALSE,Immigration,TRUE
+171,3,31,Graduate,Conservative,7,Rarely,FALSE,NA,FALSE
+172,1,42,Graduate,Conservative,7,Sometimes,FALSE,NA,TRUE
+172,2,43,Graduate,Liberal,8,Often,FALSE,NA,TRUE
+172,3,44,Graduate,Very Conservative,4,Always,TRUE,Immigration,TRUE
+173,1,64,High School,Liberal,2,Rarely,FALSE,NA,TRUE
+173,2,65,High School,Very Liberal,3,Never,FALSE,NA,FALSE
+173,3,66,High School,Moderate,2,Always,FALSE,NA,TRUE
+174,1,21,High School,Liberal,2,Often,FALSE,NA,FALSE
+174,2,22,High School,Liberal,7,Never,FALSE,NA,TRUE
+174,3,23,High School,Very Conservative,9,Rarely,FALSE,NA,TRUE
+175,1,47,BA,Very Liberal,3,Often,FALSE,NA,FALSE
+175,2,48,BA,Liberal,5,Never,FALSE,NA,FALSE
+175,3,49,BA,Very Liberal,8,Never,FALSE,NA,FALSE
+176,1,41,Some College,Conservative,5,Never,FALSE,NA,FALSE
+176,2,42,Some College,Conservative,1,Never,TRUE,Racial Justice,FALSE
+176,3,43,Some College,Liberal,10,Always,FALSE,NA,FALSE
+177,1,36,Some College,Very Conservative,7,Sometimes,FALSE,NA,FALSE
+177,2,37,Some College,Liberal,8,Sometimes,FALSE,Racial Justice,TRUE
+177,3,38,Some College,Moderate,8,Sometimes,FALSE,NA,TRUE
+178,1,26,Graduate,Liberal,3,Never,FALSE,NA,TRUE
+178,2,27,Graduate,Very Liberal,2,Never,FALSE,NA,TRUE
+178,3,28,Graduate,Very Liberal,7,Rarely,FALSE,NA,TRUE
+179,1,19,Some College,Conservative,9,Often,FALSE,NA,TRUE
+179,2,20,Some College,Conservative,5,Often,FALSE,NA,TRUE
+179,3,21,Some College,Liberal,3,Always,FALSE,NA,TRUE
+180,1,65,BA,Conservative,2,Often,FALSE,NA,FALSE
+180,2,66,BA,Liberal,2,Always,FALSE,NA,FALSE
+180,3,67,BA,Conservative,10,Always,FALSE,NA,FALSE
+181,1,21,Graduate,Conservative,7,Rarely,TRUE,NA,FALSE
+181,2,22,Graduate,Moderate,4,Often,FALSE,NA,TRUE
+181,3,23,Graduate,Liberal,1,Often,FALSE,NA,TRUE
+182,1,62,High School,Very Conservative,1,Rarely,TRUE,NA,TRUE
+182,2,63,High School,Conservative,9,Never,FALSE,Immigration,TRUE
+182,3,64,High School,Liberal,7,Always,FALSE,NA,TRUE
+183,1,38,High School,Conservative,3,Rarely,FALSE,NA,TRUE
+183,2,39,High School,Moderate,7,Rarely,FALSE,NA,FALSE
+183,3,40,High School,Moderate,4,Always,TRUE,Climate,FALSE
+184,1,47,High School,Very Conservative,6,Often,FALSE,NA,TRUE
+184,2,48,High School,Very Liberal,5,Rarely,FALSE,NA,TRUE
+184,3,49,High School,Very Conservative,2,Sometimes,FALSE,Immigration,TRUE
+185,1,58,Graduate,Very Liberal,3,Always,FALSE,NA,TRUE
+185,2,59,Graduate,Very Liberal,1,Always,FALSE,NA,FALSE
+185,3,60,Graduate,Conservative,8,Always,FALSE,NA,TRUE
+186,1,71,BA,Liberal,5,Never,FALSE,Economy,FALSE
+186,2,72,BA,Conservative,7,Often,FALSE,NA,TRUE
+186,3,73,BA,Very Liberal,2,Never,FALSE,Economy,FALSE
+187,1,34,BA,Liberal,1,Sometimes,FALSE,NA,TRUE
+187,2,35,BA,Conservative,1,Never,TRUE,NA,TRUE
+187,3,36,BA,Liberal,10,Often,FALSE,NA,FALSE
+188,1,50,Graduate,Moderate,4,Often,FALSE,NA,FALSE
+188,2,51,Graduate,Conservative,2,Often,FALSE,NA,TRUE
+188,3,52,Graduate,Liberal,2,Never,FALSE,NA,TRUE
+189,1,19,High School,Conservative,9,Always,FALSE,NA,TRUE
+189,2,20,High School,Conservative,6,Always,FALSE,NA,TRUE
+189,3,21,High School,Liberal,10,Sometimes,FALSE,NA,TRUE
+190,1,25,Graduate,Very Conservative,9,Rarely,FALSE,NA,TRUE
+190,2,26,Graduate,Conservative,3,Sometimes,FALSE,NA,FALSE
+190,3,27,Graduate,Liberal,10,Never,FALSE,NA,TRUE
+191,1,66,Graduate,Very Liberal,4,Rarely,FALSE,NA,FALSE
+191,2,67,Graduate,Very Liberal,8,Always,FALSE,NA,FALSE
+191,3,68,Graduate,Liberal,7,Often,FALSE,Climate,TRUE
+192,1,61,BA,Very Liberal,4,Sometimes,FALSE,NA,TRUE
+192,2,62,BA,Conservative,9,Sometimes,FALSE,Racial Justice,TRUE
+192,3,63,BA,Moderate,7,Rarely,TRUE,Economy,TRUE
+193,1,26,High School,Conservative,6,Always,FALSE,NA,TRUE
+193,2,27,High School,Conservative,8,Rarely,FALSE,NA,TRUE
+193,3,28,High School,Liberal,2,Sometimes,FALSE,NA,TRUE
+194,1,37,Some College,Conservative,9,Sometimes,FALSE,NA,TRUE
+194,2,38,Some College,Liberal,8,Rarely,FALSE,Immigration,FALSE
+194,3,39,Some College,Very Liberal,9,Sometimes,FALSE,NA,FALSE
+195,1,55,Some College,Very Liberal,2,Sometimes,FALSE,NA,TRUE
+195,2,56,Some College,Conservative,4,Rarely,FALSE,NA,TRUE
+195,3,57,Some College,Conservative,9,Rarely,FALSE,NA,FALSE
+196,1,52,High School,Moderate,8,Never,FALSE,NA,TRUE
+196,2,53,High School,Very Liberal,3,Sometimes,FALSE,NA,TRUE
+196,3,54,High School,Very Liberal,8,Always,FALSE,NA,TRUE
+197,1,33,High School,Conservative,8,Sometimes,FALSE,NA,FALSE
+197,2,34,High School,Liberal,10,Often,FALSE,NA,FALSE
+197,3,35,High School,Conservative,3,Always,FALSE,NA,FALSE
+198,1,50,Graduate,Moderate,6,Sometimes,FALSE,NA,TRUE
+198,2,51,Graduate,Very Conservative,4,Rarely,TRUE,NA,FALSE
+198,3,52,Graduate,Moderate,2,Always,FALSE,NA,TRUE
+199,1,70,Some College,Very Conservative,3,Never,TRUE,NA,FALSE
+199,2,71,Some College,Conservative,5,Sometimes,FALSE,NA,FALSE
+199,3,72,Some College,Liberal,7,Sometimes,TRUE,Racial Justice,TRUE
+200,1,72,BA,Liberal,6,Never,FALSE,NA,TRUE
+200,2,73,BA,Very Liberal,3,Rarely,FALSE,NA,TRUE
+200,3,74,BA,Conservative,1,Rarely,TRUE,Immigration,TRUE
+201,1,72,Graduate,Moderate,8,Rarely,FALSE,NA,TRUE
+201,2,73,Graduate,Very Liberal,8,Always,FALSE,NA,TRUE
+201,3,74,Graduate,Moderate,7,Always,FALSE,NA,TRUE
+202,1,64,Graduate,Liberal,5,Always,FALSE,NA,FALSE
+202,2,65,Graduate,Conservative,3,Never,FALSE,NA,FALSE
+202,3,66,Graduate,Moderate,2,Never,FALSE,NA,TRUE
+203,1,30,High School,Very Conservative,1,Always,TRUE,NA,TRUE
+203,2,31,High School,Liberal,5,Often,FALSE,NA,TRUE
+203,3,32,High School,Liberal,3,Rarely,FALSE,NA,FALSE
+204,1,29,Graduate,Moderate,5,Rarely,FALSE,NA,TRUE
+204,2,30,Graduate,Liberal,9,Sometimes,FALSE,NA,TRUE
+204,3,31,Graduate,Moderate,9,Never,FALSE,NA,FALSE
+205,1,19,BA,Liberal,9,Rarely,FALSE,NA,TRUE
+205,2,20,BA,Very Conservative,6,Never,FALSE,NA,FALSE
+205,3,21,BA,Very Liberal,5,Always,FALSE,NA,TRUE
+206,1,61,BA,Conservative,6,Sometimes,FALSE,NA,FALSE
+206,2,62,BA,Liberal,9,Often,TRUE,NA,TRUE
+206,3,63,BA,Conservative,1,Sometimes,FALSE,NA,FALSE
+207,1,25,High School,Very Liberal,4,Always,TRUE,NA,FALSE
+207,2,26,High School,Conservative,9,Often,FALSE,NA,TRUE
+207,3,27,High School,Moderate,5,Never,FALSE,NA,FALSE
+208,1,29,Some College,Very Conservative,9,Never,FALSE,NA,TRUE
+208,2,30,Some College,Very Liberal,10,Rarely,FALSE,NA,FALSE
+208,3,31,Some College,Moderate,5,Never,FALSE,NA,TRUE
+209,1,38,BA,Moderate,1,Always,FALSE,NA,TRUE
+209,2,39,BA,Very Conservative,2,Often,FALSE,NA,FALSE
+209,3,40,BA,Moderate,10,Always,FALSE,NA,FALSE
+210,1,43,High School,Very Liberal,4,Often,TRUE,NA,FALSE
+210,2,44,High School,Very Liberal,10,Never,FALSE,NA,TRUE
+210,3,45,High School,Conservative,2,Sometimes,FALSE,NA,FALSE
+211,1,67,Graduate,Very Liberal,7,Always,FALSE,NA,TRUE
+211,2,68,Graduate,Conservative,10,Always,FALSE,NA,TRUE
+211,3,69,Graduate,Very Liberal,6,Sometimes,FALSE,NA,FALSE
+212,1,54,High School,Conservative,9,Never,FALSE,NA,TRUE
+212,2,55,High School,Very Conservative,1,Always,FALSE,Economy,TRUE
+212,3,56,High School,Very Conservative,2,Never,FALSE,NA,FALSE
+213,1,44,BA,Very Conservative,8,Sometimes,FALSE,NA,TRUE
+213,2,45,BA,Very Liberal,3,Sometimes,FALSE,NA,FALSE
+213,3,46,BA,Moderate,10,Often,TRUE,NA,FALSE
+214,1,29,BA,Conservative,2,Never,FALSE,NA,FALSE
+214,2,30,BA,Very Conservative,7,Sometimes,FALSE,NA,FALSE
+214,3,31,BA,Conservative,6,Often,TRUE,Racial Justice,TRUE
+215,1,46,High School,Moderate,3,Always,FALSE,NA,TRUE
+215,2,47,High School,Moderate,4,Sometimes,FALSE,NA,TRUE
+215,3,48,High School,Liberal,3,Always,TRUE,NA,TRUE
+216,1,31,Some College,Conservative,10,Often,FALSE,Economy,TRUE
+216,2,32,Some College,Very Conservative,8,Sometimes,FALSE,Racial Justice,TRUE
+216,3,33,Some College,Very Liberal,5,Sometimes,FALSE,NA,FALSE
+217,1,27,Some College,Liberal,9,Often,FALSE,NA,TRUE
+217,2,28,Some College,Very Conservative,1,Always,FALSE,NA,TRUE
+217,3,29,Some College,Conservative,3,Never,FALSE,NA,TRUE
+218,1,27,Graduate,Very Liberal,2,Often,FALSE,NA,TRUE
+218,2,28,Graduate,Liberal,4,Rarely,FALSE,NA,TRUE
+218,3,29,Graduate,Conservative,1,Rarely,FALSE,NA,TRUE
+219,1,49,Graduate,Very Liberal,3,Always,FALSE,Immigration,TRUE
+219,2,50,Graduate,Conservative,6,Never,TRUE,NA,TRUE
+219,3,51,Graduate,Very Conservative,6,Sometimes,FALSE,Economy,FALSE
+220,1,31,BA,Very Liberal,1,Sometimes,FALSE,NA,TRUE
+220,2,32,BA,Very Conservative,6,Rarely,FALSE,NA,TRUE
+220,3,33,BA,Conservative,10,Never,TRUE,NA,FALSE
+221,1,65,BA,Moderate,2,Never,FALSE,NA,TRUE
+221,2,66,BA,Very Liberal,5,Always,FALSE,NA,FALSE
+221,3,67,BA,Conservative,3,Sometimes,FALSE,NA,TRUE
+222,1,24,Graduate,Conservative,6,Always,TRUE,NA,TRUE
+222,2,25,Graduate,Moderate,1,Rarely,FALSE,NA,FALSE
+222,3,26,Graduate,Liberal,2,Sometimes,FALSE,NA,TRUE
+223,1,64,Graduate,Moderate,10,Always,FALSE,NA,TRUE
+223,2,65,Graduate,Very Liberal,2,Rarely,FALSE,Economy,FALSE
+223,3,66,Graduate,Liberal,9,Rarely,FALSE,NA,TRUE
+224,1,25,Graduate,Very Conservative,6,Often,FALSE,Economy,TRUE
+224,2,26,Graduate,Very Liberal,7,Rarely,FALSE,Racial Justice,TRUE
+224,3,27,Graduate,Conservative,10,Sometimes,FALSE,NA,FALSE
+225,1,66,BA,Very Conservative,3,Always,FALSE,NA,TRUE
+225,2,67,BA,Very Conservative,7,Rarely,FALSE,NA,FALSE
+225,3,68,BA,Moderate,4,Often,FALSE,NA,TRUE
+226,1,51,Some College,Liberal,6,Always,FALSE,Climate,TRUE
+226,2,52,Some College,Very Conservative,3,Often,FALSE,NA,TRUE
+226,3,53,Some College,Very Liberal,5,Often,FALSE,NA,FALSE
+227,1,41,High School,Very Liberal,10,Rarely,TRUE,NA,TRUE
+227,2,42,High School,Conservative,9,Often,FALSE,NA,TRUE
+227,3,43,High School,Moderate,3,Always,TRUE,Racial Justice,FALSE
+228,1,36,High School,Liberal,4,Rarely,FALSE,NA,TRUE
+228,2,37,High School,Conservative,4,Rarely,FALSE,NA,FALSE
+228,3,38,High School,Very Conservative,9,Sometimes,FALSE,NA,FALSE
+229,1,32,Some College,Very Liberal,10,Sometimes,FALSE,NA,TRUE
+229,2,33,Some College,Very Conservative,7,Always,FALSE,NA,TRUE
+229,3,34,Some College,Very Liberal,9,Always,FALSE,Climate,FALSE
+230,1,74,High School,Very Liberal,10,Never,FALSE,NA,TRUE
+230,2,75,High School,Very Conservative,3,Always,FALSE,NA,FALSE
+230,3,76,High School,Liberal,3,Often,FALSE,NA,FALSE
+231,1,26,Graduate,Very Conservative,4,Rarely,FALSE,NA,TRUE
+231,2,27,Graduate,Liberal,5,Never,TRUE,NA,FALSE
+231,3,28,Graduate,Moderate,7,Sometimes,FALSE,Climate,FALSE
+232,1,22,High School,Very Conservative,1,Often,FALSE,Climate,TRUE
+232,2,23,High School,Very Conservative,1,Sometimes,FALSE,NA,TRUE
+232,3,24,High School,Very Conservative,8,Never,FALSE,NA,TRUE
+233,1,75,Graduate,Very Liberal,8,Never,FALSE,NA,FALSE
+233,2,76,Graduate,Moderate,4,Never,FALSE,NA,TRUE
+233,3,77,Graduate,Conservative,10,Rarely,FALSE,NA,TRUE
+234,1,47,Some College,Very Conservative,1,Always,FALSE,NA,FALSE
+234,2,48,Some College,Liberal,6,Rarely,FALSE,NA,TRUE
+234,3,49,Some College,Conservative,5,Rarely,FALSE,NA,TRUE
+235,1,68,Graduate,Liberal,8,Always,FALSE,NA,TRUE
+235,2,69,Graduate,Liberal,10,Rarely,FALSE,NA,TRUE
+235,3,70,Graduate,Very Conservative,8,Sometimes,FALSE,NA,TRUE
+236,1,68,High School,Very Conservative,3,Often,FALSE,NA,FALSE
+236,2,69,High School,Conservative,2,Sometimes,FALSE,NA,FALSE
+236,3,70,High School,Moderate,4,Rarely,FALSE,NA,FALSE
+237,1,22,Some College,Conservative,6,Sometimes,FALSE,NA,TRUE
+237,2,23,Some College,Liberal,6,Rarely,TRUE,NA,FALSE
+237,3,24,Some College,Very Conservative,4,Rarely,FALSE,Economy,FALSE
+238,1,65,BA,Very Liberal,7,Never,FALSE,Climate,TRUE
+238,2,66,BA,Very Liberal,3,Rarely,FALSE,NA,TRUE
+238,3,67,BA,Very Liberal,8,Never,FALSE,NA,FALSE
+239,1,31,Graduate,Conservative,8,Always,FALSE,NA,FALSE
+239,2,32,Graduate,Very Conservative,6,Always,FALSE,NA,TRUE
+239,3,33,Graduate,Moderate,5,Rarely,TRUE,NA,TRUE
+240,1,30,Some College,Very Liberal,1,Sometimes,FALSE,NA,TRUE
+240,2,31,Some College,Very Liberal,6,Never,FALSE,Economy,FALSE
+240,3,32,Some College,Very Liberal,6,Rarely,FALSE,Economy,TRUE
+241,1,24,Graduate,Very Liberal,3,Often,TRUE,NA,TRUE
+241,2,25,Graduate,Very Conservative,1,Often,FALSE,NA,TRUE
+241,3,26,Graduate,Moderate,2,Rarely,FALSE,NA,FALSE
+242,1,27,Some College,Moderate,4,Often,FALSE,NA,TRUE
+242,2,28,Some College,Moderate,8,Sometimes,TRUE,NA,FALSE
+242,3,29,Some College,Very Liberal,9,Rarely,FALSE,NA,TRUE
+243,1,75,Some College,Very Liberal,8,Never,FALSE,NA,FALSE
+243,2,76,Some College,Liberal,1,Often,FALSE,NA,FALSE
+243,3,77,Some College,Very Conservative,10,Never,FALSE,NA,FALSE
+244,1,49,BA,Moderate,4,Sometimes,FALSE,NA,TRUE
+244,2,50,BA,Moderate,8,Often,FALSE,NA,FALSE
+244,3,51,BA,Moderate,1,Often,FALSE,NA,TRUE
+245,1,23,High School,Very Conservative,1,Always,FALSE,NA,TRUE
+245,2,24,High School,Liberal,6,Never,FALSE,NA,FALSE
+245,3,25,High School,Very Conservative,5,Never,FALSE,NA,FALSE
+246,1,58,High School,Liberal,4,Rarely,FALSE,NA,TRUE
+246,2,59,High School,Very Conservative,7,Always,FALSE,NA,TRUE
+246,3,60,High School,Conservative,9,Never,FALSE,NA,FALSE
+247,1,28,Some College,Very Liberal,9,Often,TRUE,NA,TRUE
+247,2,29,Some College,Liberal,8,Never,FALSE,NA,FALSE
+247,3,30,Some College,Liberal,6,Always,FALSE,Racial Justice,TRUE
+248,1,57,Some College,Moderate,4,Sometimes,FALSE,NA,TRUE
+248,2,58,Some College,Moderate,5,Never,FALSE,NA,FALSE
+248,3,59,Some College,Moderate,10,Always,FALSE,Economy,FALSE
+249,1,42,High School,Very Liberal,2,Never,FALSE,NA,TRUE
+249,2,43,High School,Conservative,3,Sometimes,TRUE,NA,TRUE
+249,3,44,High School,Liberal,1,Sometimes,FALSE,NA,TRUE
+250,1,58,BA,Conservative,8,Rarely,TRUE,Immigration,FALSE
+250,2,59,BA,Conservative,3,Never,TRUE,NA,TRUE
+250,3,60,BA,Very Conservative,10,Always,FALSE,NA,FALSE
+251,1,70,BA,Conservative,7,Often,FALSE,NA,FALSE
+251,2,71,BA,Very Conservative,1,Sometimes,TRUE,NA,TRUE
+251,3,72,BA,Moderate,8,Always,FALSE,NA,TRUE
+252,1,68,BA,Very Conservative,2,Always,FALSE,NA,FALSE
+252,2,69,BA,Very Conservative,2,Never,FALSE,NA,TRUE
+252,3,70,BA,Liberal,4,Rarely,TRUE,NA,TRUE
+253,1,58,High School,Very Liberal,10,Often,FALSE,Immigration,TRUE
+253,2,59,High School,Moderate,4,Rarely,FALSE,NA,TRUE
+253,3,60,High School,Very Conservative,6,Often,FALSE,NA,TRUE
+254,1,38,High School,Very Liberal,4,Sometimes,FALSE,NA,TRUE
+254,2,39,High School,Very Conservative,2,Never,FALSE,NA,FALSE
+254,3,40,High School,Very Liberal,8,Often,FALSE,NA,FALSE
+255,1,55,BA,Conservative,7,Sometimes,TRUE,NA,FALSE
+255,2,56,BA,Very Conservative,2,Never,FALSE,NA,TRUE
+255,3,57,BA,Very Conservative,8,Often,FALSE,Racial Justice,TRUE
+256,1,71,High School,Conservative,8,Never,FALSE,Economy,TRUE
+256,2,72,High School,Liberal,2,Never,FALSE,NA,TRUE
+256,3,73,High School,Very Conservative,4,Always,FALSE,NA,TRUE
+257,1,55,BA,Moderate,9,Rarely,FALSE,NA,TRUE
+257,2,56,BA,Very Liberal,6,Often,FALSE,NA,FALSE
+257,3,57,BA,Liberal,5,Often,FALSE,NA,FALSE
+258,1,66,Graduate,Conservative,6,Always,TRUE,NA,TRUE
+258,2,67,Graduate,Conservative,1,Never,TRUE,NA,FALSE
+258,3,68,Graduate,Conservative,2,Often,TRUE,NA,FALSE
+259,1,70,High School,Conservative,3,Often,FALSE,Economy,TRUE
+259,2,71,High School,Conservative,3,Always,FALSE,NA,TRUE
+259,3,72,High School,Moderate,10,Rarely,FALSE,NA,FALSE
+260,1,35,BA,Very Liberal,1,Rarely,FALSE,NA,TRUE
+260,2,36,BA,Liberal,2,Never,FALSE,NA,TRUE
+260,3,37,BA,Very Liberal,1,Sometimes,FALSE,NA,TRUE
+261,1,56,Some College,Very Conservative,10,Rarely,FALSE,Racial Justice,TRUE
+261,2,57,Some College,Moderate,9,Sometimes,FALSE,NA,FALSE
+261,3,58,Some College,Conservative,7,Never,FALSE,Economy,FALSE
+262,1,21,High School,Very Liberal,3,Always,TRUE,Climate,FALSE
+262,2,22,High School,Conservative,6,Sometimes,FALSE,NA,TRUE
+262,3,23,High School,Very Liberal,10,Rarely,TRUE,Climate,FALSE
+263,1,31,BA,Very Conservative,2,Sometimes,FALSE,NA,FALSE
+263,2,32,BA,Moderate,6,Sometimes,FALSE,NA,TRUE
+263,3,33,BA,Very Conservative,5,Always,FALSE,Climate,FALSE
+264,1,54,High School,Very Liberal,3,Never,FALSE,NA,FALSE
+264,2,55,High School,Very Liberal,5,Often,FALSE,NA,TRUE
+264,3,56,High School,Very Liberal,5,Often,FALSE,Immigration,FALSE
+265,1,67,High School,Moderate,1,Rarely,FALSE,NA,TRUE
+265,2,68,High School,Liberal,1,Never,FALSE,NA,TRUE
+265,3,69,High School,Moderate,3,Never,FALSE,NA,TRUE
+266,1,65,High School,Very Liberal,7,Sometimes,FALSE,NA,FALSE
+266,2,66,High School,Very Liberal,1,Rarely,FALSE,Immigration,TRUE
+266,3,67,High School,Conservative,10,Always,FALSE,NA,TRUE
+267,1,32,High School,Moderate,7,Sometimes,FALSE,NA,TRUE
+267,2,33,High School,Conservative,4,Often,FALSE,NA,TRUE
+267,3,34,High School,Very Liberal,8,Never,FALSE,NA,TRUE
+268,1,32,Some College,Very Liberal,4,Sometimes,FALSE,NA,TRUE
+268,2,33,Some College,Conservative,8,Always,FALSE,Climate,TRUE
+268,3,34,Some College,Liberal,2,Often,FALSE,NA,TRUE
+269,1,31,BA,Very Liberal,1,Never,FALSE,Economy,TRUE
+269,2,32,BA,Moderate,2,Always,FALSE,NA,TRUE
+269,3,33,BA,Liberal,2,Always,FALSE,NA,FALSE
+270,1,73,Graduate,Liberal,7,Always,FALSE,NA,FALSE
+270,2,74,Graduate,Moderate,7,Rarely,FALSE,NA,TRUE
+270,3,75,Graduate,Moderate,7,Often,FALSE,NA,TRUE
+271,1,54,Some College,Conservative,4,Rarely,FALSE,NA,TRUE
+271,2,55,Some College,Conservative,8,Often,FALSE,NA,FALSE
+271,3,56,Some College,Very Liberal,3,Never,FALSE,NA,FALSE
+272,1,66,Graduate,Very Conservative,4,Rarely,FALSE,NA,TRUE
+272,2,67,Graduate,Very Conservative,4,Always,FALSE,NA,FALSE
+272,3,68,Graduate,Very Conservative,1,Always,TRUE,Economy,TRUE
+273,1,43,Graduate,Very Conservative,4,Rarely,FALSE,NA,FALSE
+273,2,44,Graduate,Moderate,9,Often,TRUE,NA,TRUE
+273,3,45,Graduate,Very Liberal,2,Never,TRUE,NA,FALSE
+274,1,24,BA,Conservative,9,Often,FALSE,NA,TRUE
+274,2,25,BA,Liberal,6,Sometimes,FALSE,Racial Justice,FALSE
+274,3,26,BA,Conservative,6,Never,FALSE,NA,TRUE
+275,1,47,BA,Liberal,10,Often,FALSE,NA,TRUE
+275,2,48,BA,Moderate,1,Sometimes,FALSE,NA,FALSE
+275,3,49,BA,Liberal,3,Never,FALSE,Climate,TRUE
+276,1,74,BA,Liberal,2,Sometimes,FALSE,NA,TRUE
+276,2,75,BA,Moderate,4,Never,FALSE,NA,FALSE
+276,3,76,BA,Very Conservative,6,Sometimes,FALSE,NA,FALSE
+277,1,58,High School,Moderate,3,Often,TRUE,NA,TRUE
+277,2,59,High School,Very Liberal,5,Rarely,TRUE,NA,FALSE
+277,3,60,High School,Moderate,10,Rarely,FALSE,Climate,TRUE
+278,1,35,Graduate,Moderate,3,Always,TRUE,NA,TRUE
+278,2,36,Graduate,Very Liberal,3,Rarely,TRUE,NA,TRUE
+278,3,37,Graduate,Conservative,5,Always,TRUE,NA,FALSE
+279,1,36,Graduate,Conservative,8,Often,TRUE,NA,TRUE
+279,2,37,Graduate,Moderate,1,Rarely,FALSE,NA,TRUE
+279,3,38,Graduate,Conservative,5,Often,FALSE,NA,TRUE
+280,1,55,BA,Liberal,2,Sometimes,FALSE,NA,TRUE
+280,2,56,BA,Very Liberal,4,Sometimes,FALSE,NA,TRUE
+280,3,57,BA,Liberal,6,Rarely,FALSE,Economy,TRUE
+281,1,21,BA,Conservative,5,Sometimes,FALSE,NA,TRUE
+281,2,22,BA,Moderate,6,Never,FALSE,NA,TRUE
+281,3,23,BA,Liberal,10,Often,FALSE,NA,FALSE
+282,1,18,Some College,Very Conservative,8,Sometimes,FALSE,Climate,TRUE
+282,2,19,Some College,Very Liberal,6,Sometimes,FALSE,NA,TRUE
+282,3,20,Some College,Very Conservative,7,Sometimes,FALSE,NA,TRUE
+283,1,53,High School,Conservative,8,Sometimes,FALSE,NA,TRUE
+283,2,54,High School,Very Conservative,4,Never,FALSE,Climate,TRUE
+283,3,55,High School,Moderate,4,Rarely,FALSE,NA,TRUE
+284,1,39,High School,Very Conservative,1,Often,TRUE,NA,TRUE
+284,2,40,High School,Moderate,4,Rarely,TRUE,NA,FALSE
+284,3,41,High School,Very Conservative,8,Rarely,FALSE,NA,TRUE
+285,1,64,Some College,Very Liberal,6,Never,FALSE,NA,TRUE
+285,2,65,Some College,Liberal,5,Sometimes,FALSE,Economy,TRUE
+285,3,66,Some College,Conservative,5,Often,FALSE,NA,TRUE
+286,1,26,Graduate,Moderate,10,Sometimes,FALSE,Climate,FALSE
+286,2,27,Graduate,Liberal,10,Sometimes,FALSE,Climate,TRUE
+286,3,28,Graduate,Liberal,3,Rarely,FALSE,NA,FALSE
+287,1,20,Some College,Conservative,1,Often,FALSE,NA,TRUE
+287,2,21,Some College,Liberal,8,Always,FALSE,NA,TRUE
+287,3,22,Some College,Moderate,5,Always,FALSE,NA,FALSE
+288,1,52,High School,Moderate,1,Sometimes,TRUE,NA,TRUE
+288,2,53,High School,Conservative,4,Never,FALSE,NA,TRUE
+288,3,54,High School,Very Liberal,1,Never,TRUE,NA,TRUE
+289,1,46,Graduate,Very Liberal,10,Often,TRUE,NA,FALSE
+289,2,47,Graduate,Conservative,1,Rarely,FALSE,NA,TRUE
+289,3,48,Graduate,Liberal,8,Often,FALSE,Immigration,FALSE
+290,1,75,High School,Conservative,8,Often,FALSE,NA,TRUE
+290,2,76,High School,Very Conservative,3,Always,FALSE,NA,FALSE
+290,3,77,High School,Very Liberal,7,Never,FALSE,NA,FALSE
+291,1,75,Some College,Very Conservative,3,Often,FALSE,Economy,FALSE
+291,2,76,Some College,Very Conservative,1,Always,FALSE,Immigration,TRUE
+291,3,77,Some College,Very Liberal,6,Always,FALSE,NA,TRUE
+292,1,34,Graduate,Very Liberal,9,Always,FALSE,NA,TRUE
+292,2,35,Graduate,Very Liberal,1,Often,FALSE,NA,FALSE
+292,3,36,Graduate,Liberal,8,Sometimes,TRUE,NA,TRUE
+293,1,70,Graduate,Very Conservative,5,Often,FALSE,NA,TRUE
+293,2,71,Graduate,Moderate,7,Never,FALSE,NA,FALSE
+293,3,72,Graduate,Conservative,1,Always,FALSE,NA,TRUE
+294,1,61,Graduate,Very Liberal,4,Rarely,FALSE,NA,TRUE
+294,2,62,Graduate,Liberal,4,Always,FALSE,NA,TRUE
+294,3,63,Graduate,Conservative,5,Never,FALSE,NA,FALSE
+295,1,71,Some College,Conservative,1,Always,FALSE,NA,TRUE
+295,2,72,Some College,Conservative,7,Never,FALSE,Racial Justice,TRUE
+295,3,73,Some College,Very Liberal,4,Rarely,TRUE,NA,FALSE
+296,1,18,Graduate,Liberal,3,Never,FALSE,NA,TRUE
+296,2,19,Graduate,Very Conservative,5,Often,FALSE,Racial Justice,FALSE
+296,3,20,Graduate,Very Conservative,9,Sometimes,FALSE,Immigration,FALSE
+297,1,30,BA,Conservative,7,Never,FALSE,Economy,TRUE
+297,2,31,BA,Liberal,9,Never,FALSE,NA,FALSE
+297,3,32,BA,Moderate,3,Sometimes,FALSE,NA,TRUE
+298,1,54,High School,Conservative,7,Rarely,FALSE,NA,TRUE
+298,2,55,High School,Liberal,7,Never,FALSE,NA,FALSE
+298,3,56,High School,Moderate,3,Never,FALSE,Climate,TRUE
+299,1,37,BA,Liberal,1,Sometimes,FALSE,NA,FALSE
+299,2,38,BA,Very Liberal,1,Always,FALSE,NA,FALSE
+299,3,39,BA,Liberal,8,Often,FALSE,NA,FALSE
+300,1,18,High School,Very Conservative,8,Always,FALSE,NA,TRUE
+300,2,19,High School,Very Conservative,10,Sometimes,FALSE,NA,FALSE
+300,3,20,High School,Liberal,8,Rarely,FALSE,NA,FALSE

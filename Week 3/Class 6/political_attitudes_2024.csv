@@ -1,0 +1,501 @@
+respondent_id,age,gender,race_ethnicity,education,income_bracket,ideology,party_id,trust_gov,policy_support_env,policy_support_guns
+1,69,Female,Hispanic,Graduate,<$25k,Conservative,Independent,7,4,10
+2,52,Female,Hispanic,Some College,<$25k,Moderate,Republican,4,9,6
+3,50,Male,Black,Graduate,<$25k,Conservative,Democrat,3,9,1
+4,44,Female,Hispanic,Less than HS,$25-50k,Very Liberal,Independent,5,10,6
+5,25,Male,Black,Some College,$75-100k,Very Conservative,Republican,10,2,3
+6,20,Female,Hispanic,High School,<$25k,Very Conservative,Republican,0,2,1
+7,27,Male,Hispanic,Some College,$25-50k,Very Liberal,Democrat,9,4,8
+8,58,Male,White,Less than HS,$50-75k,Very Liberal,Democrat,7,3,9
+9,42,Female,White,BA,$50-75k,Conservative,Democrat,4,9,9
+10,22,Non-binary,White,Graduate,$50-75k,Conservative,Independent,3,8,0
+11,63,Non-binary,White,Less than HS,$75-100k,Very Conservative,Democrat,0,6,5
+12,66,Female,White,Less than HS,$25-50k,Very Conservative,Independent,5,10,9
+13,22,Male,White,BA,<$25k,Conservative,Independent,9,4,6
+14,55,Female,Hispanic,Graduate,>$100k,Conservative,Other,7,10,0
+15,30,Female,White,BA,$50-75k,Very Liberal,Republican,3,7,2
+16,69,Male,White,Less than HS,<$25k,Moderate,Democrat,1,4,7
+17,42,Female,White,Graduate,$75-100k,Very Liberal,Republican,9,8,1
+18,24,Male,Hispanic,Less than HS,$75-100k,Very Conservative,Other,6,4,4
+19,50,Male,White,BA,$75-100k,Moderate,Independent,8,6,7
+20,50,Male,Black,High School,>$100k,Very Conservative,Independent,5,10,5
+21,58,Female,Black,Graduate,$75-100k,Conservative,Republican,10,4,10
+22,21,Male,White,Graduate,<$25k,Conservative,Democrat,1,10,5
+23,35,Female,Asian,Graduate,<$25k,Very Conservative,Republican,5,0,10
+24,74,Female,White,Less than HS,$75-100k,Conservative,Democrat,6,2,4
+25,27,Female,Hispanic,Graduate,<$25k,Very Liberal,Republican,7,2,8
+26,21,Non-binary,Black,High School,$25-50k,Very Conservative,Democrat,10,1,3
+27,37,Male,White,Some College,$75-100k,Very Liberal,Independent,1,0,7
+28,70,Male,White,Less than HS,$25-50k,Very Conservative,Republican,3,0,4
+29,82,Male,Hispanic,Graduate,>$100k,Liberal,Republican,6,1,8
+30,41,Male,White,BA,$25-50k,Very Liberal,Democrat,4,6,7
+31,78,Male,White,BA,$50-75k,Liberal,Independent,0,0,4
+32,45,Non-binary,White,BA,<$25k,Conservative,Democrat,10,3,6
+33,81,Female,White,Less than HS,$75-100k,Very Liberal,Democrat,2,7,4
+34,77,Female,White,Some College,>$100k,Moderate,Independent,7,7,0
+35,70,Male,White,Some College,$25-50k,Moderate,Other,9,3,5
+36,76,Male,White,Some College,<$25k,Very Liberal,Democrat,9,6,1
+37,68,Female,White,BA,$75-100k,Very Liberal,Independent,7,6,0
+38,62,Male,Hispanic,Some College,$50-75k,Moderate,Independent,3,7,3
+39,52,Male,White,BA,$75-100k,Very Liberal,Democrat,9,9,8
+40,49,Female,White,High School,$50-75k,Moderate,Democrat,8,2,1
+41,62,Male,White,Less than HS,$50-75k,Liberal,Democrat,2,10,10
+42,66,Male,White,Some College,<$25k,Very Liberal,Independent,3,1,4
+43,47,Female,White,High School,$25-50k,Moderate,Republican,10,5,5
+44,29,Male,White,Graduate,$50-75k,Very Conservative,Democrat,3,2,6
+45,66,Female,White,Less than HS,$50-75k,Liberal,Democrat,10,1,9
+46,58,Female,Asian,Graduate,>$100k,Moderate,Other,9,4,7
+47,29,Male,Hispanic,Some College,$25-50k,Moderate,Democrat,4,0,1
+48,46,Female,White,Less than HS,<$25k,Very Conservative,Democrat,2,5,2
+49,72,Male,White,BA,$25-50k,Moderate,Independent,2,3,1
+50,79,Female,Black,Less than HS,$50-75k,Liberal,Republican,7,9,1
+51,85,Male,White,Graduate,$50-75k,Very Conservative,Republican,7,6,8
+52,51,Female,White,BA,$50-75k,Moderate,Independent,2,10,8
+53,80,Female,Asian,Some College,$75-100k,Conservative,Democrat,9,5,4
+54,53,Female,Asian,High School,<$25k,Very Liberal,Republican,9,1,5
+55,51,Male,White,Graduate,>$100k,Liberal,Republican,1,2,8
+56,18,Male,Black,Less than HS,<$25k,Conservative,Independent,8,2,9
+57,59,Male,White,Graduate,>$100k,Conservative,Independent,0,9,1
+58,62,Male,White,Graduate,>$100k,Moderate,Republican,5,5,4
+59,79,Female,White,High School,$50-75k,Very Liberal,Republican,9,7,7
+60,58,Male,White,Some College,$50-75k,Very Liberal,Republican,5,10,6
+61,38,Female,White,Less than HS,$25-50k,Very Liberal,Democrat,7,7,7
+62,80,Male,Black,Some College,$25-50k,Conservative,Democrat,7,2,0
+63,49,Female,Black,BA,<$25k,Moderate,Republican,0,9,0
+64,45,Non-binary,White,Some College,$50-75k,Very Conservative,Other,7,6,9
+65,46,Female,White,Less than HS,>$100k,Liberal,Republican,9,3,7
+66,58,Male,White,High School,$75-100k,Moderate,Democrat,0,10,6
+67,19,Male,White,Less than HS,$25-50k,Very Liberal,Independent,0,9,4
+68,27,Female,Hispanic,Less than HS,>$100k,Very Liberal,Democrat,9,4,2
+69,81,Female,Hispanic,BA,$25-50k,Moderate,Republican,1,10,1
+70,37,Female,Asian,Less than HS,>$100k,Moderate,Democrat,4,5,8
+71,19,Male,Hispanic,BA,<$25k,Very Liberal,Democrat,6,8,2
+72,81,Male,White,Some College,$25-50k,Very Conservative,Republican,3,2,3
+73,34,Male,White,Less than HS,<$25k,Conservative,Republican,3,9,9
+74,63,Male,White,Some College,<$25k,Very Conservative,Republican,8,6,5
+75,83,Male,Other,Less than HS,>$100k,Moderate,Democrat,6,3,0
+76,33,Non-binary,White,Graduate,$25-50k,Liberal,Democrat,7,2,10
+77,40,Male,Hispanic,Graduate,<$25k,Moderate,Republican,3,0,2
+78,24,Female,White,BA,$25-50k,Very Liberal,Republican,3,6,10
+79,59,Male,White,High School,<$25k,Moderate,Independent,7,8,5
+80,62,Male,White,High School,>$100k,Conservative,Independent,9,2,8
+81,38,Female,White,High School,>$100k,Conservative,Independent,2,4,0
+82,85,Male,Asian,BA,$50-75k,Very Conservative,Democrat,9,6,7
+83,73,Female,Black,Some College,$25-50k,Liberal,Independent,10,1,9
+84,47,Female,White,Less than HS,$50-75k,Moderate,Democrat,4,10,10
+85,23,Female,White,BA,$75-100k,Very Conservative,Republican,5,1,6
+86,67,Female,White,High School,$50-75k,Liberal,Independent,4,10,8
+87,66,Male,White,Graduate,$50-75k,Conservative,Other,7,7,7
+88,57,Male,White,BA,$75-100k,Very Liberal,Democrat,9,1,6
+89,71,Male,White,BA,$50-75k,Liberal,Democrat,3,9,7
+90,32,Female,Asian,High School,>$100k,Liberal,Independent,0,8,4
+91,74,Male,Hispanic,Less than HS,$50-75k,Very Conservative,Democrat,7,6,10
+92,48,Female,White,High School,<$25k,Liberal,Independent,0,9,1
+93,33,Female,White,BA,<$25k,Moderate,Democrat,1,5,6
+94,71,Female,White,Less than HS,<$25k,Very Conservative,Independent,0,3,6
+95,58,Male,White,Less than HS,<$25k,Liberal,Democrat,10,7,4
+96,35,Male,Hispanic,Graduate,<$25k,Liberal,Independent,7,2,3
+97,22,Female,Asian,Less than HS,$25-50k,Liberal,Democrat,0,8,3
+98,42,Female,Hispanic,Less than HS,$25-50k,Very Conservative,Independent,0,10,3
+99,52,Female,Asian,Less than HS,$25-50k,Very Conservative,Independent,4,1,7
+100,40,Male,Hispanic,Less than HS,$25-50k,Moderate,Democrat,0,6,6
+101,79,Male,Other,Some College,$25-50k,Conservative,Democrat,0,3,1
+102,56,Male,Asian,BA,$75-100k,Very Liberal,Democrat,6,10,5
+103,70,Female,Hispanic,BA,<$25k,Liberal,Republican,9,4,3
+104,62,Female,Black,High School,>$100k,Very Conservative,Democrat,5,3,9
+105,47,Female,White,Some College,>$100k,Moderate,Democrat,9,1,7
+106,56,Female,Hispanic,Some College,$50-75k,Very Conservative,Independent,2,4,5
+107,78,Female,Asian,BA,>$100k,Liberal,Republican,7,2,0
+108,77,Female,White,BA,$50-75k,Liberal,Republican,4,9,7
+109,25,Male,Hispanic,Less than HS,<$25k,Liberal,Democrat,0,0,1
+110,79,Male,White,BA,<$25k,Moderate,Republican,1,3,9
+111,59,Female,Hispanic,Graduate,<$25k,Liberal,Democrat,3,5,9
+112,36,Male,Hispanic,Less than HS,>$100k,Conservative,Democrat,2,2,5
+113,65,Female,White,BA,<$25k,Liberal,Republican,4,10,4
+114,70,Male,Hispanic,High School,$50-75k,Very Conservative,Republican,7,10,8
+115,28,Male,White,High School,>$100k,Conservative,Democrat,9,10,0
+116,80,Female,White,Graduate,$75-100k,Very Conservative,Democrat,4,0,4
+117,18,Male,White,Less than HS,>$100k,Very Liberal,Independent,5,3,2
+118,83,Male,Black,Some College,$25-50k,Conservative,Independent,4,4,7
+119,58,Female,Black,Less than HS,$25-50k,Conservative,Republican,5,5,8
+120,62,Female,Black,Less than HS,$50-75k,Conservative,Other,2,10,5
+121,30,Male,Hispanic,Graduate,$50-75k,Liberal,Democrat,6,2,3
+122,81,Male,White,High School,$25-50k,Conservative,Independent,7,10,2
+123,82,Female,White,Graduate,>$100k,Conservative,Democrat,9,8,8
+124,77,Female,White,Less than HS,>$100k,Very Conservative,Republican,7,4,2
+125,39,Female,White,Less than HS,$50-75k,Very Conservative,Independent,1,0,7
+126,41,Female,White,High School,$50-75k,Liberal,Democrat,2,10,5
+127,68,Male,White,Less than HS,$50-75k,Very Conservative,Democrat,0,9,0
+128,47,Male,Hispanic,BA,$25-50k,Very Conservative,Democrat,3,10,5
+129,70,Male,White,BA,$75-100k,Very Liberal,Independent,3,8,8
+130,51,Female,Asian,High School,$25-50k,Moderate,Democrat,3,2,9
+131,48,Female,White,BA,>$100k,Very Conservative,Republican,3,10,9
+132,34,Male,White,Less than HS,$75-100k,Conservative,Democrat,10,5,2
+133,82,Female,White,Some College,$75-100k,Conservative,Democrat,0,7,5
+134,18,Male,White,High School,>$100k,Moderate,Democrat,3,5,2
+135,41,Male,Black,BA,$25-50k,Conservative,Democrat,7,4,1
+136,29,Female,White,BA,$50-75k,Moderate,Independent,0,4,10
+137,43,Female,White,BA,$75-100k,Very Conservative,Republican,2,4,3
+138,36,Male,Hispanic,BA,$25-50k,Very Conservative,Republican,6,4,7
+139,70,Female,White,High School,<$25k,Very Conservative,Republican,6,0,5
+140,40,Male,Hispanic,Graduate,$75-100k,Very Liberal,Republican,1,0,8
+141,77,Male,White,Less than HS,<$25k,Very Conservative,Democrat,0,2,4
+142,43,Male,White,Less than HS,$25-50k,Very Conservative,Democrat,2,7,9
+143,58,Female,White,Less than HS,$25-50k,Very Conservative,Democrat,3,4,6
+144,58,Male,Black,High School,$50-75k,Moderate,Democrat,5,1,10
+145,36,Female,White,High School,>$100k,Conservative,Independent,1,7,2
+146,78,Female,Hispanic,Some College,$50-75k,Moderate,Independent,9,8,1
+147,63,Female,White,Some College,<$25k,Moderate,Independent,8,3,6
+148,36,Female,Hispanic,Some College,$50-75k,Very Conservative,Republican,5,4,4
+149,69,Female,White,Some College,>$100k,Conservative,Independent,6,10,2
+150,38,Female,Black,BA,>$100k,Moderate,Democrat,6,9,2
+151,28,Female,Black,High School,<$25k,Very Conservative,Democrat,4,8,0
+152,63,Male,Hispanic,Graduate,$75-100k,Moderate,Independent,5,0,9
+153,60,Female,White,Graduate,$75-100k,Liberal,Democrat,6,4,4
+154,84,Female,Hispanic,Some College,$50-75k,Conservative,Republican,9,10,10
+155,84,Female,White,High School,>$100k,Conservative,Democrat,4,8,4
+156,22,Female,White,High School,<$25k,Very Liberal,Independent,7,6,6
+157,38,Female,Black,Some College,$25-50k,Conservative,Democrat,10,8,5
+158,82,Non-binary,Hispanic,Some College,>$100k,Very Liberal,Republican,10,6,0
+159,57,Male,Black,Less than HS,$50-75k,Moderate,Independent,7,6,9
+160,31,Female,White,Some College,$75-100k,Moderate,Democrat,10,1,5
+161,64,Female,White,BA,>$100k,Conservative,Democrat,1,9,6
+162,37,Female,White,Less than HS,>$100k,Very Conservative,Republican,4,8,6
+163,73,Male,White,BA,>$100k,Very Liberal,Independent,1,6,0
+164,57,Female,White,Less than HS,<$25k,Very Liberal,Democrat,8,6,8
+165,64,Male,White,High School,>$100k,Very Conservative,Independent,1,8,0
+166,57,Female,Hispanic,High School,$50-75k,Very Conservative,Democrat,10,1,0
+167,81,Male,White,Less than HS,$50-75k,Very Liberal,Republican,4,5,1
+168,40,Female,Hispanic,BA,$25-50k,Moderate,Independent,2,5,8
+169,51,Female,White,Some College,>$100k,Moderate,Independent,8,3,7
+170,48,Male,White,Graduate,<$25k,Moderate,Democrat,8,4,2
+171,64,Male,Black,BA,<$25k,Conservative,Republican,5,4,2
+172,85,Male,White,Less than HS,$50-75k,Very Liberal,Independent,6,6,2
+173,66,Female,Hispanic,High School,$75-100k,Very Conservative,Independent,10,9,5
+174,44,Female,White,Graduate,$75-100k,Very Liberal,Republican,3,1,0
+175,25,Male,Hispanic,BA,>$100k,Moderate,Independent,9,9,9
+176,85,Female,White,High School,$50-75k,Very Liberal,Democrat,10,3,9
+177,39,Female,Asian,Graduate,$75-100k,Very Liberal,Independent,1,10,9
+178,37,Male,White,Less than HS,$75-100k,Moderate,Other,0,1,0
+179,84,Male,White,Graduate,$50-75k,Very Liberal,Democrat,4,6,0
+180,25,Male,White,Some College,$50-75k,Conservative,Independent,3,5,7
+181,20,Male,White,High School,<$25k,Very Conservative,Republican,5,10,1
+182,28,Male,White,Less than HS,>$100k,Very Conservative,Democrat,4,7,8
+183,39,Female,Black,Some College,<$25k,Conservative,Independent,6,10,0
+184,23,Male,Black,BA,$75-100k,Conservative,Republican,9,7,7
+185,24,Male,White,BA,$25-50k,Conservative,Democrat,6,0,4
+186,61,Male,White,Some College,$25-50k,Moderate,Republican,2,9,1
+187,40,Female,Hispanic,Graduate,>$100k,Conservative,Republican,0,0,9
+188,57,Female,Hispanic,Less than HS,$25-50k,Moderate,Democrat,6,4,8
+189,49,Female,White,High School,>$100k,Very Liberal,Independent,2,2,1
+190,30,Female,Other,Some College,<$25k,Very Conservative,Independent,3,3,3
+191,78,Female,Hispanic,Graduate,$75-100k,Very Conservative,Democrat,0,10,5
+192,18,Female,White,Less than HS,$75-100k,Very Conservative,Democrat,1,8,9
+193,82,Male,White,Some College,$25-50k,Moderate,Independent,4,6,3
+194,77,Male,White,Less than HS,$25-50k,Moderate,Republican,1,8,0
+195,37,Male,Hispanic,Less than HS,$50-75k,Very Conservative,Republican,10,6,5
+196,60,Female,White,BA,<$25k,Conservative,Democrat,1,10,2
+197,42,Male,White,BA,$50-75k,Conservative,Independent,7,7,3
+198,51,Female,Black,BA,$75-100k,Very Conservative,Independent,8,4,10
+199,47,Male,White,BA,$50-75k,Conservative,Independent,3,2,2
+200,67,Male,White,Graduate,$25-50k,Liberal,Democrat,10,10,6
+201,39,Male,White,BA,$75-100k,Very Liberal,Democrat,6,4,1
+202,81,Female,Hispanic,High School,$25-50k,Very Liberal,Democrat,4,4,2
+203,80,Male,Hispanic,High School,<$25k,Conservative,Republican,3,10,2
+204,19,Male,White,Graduate,>$100k,Liberal,Republican,0,1,10
+205,84,Male,Asian,High School,$25-50k,Very Conservative,Democrat,7,5,1
+206,68,Female,White,Some College,$75-100k,Moderate,Independent,1,1,5
+207,18,Female,White,Some College,$25-50k,Moderate,Democrat,9,9,9
+208,55,Male,Asian,Less than HS,$50-75k,Very Conservative,Republican,5,7,7
+209,23,Male,White,Graduate,$25-50k,Moderate,Independent,8,8,6
+210,85,Female,White,BA,$75-100k,Very Conservative,Other,8,3,5
+211,82,Male,White,BA,$25-50k,Very Conservative,Republican,7,6,7
+212,73,Female,White,BA,$25-50k,Liberal,Independent,3,5,0
+213,45,Female,White,BA,$50-75k,Very Conservative,Democrat,5,0,3
+214,63,Male,Black,High School,>$100k,Liberal,Democrat,10,8,2
+215,43,Female,White,Some College,<$25k,Conservative,Democrat,6,8,1
+216,57,Male,White,Graduate,>$100k,Very Liberal,Democrat,10,7,10
+217,71,Female,Hispanic,Graduate,$25-50k,Moderate,Republican,9,4,4
+218,81,Male,Hispanic,High School,>$100k,Moderate,Democrat,9,3,6
+219,21,Female,Hispanic,BA,<$25k,Liberal,Other,2,8,2
+220,47,Female,White,BA,<$25k,Very Conservative,Independent,10,2,8
+221,84,Female,Hispanic,High School,$25-50k,Very Liberal,Republican,4,9,5
+222,75,Female,White,Less than HS,<$25k,Conservative,Republican,4,3,2
+223,55,Female,White,High School,$25-50k,Liberal,Independent,7,0,0
+224,71,Male,Hispanic,Less than HS,$50-75k,Very Conservative,Democrat,4,7,8
+225,80,Female,Hispanic,High School,$25-50k,Very Liberal,Democrat,4,4,3
+226,48,Female,White,High School,<$25k,Liberal,Republican,9,5,1
+227,66,Female,White,High School,<$25k,Liberal,Independent,1,1,6
+228,25,Male,White,BA,$75-100k,Liberal,Democrat,5,4,3
+229,23,Non-binary,White,Less than HS,$75-100k,Liberal,Republican,6,5,7
+230,27,Female,White,Less than HS,$50-75k,Moderate,Republican,4,9,5
+231,53,Male,White,BA,$50-75k,Moderate,Republican,9,5,4
+232,31,Female,White,Graduate,$50-75k,Very Liberal,Independent,8,8,10
+233,66,Male,Black,High School,<$25k,Liberal,Democrat,7,6,8
+234,84,Male,White,Some College,>$100k,Moderate,Democrat,6,9,10
+235,39,Female,Hispanic,BA,$25-50k,Moderate,Republican,2,9,2
+236,64,Female,Black,High School,>$100k,Very Liberal,Democrat,9,3,4
+237,51,Male,Hispanic,BA,$75-100k,Very Liberal,Republican,4,5,0
+238,45,Female,Black,Some College,>$100k,Conservative,Democrat,2,5,9
+239,38,Male,White,Less than HS,>$100k,Conservative,Independent,6,2,0
+240,52,Male,White,Some College,$50-75k,Very Liberal,Independent,9,4,3
+241,55,Male,Hispanic,Some College,$25-50k,Very Conservative,Independent,8,1,9
+242,23,Male,White,Less than HS,>$100k,Moderate,Democrat,2,3,3
+243,83,Male,Asian,Some College,$50-75k,Very Liberal,Democrat,0,9,0
+244,58,Female,White,High School,>$100k,Liberal,Democrat,5,1,10
+245,54,Female,White,High School,>$100k,Conservative,Democrat,9,0,0
+246,23,Female,Black,Some College,$75-100k,Conservative,Republican,4,9,9
+247,71,Male,White,Graduate,$75-100k,Liberal,Republican,5,8,10
+248,28,Female,Hispanic,Graduate,>$100k,Liberal,Independent,10,3,2
+249,25,Female,White,Less than HS,$25-50k,Conservative,Republican,6,4,1
+250,21,Male,Hispanic,BA,$75-100k,Very Conservative,Independent,10,5,3
+251,62,Male,White,High School,$50-75k,Moderate,Democrat,9,5,9
+252,35,Female,Black,Graduate,<$25k,Conservative,Republican,5,5,2
+253,21,Female,White,Graduate,$75-100k,Liberal,Democrat,0,3,5
+254,60,Male,Asian,Some College,<$25k,Very Liberal,Independent,5,5,6
+255,79,Male,Other,Some College,>$100k,Moderate,Republican,1,7,9
+256,47,Male,White,Graduate,$25-50k,Moderate,Republican,4,7,1
+257,23,Non-binary,White,Some College,$50-75k,Conservative,Democrat,0,2,8
+258,27,Female,White,High School,$25-50k,Very Liberal,Democrat,3,7,2
+259,43,Female,Black,High School,>$100k,Liberal,Democrat,5,2,10
+260,60,Female,Black,BA,<$25k,Very Conservative,Democrat,7,7,5
+261,79,Female,White,Less than HS,>$100k,Liberal,Independent,10,0,0
+262,48,Non-binary,White,Less than HS,$75-100k,Very Conservative,Independent,10,0,3
+263,85,Female,White,Some College,$50-75k,Very Conservative,Republican,8,9,3
+264,76,Female,White,Some College,$75-100k,Moderate,Democrat,3,3,3
+265,45,Male,White,Some College,<$25k,Very Liberal,Democrat,8,7,1
+266,63,Female,White,Some College,<$25k,Very Liberal,Republican,2,1,0
+267,71,Male,Asian,Less than HS,$75-100k,Moderate,Democrat,6,7,3
+268,57,Male,White,Some College,$25-50k,Moderate,Republican,6,3,5
+269,82,Female,Hispanic,High School,<$25k,Conservative,Republican,2,0,4
+270,51,Male,White,Graduate,$75-100k,Conservative,Republican,8,8,2
+271,52,Female,Black,BA,$25-50k,Moderate,Independent,6,2,2
+272,83,Male,White,Some College,$75-100k,Very Liberal,Republican,5,5,8
+273,45,Female,Hispanic,Some College,$50-75k,Moderate,Democrat,5,7,6
+274,21,Female,White,Some College,$50-75k,Very Conservative,Republican,0,9,6
+275,80,Non-binary,Black,BA,<$25k,Moderate,Democrat,4,6,8
+276,77,Female,White,High School,<$25k,Moderate,Republican,4,2,5
+277,24,Male,Black,High School,$75-100k,Very Liberal,Other,2,4,6
+278,75,Male,White,BA,<$25k,Conservative,Republican,1,7,3
+279,34,Male,White,Graduate,$25-50k,Liberal,Independent,3,2,8
+280,38,Male,Black,BA,>$100k,Very Conservative,Republican,2,5,8
+281,48,Female,White,High School,$50-75k,Liberal,Independent,9,2,6
+282,29,Female,White,BA,>$100k,Liberal,Democrat,9,0,1
+283,76,Male,White,Graduate,$50-75k,Very Liberal,Democrat,3,5,0
+284,52,Male,Hispanic,High School,>$100k,Moderate,Democrat,2,4,9
+285,26,Female,White,Some College,<$25k,Very Liberal,Republican,5,6,8
+286,58,Male,Hispanic,Graduate,$50-75k,Conservative,Republican,10,1,3
+287,28,Female,White,Some College,$25-50k,Liberal,Republican,5,3,6
+288,77,Male,White,High School,>$100k,Very Liberal,Democrat,9,7,2
+289,23,Male,White,Some College,$50-75k,Conservative,Democrat,2,3,1
+290,32,Male,Hispanic,Some College,>$100k,Liberal,Independent,6,3,3
+291,68,Male,White,Some College,>$100k,Very Conservative,Independent,9,6,0
+292,27,Male,Hispanic,Less than HS,<$25k,Liberal,Republican,5,4,1
+293,69,Female,Black,High School,$25-50k,Moderate,Independent,6,8,5
+294,62,Female,White,BA,$25-50k,Very Liberal,Democrat,8,9,5
+295,47,Female,White,Less than HS,<$25k,Very Liberal,Democrat,8,8,5
+296,26,Male,White,Less than HS,$25-50k,Very Liberal,Republican,9,10,10
+297,60,Male,White,BA,$25-50k,Very Conservative,Republican,2,0,8
+298,71,Male,White,Some College,>$100k,Moderate,Republican,0,10,5
+299,78,Male,Hispanic,Graduate,$75-100k,Conservative,Independent,6,7,5
+300,77,Female,White,Some College,>$100k,Very Liberal,Republican,5,9,5
+301,65,Male,White,High School,$75-100k,Liberal,Independent,9,2,6
+302,59,Female,Black,Graduate,$25-50k,Very Conservative,Republican,4,7,10
+303,50,Female,White,Some College,>$100k,Conservative,Democrat,8,4,4
+304,42,Male,White,Some College,$50-75k,Very Conservative,Democrat,8,8,8
+305,42,Female,White,High School,$75-100k,Conservative,Other,0,5,9
+306,46,Female,Hispanic,Less than HS,$25-50k,Very Liberal,Democrat,0,1,9
+307,85,Female,Hispanic,Less than HS,$25-50k,Conservative,Democrat,7,4,0
+308,49,Male,Black,BA,<$25k,Very Conservative,Independent,4,10,8
+309,23,Female,Asian,BA,$50-75k,Liberal,Democrat,5,0,9
+310,51,Male,White,Less than HS,<$25k,Very Liberal,Republican,5,3,6
+311,48,Female,White,High School,$50-75k,Conservative,Democrat,10,4,7
+312,65,Male,White,Some College,>$100k,Liberal,Independent,4,1,2
+313,69,Female,White,BA,$25-50k,Moderate,Independent,3,4,4
+314,23,Male,White,Graduate,$75-100k,Conservative,Democrat,3,10,0
+315,20,Female,White,Graduate,<$25k,Very Liberal,Independent,4,2,4
+316,19,Female,White,Less than HS,<$25k,Conservative,Independent,10,0,5
+317,40,Female,White,Some College,$75-100k,Liberal,Republican,8,1,3
+318,25,Male,White,High School,$50-75k,Very Conservative,Democrat,9,0,4
+319,48,Male,Black,BA,<$25k,Very Liberal,Republican,1,2,9
+320,58,Male,Hispanic,Some College,<$25k,Very Liberal,Republican,5,8,8
+321,60,Female,Asian,Some College,$50-75k,Moderate,Republican,3,4,3
+322,63,Male,White,High School,<$25k,Conservative,Democrat,6,2,2
+323,63,Male,White,BA,$75-100k,Very Conservative,Democrat,0,0,0
+324,74,Male,Black,Graduate,$25-50k,Conservative,Independent,2,3,1
+325,48,Female,Black,Some College,<$25k,Moderate,Independent,4,10,2
+326,29,Female,Hispanic,BA,$50-75k,Very Conservative,Democrat,9,9,10
+327,84,Female,Hispanic,Some College,<$25k,Conservative,Republican,0,4,6
+328,20,Male,White,BA,$25-50k,Very Conservative,Democrat,10,9,9
+329,55,Male,Hispanic,Some College,>$100k,Very Conservative,Republican,6,6,10
+330,49,Female,White,Graduate,<$25k,Liberal,Independent,1,7,0
+331,67,Female,Hispanic,BA,$75-100k,Very Liberal,Democrat,0,9,4
+332,84,Female,Asian,Some College,<$25k,Liberal,Republican,10,10,3
+333,58,Male,Other,Some College,$25-50k,Liberal,Independent,3,1,2
+334,64,Female,White,Graduate,<$25k,Conservative,Republican,1,6,6
+335,22,Female,White,Some College,<$25k,Very Liberal,Democrat,4,8,8
+336,56,Female,White,Some College,$75-100k,Very Liberal,Democrat,1,9,0
+337,67,Non-binary,White,High School,$25-50k,Liberal,Independent,7,10,1
+338,58,Female,Hispanic,Less than HS,<$25k,Conservative,Republican,7,2,3
+339,42,Female,White,High School,<$25k,Very Liberal,Democrat,8,4,0
+340,71,Female,Hispanic,Graduate,>$100k,Very Liberal,Independent,7,5,9
+341,46,Female,White,Less than HS,$50-75k,Conservative,Democrat,1,9,8
+342,46,Male,Black,Some College,$50-75k,Liberal,Independent,0,0,7
+343,26,Female,White,Less than HS,$50-75k,Moderate,Other,9,6,7
+344,30,Male,Black,High School,$50-75k,Liberal,Other,5,6,8
+345,76,Male,White,High School,$75-100k,Very Conservative,Democrat,1,0,7
+346,61,Male,White,Graduate,$50-75k,Moderate,Democrat,0,3,6
+347,44,Male,White,BA,$50-75k,Very Conservative,Democrat,6,5,6
+348,40,Female,Hispanic,High School,$75-100k,Conservative,Democrat,1,5,1
+349,39,Male,Hispanic,Some College,$50-75k,Moderate,Republican,9,4,3
+350,74,Female,White,High School,$75-100k,Very Conservative,Republican,9,0,2
+351,41,Non-binary,Asian,BA,$25-50k,Very Conservative,Democrat,3,10,1
+352,67,Male,White,Some College,>$100k,Liberal,Republican,10,5,2
+353,65,Male,White,High School,<$25k,Moderate,Independent,7,7,4
+354,49,Male,White,High School,$75-100k,Very Liberal,Democrat,1,6,8
+355,39,Female,White,Graduate,>$100k,Very Liberal,Independent,8,5,6
+356,34,Female,White,Graduate,$75-100k,Very Liberal,Republican,1,9,6
+357,19,Male,Hispanic,Graduate,$75-100k,Moderate,Independent,8,0,5
+358,75,Male,White,BA,>$100k,Very Liberal,Democrat,8,9,1
+359,62,Male,Hispanic,Less than HS,$50-75k,Moderate,Democrat,5,0,9
+360,65,Female,White,BA,<$25k,Very Liberal,Independent,5,1,5
+361,52,Male,White,Graduate,$50-75k,Very Liberal,Democrat,9,0,2
+362,60,Female,Hispanic,Graduate,<$25k,Moderate,Republican,1,9,2
+363,46,Male,Black,BA,$50-75k,Moderate,Democrat,3,1,9
+364,28,Non-binary,White,BA,>$100k,Liberal,Democrat,5,0,1
+365,79,Male,Other,Some College,$75-100k,Conservative,Republican,3,8,1
+366,38,Female,White,Less than HS,$50-75k,Very Conservative,Democrat,9,10,1
+367,22,Female,White,High School,>$100k,Liberal,Independent,6,4,10
+368,26,Male,White,High School,$50-75k,Liberal,Democrat,0,6,7
+369,20,Male,White,Some College,$25-50k,Liberal,Republican,9,3,2
+370,39,Male,Asian,Some College,$50-75k,Very Conservative,Independent,9,1,4
+371,56,Male,Hispanic,Graduate,$25-50k,Very Liberal,Democrat,0,8,3
+372,64,Female,White,BA,$25-50k,Very Liberal,Democrat,7,10,5
+373,76,Female,White,High School,>$100k,Liberal,Republican,4,1,8
+374,21,Female,Other,High School,$50-75k,Very Conservative,Independent,3,3,8
+375,54,Female,Hispanic,Some College,>$100k,Liberal,Independent,0,0,9
+376,72,Female,Black,Graduate,>$100k,Very Conservative,Democrat,3,5,1
+377,41,Female,White,Less than HS,>$100k,Moderate,Republican,0,4,8
+378,55,Male,Hispanic,High School,$50-75k,Very Liberal,Independent,5,5,5
+379,33,Female,White,Less than HS,$75-100k,Conservative,Republican,6,9,4
+380,52,Male,Hispanic,BA,$75-100k,Very Liberal,Democrat,9,1,2
+381,74,Female,White,Less than HS,>$100k,Liberal,Independent,1,2,6
+382,75,Male,White,High School,$25-50k,Conservative,Republican,5,10,8
+383,19,Female,Hispanic,Less than HS,>$100k,Very Conservative,Republican,2,7,10
+384,20,Female,White,Less than HS,$75-100k,Very Conservative,Republican,2,1,6
+385,38,Male,White,Some College,>$100k,Conservative,Democrat,2,10,8
+386,31,Female,White,Graduate,>$100k,Very Liberal,Independent,2,4,7
+387,70,Male,White,Some College,<$25k,Conservative,Independent,10,10,7
+388,23,Female,Hispanic,Less than HS,$50-75k,Very Conservative,Independent,0,1,4
+389,30,Male,Hispanic,High School,$25-50k,Very Conservative,Democrat,9,5,2
+390,85,Female,White,BA,>$100k,Very Liberal,Independent,6,5,6
+391,75,Female,White,BA,<$25k,Very Conservative,Independent,4,7,1
+392,36,Male,White,Some College,$50-75k,Very Liberal,Independent,10,3,4
+393,84,Male,Hispanic,Graduate,$75-100k,Conservative,Democrat,7,5,3
+394,77,Male,Hispanic,Some College,<$25k,Moderate,Republican,3,3,3
+395,82,Male,Black,Graduate,>$100k,Liberal,Independent,4,10,9
+396,54,Female,White,Less than HS,>$100k,Very Conservative,Democrat,5,3,5
+397,67,Non-binary,Hispanic,Less than HS,<$25k,Very Liberal,Independent,6,7,3
+398,81,Non-binary,Hispanic,High School,>$100k,Very Liberal,Republican,0,6,0
+399,61,Female,Hispanic,Less than HS,$50-75k,Very Conservative,Republican,2,7,5
+400,43,Female,Black,High School,$75-100k,Liberal,Democrat,7,7,3
+401,74,Male,Black,Graduate,>$100k,Moderate,Independent,8,6,7
+402,33,Male,White,Some College,$25-50k,Conservative,Democrat,1,8,10
+403,37,Female,White,Less than HS,$50-75k,Very Conservative,Republican,2,7,5
+404,52,Female,Black,Less than HS,>$100k,Very Conservative,Republican,3,4,0
+405,66,Female,Other,Graduate,$25-50k,Liberal,Republican,3,6,1
+406,25,Male,White,BA,$75-100k,Liberal,Independent,7,3,4
+407,79,Male,Black,High School,>$100k,Liberal,Democrat,5,7,7
+408,53,Male,White,High School,<$25k,Conservative,Democrat,2,10,7
+409,25,Female,White,Some College,<$25k,Conservative,Democrat,8,7,2
+410,35,Female,White,Less than HS,<$25k,Moderate,Independent,0,5,8
+411,23,Female,Asian,BA,<$25k,Very Liberal,Republican,4,5,0
+412,65,Male,White,BA,$75-100k,Very Conservative,Democrat,4,0,10
+413,27,Male,Hispanic,BA,<$25k,Conservative,Democrat,6,4,10
+414,41,Female,Other,Some College,$50-75k,Conservative,Democrat,9,9,10
+415,20,Male,Hispanic,Some College,>$100k,Very Liberal,Republican,6,3,4
+416,84,Female,Hispanic,High School,$75-100k,Moderate,Democrat,6,4,1
+417,23,Male,White,High School,$25-50k,Very Liberal,Republican,4,10,9
+418,18,Male,White,Graduate,$25-50k,Liberal,Democrat,2,10,5
+419,43,Female,Asian,BA,$50-75k,Very Conservative,Independent,5,0,1
+420,38,Female,White,Graduate,$25-50k,Conservative,Republican,1,1,0
+421,27,Male,White,High School,$25-50k,Moderate,Democrat,3,7,5
+422,78,Male,Hispanic,Some College,>$100k,Conservative,Republican,0,3,0
+423,83,Female,White,Graduate,>$100k,Very Liberal,Democrat,4,9,8
+424,48,Female,White,BA,>$100k,Very Conservative,Democrat,8,6,3
+425,22,Female,Black,Some College,<$25k,Moderate,Democrat,0,1,1
+426,77,Male,Hispanic,Graduate,>$100k,Moderate,Democrat,9,3,2
+427,34,Male,White,High School,<$25k,Moderate,Independent,9,6,2
+428,71,Male,White,BA,$50-75k,Conservative,Democrat,6,10,8
+429,32,Male,White,Less than HS,$75-100k,Conservative,Democrat,1,4,9
+430,75,Female,Hispanic,Less than HS,$75-100k,Very Conservative,Independent,2,9,9
+431,77,Male,White,Less than HS,$25-50k,Very Conservative,Democrat,8,2,2
+432,40,Male,Black,Less than HS,<$25k,Very Liberal,Independent,9,0,5
+433,33,Female,White,Graduate,<$25k,Very Conservative,Republican,2,0,9
+434,45,Female,White,BA,<$25k,Liberal,Independent,5,10,5
+435,66,Male,White,Graduate,$25-50k,Liberal,Democrat,7,6,5
+436,73,Female,White,Some College,$50-75k,Conservative,Republican,0,4,0
+437,63,Female,White,Less than HS,$50-75k,Moderate,Independent,6,2,5
+438,77,Female,White,Graduate,$75-100k,Very Liberal,Republican,1,9,1
+439,49,Non-binary,White,Less than HS,$25-50k,Moderate,Democrat,3,6,2
+440,63,Female,White,BA,$50-75k,Moderate,Republican,4,5,9
+441,47,Female,White,High School,$75-100k,Moderate,Democrat,6,10,1
+442,39,Male,White,BA,$75-100k,Very Liberal,Independent,8,5,4
+443,55,Male,White,BA,$50-75k,Very Liberal,Republican,3,0,5
+444,64,Male,White,High School,<$25k,Very Conservative,Republican,5,7,8
+445,51,Male,White,Graduate,>$100k,Liberal,Other,3,4,2
+446,66,Female,White,Less than HS,$25-50k,Conservative,Independent,9,2,0
+447,26,Female,White,BA,<$25k,Very Conservative,Republican,6,8,5
+448,53,Male,Hispanic,Some College,$25-50k,Moderate,Independent,0,5,7
+449,35,Male,White,Less than HS,$25-50k,Very Liberal,Democrat,9,10,8
+450,78,Male,White,Some College,>$100k,Very Liberal,Republican,7,2,4
+451,27,Female,Black,Some College,$75-100k,Very Liberal,Republican,9,0,3
+452,72,Male,White,High School,<$25k,Very Conservative,Democrat,7,3,1
+453,59,Male,White,Graduate,$50-75k,Very Liberal,Independent,10,10,8
+454,20,Male,Hispanic,Graduate,$75-100k,Very Liberal,Independent,0,0,9
+455,82,Female,White,BA,>$100k,Moderate,Independent,5,3,0
+456,39,Male,White,Less than HS,<$25k,Very Liberal,Republican,6,9,10
+457,72,Female,White,BA,<$25k,Conservative,Republican,9,8,10
+458,55,Female,Hispanic,BA,$75-100k,Liberal,Republican,3,6,8
+459,21,Male,White,Less than HS,<$25k,Very Liberal,Other,5,1,3
+460,48,Male,Hispanic,Less than HS,$50-75k,Liberal,Independent,4,4,5
+461,60,Female,White,BA,$50-75k,Very Liberal,Republican,3,1,3
+462,33,Male,Hispanic,High School,$25-50k,Very Liberal,Independent,3,4,2
+463,66,Female,Black,Less than HS,<$25k,Very Conservative,Democrat,10,5,3
+464,36,Female,White,BA,>$100k,Liberal,Democrat,4,2,1
+465,46,Male,White,Graduate,$50-75k,Very Conservative,Independent,3,9,7
+466,81,Male,White,Some College,$25-50k,Very Liberal,Independent,0,7,7
+467,52,Female,White,Some College,$75-100k,Liberal,Independent,0,2,3
+468,58,Female,Hispanic,High School,$50-75k,Conservative,Democrat,8,9,4
+469,19,Female,White,Less than HS,>$100k,Liberal,Republican,8,0,3
+470,78,Female,Hispanic,Some College,>$100k,Conservative,Independent,3,8,9
+471,46,Male,White,Graduate,$75-100k,Moderate,Democrat,4,9,6
+472,52,Non-binary,White,Some College,$75-100k,Very Liberal,Democrat,9,10,5
+473,75,Female,Asian,Some College,$25-50k,Very Conservative,Independent,4,0,4
+474,84,Male,White,BA,>$100k,Conservative,Democrat,3,2,10
+475,48,Female,Black,High School,$75-100k,Liberal,Republican,4,4,6
+476,19,Male,White,Less than HS,$75-100k,Moderate,Independent,10,4,2
+477,37,Female,Black,Less than HS,$50-75k,Moderate,Independent,10,8,0
+478,20,Female,White,Some College,$25-50k,Very Conservative,Independent,8,0,5
+479,80,Female,White,Less than HS,>$100k,Very Liberal,Democrat,0,9,10
+480,36,Female,Black,Less than HS,>$100k,Liberal,Other,1,8,0
+481,72,Female,White,Less than HS,$75-100k,Very Liberal,Democrat,1,2,7
+482,23,Female,White,Graduate,<$25k,Very Conservative,Republican,8,0,7
+483,55,Male,Asian,BA,<$25k,Liberal,Democrat,6,1,8
+484,37,Female,Asian,BA,$25-50k,Moderate,Democrat,5,7,3
+485,38,Male,White,Less than HS,<$25k,Very Liberal,Democrat,3,0,9
+486,82,Female,White,Graduate,$75-100k,Liberal,Democrat,6,5,9
+487,32,Female,White,Less than HS,$75-100k,Liberal,Democrat,9,9,5
+488,63,Female,White,Less than HS,$25-50k,Very Conservative,Independent,4,0,1
+489,59,Male,Black,High School,$25-50k,Very Liberal,Democrat,2,8,4
+490,18,Male,White,Some College,$75-100k,Liberal,Republican,4,8,5
+491,37,Female,White,Graduate,$25-50k,Moderate,Independent,5,6,2
+492,71,Female,White,BA,$50-75k,Moderate,Republican,0,9,8
+493,32,Male,White,Graduate,>$100k,Conservative,Republican,6,6,1
+494,81,Female,White,Some College,$75-100k,Conservative,Independent,4,9,2
+495,65,Female,White,Graduate,$50-75k,Very Liberal,Republican,10,4,0
+496,51,Male,White,Graduate,>$100k,Conservative,Independent,0,10,3
+497,27,Female,Other,Less than HS,$75-100k,Conservative,Democrat,9,1,5
+498,67,Male,White,Graduate,$50-75k,Conservative,Republican,3,1,10
+499,63,Female,Hispanic,Less than HS,<$25k,Very Conservative,Democrat,6,7,5
+500,68,Female,White,Graduate,$75-100k,Very Conservative,Independent,6,6,9

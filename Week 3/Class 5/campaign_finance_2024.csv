@@ -1,0 +1,501 @@
+contribution_id,candidate,party,office,amount,date,contributor_type,state,employer,occupation
+1,Candidate I,Democrat,Senate,579.5920217378973,2024-04-18,Individual,WV,Tech Company,Executive
+2,Candidate F,Republican,Governor,146.27367531311845,2024-01-12,Individual,VT,University,Physician
+3,Candidate E,Republican,Senate,642.6092093492522,2024-03-06,Individual,HI,Tech Company,Executive
+4,Candidate G,Democrat,Governor,459.4878725131085,2024-08-30,Individual,AR,University,Retired
+5,Candidate C,Democrat,Senate,567.4635638344658,2024-06-04,Individual,OK,Retired,Retired
+6,Candidate C,Democrat,Senate,2046.4529048954723,2024-04-02,PAC,GA,Self-Employed,Executive
+7,Candidate G,Republican,House,1076.3147339941545,2024-03-12,Party Committee,KY,Various Corp,Professor
+8,Candidate A,Republican,Senate,2318.0544361222487,2024-03-07,Party Committee,IL,Tech Company,Retired
+9,Candidate J,Democrat,Governor,3258.858035585533,2024-02-04,PAC,RI,University,Executive
+10,Candidate A,Democrat,House,678.1586031683731,2024-03-22,Individual,OR,University,Executive
+11,Candidate C,Democrat,House,5239.230166466899,2024-07-22,Party Committee,NH,Tech Company,Retired
+12,Candidate F,Republican,Senate,341.4111261351674,2024-06-09,Individual,ME,University,Retired
+13,Candidate H,Democrat,House,228.46924855763748,2024-05-11,Individual,MA,Tech Company,Engineer
+14,Candidate C,Democrat,House,120.89389016370569,2024-01-30,Individual,ID,University,Retired
+15,Candidate G,Democrat,House,4078.2769486307207,2024-01-10,Individual,NH,Various Corp,Professor
+16,Candidate E,Republican,House,126.23527171672616,2024-05-02,Individual,CA,Tech Company,Physician
+17,Candidate F,Republican,House,365.7136077266912,2024-03-10,Individual,NM,University,Retired
+18,Candidate I,Democrat,Governor,75.51295716927389,2024-04-27,PAC,SC,Various Corp,Attorney
+19,Candidate I,Republican,House,1192.5948232556818,2024-02-07,Individual,TN,Retired,Executive
+20,Candidate J,Republican,House,1187.814050454884,2024-04-06,Individual,SD,Retired,Physician
+21,Candidate J,Republican,Senate,614.1201348308591,2024-07-26,PAC,NV,Various Corp,Professor
+22,Candidate F,Republican,Senate,320.71579553744573,2024-04-26,Individual,FL,University,Retired
+23,Candidate D,Democrat,Senate,530.4983391867374,2024-04-22,PAC,OR,Tech Company,Attorney
+24,Candidate C,Republican,Senate,4009.41017026206,2024-07-22,PAC,NM,Tech Company,Professor
+25,Candidate C,Republican,Governor,422.456879443657,2024-05-19,Individual,NJ,University,Physician
+26,Candidate I,Republican,House,161.65686121924975,2024-01-07,Individual,MD,Self-Employed,Executive
+27,Candidate D,Republican,House,219.33650322314733,2024-01-24,Individual,OH,Retired,Retired
+28,Candidate D,Democrat,House,26.87143380617975,2024-06-01,Individual,NH,Tech Company,Retired
+29,Candidate A,Republican,House,1489.9872772963756,2024-09-23,Individual,AK,Various Corp,Attorney
+30,Candidate F,Democrat,Senate,82.25517713217428,2024-10-19,PAC,NE,University,Attorney
+31,Candidate A,Democrat,House,3188.307355832774,2024-08-08,Individual,MN,University,Professor
+32,Candidate E,Republican,Governor,3368.371242407452,2024-10-24,PAC,WA,Self-Employed,Professor
+33,Candidate G,Republican,House,1617.1810759411896,2024-01-21,Individual,NH,Tech Company,Executive
+34,Candidate J,Republican,House,82.2043348630593,2024-08-12,Party Committee,WY,Retired,Retired
+35,Candidate H,Democrat,House,79.82234335249963,2024-05-17,Party Committee,NC,Various Corp,Professor
+36,Candidate A,Democrat,House,129.98339371344233,2024-03-09,PAC,SC,Retired,Engineer
+37,Candidate A,Republican,Governor,99.01248227902481,2024-07-22,PAC,WI,Various Corp,Engineer
+38,Candidate H,Republican,House,783.5963019270856,2024-07-02,Individual,DE,Retired,Engineer
+39,Candidate I,Democrat,House,403.6348901162625,2024-07-28,Individual,GA,Various Corp,Professor
+40,Candidate E,Republican,House,2738.506750776318,2024-06-12,Individual,VA,Various Corp,Physician
+41,Candidate F,Democrat,Senate,1174.1726623554287,2024-01-05,Individual,WI,Various Corp,Retired
+42,Candidate G,Democrat,House,1715.470736819249,2024-08-10,Individual,MN,Tech Company,Executive
+43,Candidate G,Democrat,House,7042.931547490345,2024-07-06,Party Committee,ID,Self-Employed,Executive
+44,Candidate A,Democrat,Governor,665.0172587370839,2024-03-17,Individual,CT,Tech Company,Physician
+45,Candidate G,Democrat,Governor,4041.7513129688796,2024-07-03,Individual,OR,Tech Company,Attorney
+46,Candidate I,Republican,House,157.48865747012601,2024-02-20,Individual,KY,Various Corp,Engineer
+47,Candidate I,Democrat,Senate,851.799870327102,2024-04-16,Party Committee,MO,Various Corp,Retired
+48,Candidate H,Democrat,House,250.17585818715432,2024-07-18,Party Committee,KS,Retired,Attorney
+49,Candidate J,Republican,House,639.2417428900574,2024-09-12,Individual,AL,University,Engineer
+50,Candidate G,Democrat,Governor,10,2024-08-17,Individual,ID,Tech Company,Engineer
+51,Candidate B,Republican,House,134.96057814842894,2024-06-24,Individual,MI,Tech Company,Executive
+52,Candidate A,Republican,House,176.0637639796666,2024-05-09,Individual,MT,University,Professor
+53,Candidate I,Democrat,House,491.74455406748456,2024-03-17,Individual,DE,Retired,Engineer
+54,Candidate C,Republican,House,31.25268588924275,2024-04-11,Individual,WV,Various Corp,Physician
+55,Candidate C,Democrat,Senate,254.67343123732783,2024-05-05,Individual,NC,Tech Company,Physician
+56,Candidate J,Republican,House,324.6645592921459,2024-07-16,Individual,VA,University,Retired
+57,Candidate J,Republican,Senate,48.48276919306912,2024-01-18,Individual,MT,Self-Employed,Physician
+58,Candidate C,Republican,Governor,53.365441921140146,2024-09-05,PAC,WI,University,Attorney
+59,Candidate I,Democrat,House,680.7896086909454,2024-04-10,Individual,TX,University,Engineer
+60,Candidate F,Republican,House,1877.7272875097237,2024-10-18,Individual,OH,University,Professor
+61,Candidate I,Democrat,Senate,370.87057188183104,2024-03-20,Individual,CA,University,Professor
+62,Candidate B,Republican,House,6744.998793789483,2024-10-16,Individual,UT,Retired,Professor
+63,Candidate G,Republican,Senate,362.18090141689913,2024-03-27,PAC,NV,Tech Company,Attorney
+64,Candidate B,Republican,House,86.8917995355649,2024-03-16,PAC,OH,Tech Company,Retired
+65,Candidate J,Democrat,Governor,36.38208907535697,2024-10-21,Individual,OK,Retired,Physician
+66,Candidate J,Republican,House,271.1835400242485,2024-02-12,Individual,FL,Various Corp,Professor
+67,Candidate C,Democrat,House,226.45556928840412,2024-06-23,Individual,KS,Various Corp,Professor
+68,Candidate A,Democrat,Senate,1185.802239611917,2024-07-08,Individual,MO,Various Corp,Professor
+69,Candidate H,Democrat,House,5174.53273175858,2024-10-11,PAC,GA,Various Corp,Professor
+70,Candidate J,Republican,House,819.3183662425486,2024-08-19,Individual,MN,University,Engineer
+71,Candidate B,Republican,Senate,205.50177579945563,2024-09-22,Individual,FL,Various Corp,Retired
+72,Candidate A,Republican,House,950.8313646725522,2024-01-17,Individual,IA,Various Corp,Executive
+73,Candidate H,Republican,House,1211.3481232321114,2024-06-11,Individual,AR,University,Executive
+74,Candidate C,Republican,House,36.70581511720296,2024-06-24,Individual,CT,Various Corp,Retired
+75,Candidate D,Republican,House,260.4689273829444,2024-06-13,Individual,CT,University,Physician
+76,Candidate H,Democrat,Governor,296.9354634815444,2024-09-04,PAC,WY,University,Attorney
+77,Candidate F,Democrat,House,123.2380551533053,2024-04-17,Individual,CT,Retired,Executive
+78,Candidate A,Republican,House,598.2790624634388,2024-09-20,Individual,NJ,Self-Employed,Retired
+79,Candidate I,Democrat,Senate,244.21149988490146,2024-05-09,PAC,IN,Retired,Executive
+80,Candidate G,Democrat,House,145.58232502041838,2024-05-13,Individual,OK,Retired,Engineer
+81,Candidate G,Democrat,House,146.26362138645587,2024-01-28,Party Committee,WA,Tech Company,Executive
+82,Candidate G,Republican,House,326.9595022175786,2024-08-26,Individual,UT,University,Physician
+83,Candidate E,Republican,House,562.9853012083183,2024-09-15,Individual,VT,Various Corp,Executive
+84,Candidate E,Republican,House,625.0769706681523,2024-10-10,Individual,NJ,Self-Employed,Professor
+85,Candidate D,Republican,House,269.67424689530634,2024-01-19,Individual,HI,Tech Company,Physician
+86,Candidate C,Republican,Governor,431.14530958082685,2024-01-05,Individual,IA,Retired,Retired
+87,Candidate H,Democrat,House,598.681407643612,2024-04-05,Individual,OK,Various Corp,Attorney
+88,Candidate I,Republican,House,40.55687067003164,2024-09-24,Individual,MO,Retired,Attorney
+89,Candidate A,Republican,House,577.2670044440108,2024-10-16,Individual,WA,Retired,Engineer
+90,Candidate C,Republican,House,2094.7255688538753,2024-05-01,Individual,MD,Various Corp,Attorney
+91,Candidate J,Democrat,House,3616.068260397939,2024-02-13,Individual,NC,University,Attorney
+92,Candidate H,Democrat,Senate,10698.053372408436,2024-07-11,PAC,HI,Tech Company,Retired
+93,Candidate I,Republican,House,74.78089615914793,2024-08-10,Individual,NH,Tech Company,Executive
+94,Candidate G,Republican,Senate,233.71934437558298,2024-06-13,Individual,AR,University,Professor
+95,Candidate D,Democrat,House,6795.629907263145,2024-05-09,Individual,WI,University,Attorney
+96,Candidate E,Democrat,Senate,50.28864599382627,2024-10-21,Individual,AR,Various Corp,Executive
+97,Candidate I,Republican,House,109.37751580539937,2024-03-13,Individual,IL,Self-Employed,Retired
+98,Candidate G,Republican,House,717.245701211154,2024-07-11,Individual,KS,Retired,Retired
+99,Candidate C,Republican,House,489.729509547219,2024-07-11,Individual,OR,Self-Employed,Professor
+100,Candidate H,Democrat,House,2035.8005671963656,2024-09-28,Individual,TN,University,Attorney
+101,Candidate F,Democrat,Senate,261.4171526250583,2024-09-22,PAC,NV,Retired,Retired
+102,Candidate C,Democrat,Senate,58.47355883631063,2024-05-12,PAC,MO,Self-Employed,Attorney
+103,Candidate F,Republican,Senate,1892.9762817187955,2024-08-08,PAC,RI,Self-Employed,Professor
+104,Candidate I,Republican,House,714.8005530359397,2024-01-02,Individual,SD,Self-Employed,Retired
+105,Candidate G,Democrat,Senate,61.08938437087211,2024-10-27,PAC,LA,Retired,Engineer
+106,Candidate I,Democrat,House,588.413980479016,2024-10-20,Individual,KS,University,Professor
+107,Candidate G,Republican,Senate,3067.239896620682,2024-02-18,PAC,NJ,Self-Employed,Attorney
+108,Candidate G,Democrat,Senate,1752.79033075457,2024-01-15,Individual,NY,Tech Company,Retired
+109,Candidate G,Democrat,House,166.34502439360028,2024-07-16,PAC,OR,University,Attorney
+110,Candidate I,Democrat,House,393.4951032746949,2024-07-18,Individual,WI,University,Retired
+111,Candidate B,Republican,House,372.02324409198474,2024-03-02,Party Committee,MT,University,Engineer
+112,Candidate E,Republican,House,1344.037583858072,2024-07-17,Individual,NH,University,Attorney
+113,Candidate H,Democrat,House,862.2431304961142,2024-03-05,Individual,MS,Retired,Physician
+114,Candidate D,Republican,House,23.80332487048925,2024-02-02,Individual,WV,Various Corp,Retired
+115,Candidate H,Democrat,Senate,123.80288727263788,2024-04-22,Individual,TX,University,Executive
+116,Candidate C,Republican,House,197.57805396004395,2024-06-15,Individual,GA,Retired,Attorney
+117,Candidate C,Democrat,House,32.20037399329797,2024-08-14,Individual,WY,University,Professor
+118,Candidate I,Republican,House,58.540203646824565,2024-09-17,Individual,NE,Tech Company,Retired
+119,Candidate A,Republican,House,214.14045053549253,2024-04-18,Party Committee,DE,Various Corp,Physician
+120,Candidate A,Democrat,House,2476.057235980134,2024-05-01,Individual,AR,University,Professor
+121,Candidate H,Republican,House,883.8261195200599,2024-06-11,Individual,MS,Retired,Retired
+122,Candidate I,Democrat,Senate,170.92934149665584,2024-03-28,Individual,LA,Tech Company,Engineer
+123,Candidate I,Republican,Senate,828.7302526942968,2024-09-22,Individual,CA,Self-Employed,Professor
+124,Candidate A,Democrat,House,4471.720208082035,2024-01-22,Individual,LA,Retired,Physician
+125,Candidate G,Democrat,House,466.22424367423423,2024-01-06,Individual,MI,Tech Company,Executive
+126,Candidate B,Democrat,Governor,726.3503772985416,2024-05-17,Individual,UT,Retired,Attorney
+127,Candidate F,Democrat,Governor,1605.1607451201314,2024-03-17,Individual,WA,Tech Company,Executive
+128,Candidate A,Democrat,Senate,1242.177656644695,2024-06-15,Individual,FL,Self-Employed,Engineer
+129,Candidate F,Republican,House,4346.977449206981,2024-07-18,Individual,FL,Various Corp,Physician
+130,Candidate C,Democrat,House,611.7429999940069,2024-07-30,Party Committee,IA,Tech Company,Engineer
+131,Candidate F,Republican,Senate,48.22710841283145,2024-04-13,Individual,NE,Various Corp,Physician
+132,Candidate C,Democrat,House,261.38732622639014,2024-07-16,PAC,SD,Retired,Professor
+133,Candidate F,Republican,Governor,107.9430849931936,2024-05-05,Individual,OK,Various Corp,Professor
+134,Candidate G,Democrat,Governor,836.7601128602313,2024-07-13,Individual,KY,Self-Employed,Engineer
+135,Candidate A,Republican,House,73.60226267450557,2024-04-05,PAC,MD,Various Corp,Attorney
+136,Candidate C,Republican,Governor,1044.581799108852,2024-06-07,Individual,LA,Retired,Retired
+137,Candidate I,Democrat,House,316.37881457453324,2024-06-27,Individual,NV,Retired,Executive
+138,Candidate D,Republican,Senate,375.08608807294775,2024-03-25,Individual,WI,Self-Employed,Attorney
+139,Candidate B,Republican,House,2908.2798509788045,2024-08-08,Individual,MI,Retired,Retired
+140,Candidate D,Republican,House,223.45178981502036,2024-04-24,Individual,IN,University,Physician
+141,Candidate J,Republican,House,239.84891332494695,2024-09-01,Individual,KS,Self-Employed,Physician
+142,Candidate J,Republican,House,34.16135220379465,2024-05-04,PAC,DE,Tech Company,Retired
+143,Candidate C,Republican,Senate,338.6995834228323,2024-04-09,Individual,NJ,University,Engineer
+144,Candidate H,Republican,House,59.13032202979091,2024-05-20,Individual,WY,Tech Company,Engineer
+145,Candidate H,Democrat,House,706.2078646345991,2024-03-10,Individual,MA,Tech Company,Engineer
+146,Candidate F,Democrat,Senate,20.7865199776851,2024-03-22,Individual,ID,Retired,Retired
+147,Candidate J,Republican,Governor,421.1189467668174,2024-08-24,Party Committee,IL,University,Engineer
+148,Candidate A,Democrat,Senate,1690.5307988150394,2024-06-11,PAC,TX,Various Corp,Engineer
+149,Candidate H,Republican,House,117.35326091323424,2024-06-10,Individual,MA,Tech Company,Professor
+150,Candidate B,Democrat,Senate,6910.470402462771,2024-02-26,Individual,WA,University,Retired
+151,Candidate A,Republican,House,474.25989401642664,2024-05-07,Individual,HI,Retired,Attorney
+152,Candidate E,Republican,Governor,3057.857007524771,2024-05-12,PAC,WI,Retired,Retired
+153,Candidate J,Democrat,Senate,23.512773436345046,2024-04-19,Individual,OK,University,Professor
+154,Candidate G,Democrat,Governor,30.48716447505956,2024-04-01,PAC,PA,Self-Employed,Attorney
+155,Candidate B,Democrat,House,3132.6908288193044,2024-04-08,Individual,DE,Tech Company,Engineer
+156,Candidate G,Republican,House,75.96704342944491,2024-09-03,Individual,NM,Retired,Engineer
+157,Candidate G,Democrat,Governor,2615.383725493521,2024-07-16,Individual,WI,University,Physician
+158,Candidate C,Democrat,Senate,100.5551196988892,2024-06-05,Party Committee,MI,Retired,Executive
+159,Candidate B,Republican,House,3046.096075491138,2024-04-04,Individual,TX,Tech Company,Attorney
+160,Candidate E,Democrat,House,215.74050494794636,2024-08-06,Individual,OK,Self-Employed,Retired
+161,Candidate C,Republican,Senate,57.34247490104566,2024-05-11,Individual,RI,Various Corp,Executive
+162,Candidate H,Republican,Senate,101.98442103345437,2024-01-25,Party Committee,NM,Retired,Retired
+163,Candidate E,Republican,Governor,20.259267483962617,2024-07-06,Individual,MS,Tech Company,Professor
+164,Candidate A,Republican,Governor,447.30900184602655,2024-02-24,Individual,AZ,Various Corp,Retired
+165,Candidate J,Republican,House,255.26764769281235,2024-10-26,Party Committee,NH,Self-Employed,Retired
+166,Candidate A,Democrat,House,108.88014506567607,2024-09-09,Individual,NC,Retired,Engineer
+167,Candidate B,Democrat,House,743.9871059782546,2024-01-14,Individual,DE,Tech Company,Attorney
+168,Candidate G,Democrat,Senate,43.17999912891067,2024-03-16,PAC,VA,Self-Employed,Retired
+169,Candidate C,Republican,House,269.28303699129856,2024-05-15,PAC,WI,Self-Employed,Professor
+170,Candidate G,Democrat,House,7448.799265882715,2024-02-05,Individual,GA,Self-Employed,Physician
+171,Candidate H,Republican,House,1353.1597067432817,2024-03-23,Individual,MD,Self-Employed,Physician
+172,Candidate D,Republican,House,1012.0591188075314,2024-01-20,PAC,RI,Various Corp,Executive
+173,Candidate B,Democrat,House,691.2610220275435,2024-04-01,Individual,IN,Various Corp,Retired
+174,Candidate A,Democrat,House,144.100996375604,2024-02-06,Individual,AR,Tech Company,Professor
+175,Candidate I,Democrat,House,43.56815172510298,2024-09-14,Individual,HI,Retired,Executive
+176,Candidate I,Democrat,House,169.72189938418106,2024-10-12,PAC,WI,Various Corp,Executive
+177,Candidate C,Democrat,Governor,427.18119179535626,2024-06-10,Individual,NV,Retired,Attorney
+178,Candidate C,Republican,House,409.17549624280645,2024-09-10,PAC,TN,Tech Company,Professor
+179,Candidate J,Republican,House,159.44593643286817,2024-06-15,Individual,LA,Tech Company,Engineer
+180,Candidate I,Republican,House,71.94030183683792,2024-09-12,Individual,MD,Self-Employed,Executive
+181,Candidate J,Republican,Governor,58.96662161438453,2024-10-09,Individual,ND,Retired,Professor
+182,Candidate H,Democrat,House,27.63158547631069,2024-01-03,Party Committee,WA,Self-Employed,Attorney
+183,Candidate J,Republican,House,112.92433214315679,2024-04-25,PAC,DE,Tech Company,Retired
+184,Candidate A,Democrat,House,160.67955483934745,2024-03-08,PAC,AR,Tech Company,Attorney
+185,Candidate F,Republican,Senate,145.66916397147946,2024-05-17,Individual,OR,Various Corp,Attorney
+186,Candidate C,Democrat,House,1624.3076560972763,2024-01-16,Individual,SD,Self-Employed,Professor
+187,Candidate D,Republican,House,710.3162953134434,2024-07-04,Individual,CA,Retired,Professor
+188,Candidate H,Republican,House,88.59413218474545,2024-06-26,Party Committee,OR,Self-Employed,Executive
+189,Candidate C,Democrat,Governor,5298.810807438718,2024-06-13,Individual,CO,Tech Company,Executive
+190,Candidate C,Republican,House,119.71225343826211,2024-01-13,Individual,NM,Self-Employed,Engineer
+191,Candidate E,Republican,Governor,85.445265266438,2024-08-14,Individual,IL,Self-Employed,Engineer
+192,Candidate I,Republican,Governor,566.7052277664209,2024-07-17,Individual,AK,Retired,Engineer
+193,Candidate J,Democrat,House,1185.120853425271,2024-03-09,Individual,WV,University,Attorney
+194,Candidate F,Republican,Governor,264.7285618110864,2024-07-18,Individual,IN,Self-Employed,Physician
+195,Candidate C,Republican,Senate,1904.7391312466643,2024-07-01,Individual,MN,Tech Company,Physician
+196,Candidate J,Republican,House,275.9074254377381,2024-04-17,Individual,AL,University,Physician
+197,Candidate H,Democrat,House,212.61450041629803,2024-06-27,Individual,DE,Self-Employed,Executive
+198,Candidate D,Democrat,Senate,7814.198492438867,2024-08-26,PAC,MA,Retired,Engineer
+199,Candidate E,Democrat,House,356.2245325269445,2024-10-22,Individual,NV,Various Corp,Professor
+200,Candidate E,Democrat,Governor,553.405586641368,2024-09-04,Individual,ID,Self-Employed,Attorney
+201,Candidate I,Democrat,House,201.53802002998881,2024-09-05,Individual,SD,University,Professor
+202,Candidate I,Democrat,House,224.3333757789754,2024-01-24,Individual,MS,Self-Employed,Executive
+203,Candidate F,Democrat,House,139.6717215278235,2024-06-10,Individual,FL,Tech Company,Professor
+204,Candidate D,Democrat,House,657.6988328848208,2024-02-13,Party Committee,OH,Retired,Physician
+205,Candidate I,Democrat,House,1474.6365637809492,2024-07-27,Individual,FL,University,Retired
+206,Candidate E,Republican,Senate,29.77145232320635,2024-09-21,Individual,NC,University,Engineer
+207,Candidate H,Democrat,Governor,128.32086642270326,2024-09-17,PAC,NM,Various Corp,Executive
+208,Candidate C,Republican,Senate,141.8480159573897,2024-01-26,PAC,HI,Self-Employed,Retired
+209,Candidate J,Democrat,Senate,142.69415870468745,2024-05-03,Individual,MN,Tech Company,Engineer
+210,Candidate A,Democrat,House,120.8718822646189,2024-02-23,PAC,MI,University,Professor
+211,Candidate A,Democrat,Senate,720.4631236699123,2024-07-24,Party Committee,AL,University,Professor
+212,Candidate F,Democrat,Senate,905.0399811335974,2024-04-22,Individual,MN,University,Executive
+213,Candidate J,Democrat,House,309.97500423883463,2024-02-23,Individual,CA,Various Corp,Executive
+214,Candidate A,Republican,House,1543.4620570941622,2024-08-19,PAC,FL,University,Attorney
+215,Candidate C,Democrat,House,364.570141744441,2024-08-04,PAC,IL,Tech Company,Professor
+216,Candidate I,Democrat,House,339.5672579125054,2024-03-13,PAC,AZ,Various Corp,Retired
+217,Candidate I,Democrat,Governor,546.2370065745556,2024-07-10,Individual,GA,Retired,Professor
+218,Candidate J,Republican,House,4855.483578374207,2024-10-17,Individual,IL,Tech Company,Attorney
+219,Candidate H,Republican,House,12.378803992110544,2024-08-21,Individual,WY,University,Physician
+220,Candidate A,Democrat,Senate,35.73221006779058,2024-07-22,Individual,WI,Self-Employed,Physician
+221,Candidate I,Republican,Governor,149.30586426386486,2024-06-19,Individual,UT,University,Retired
+222,Candidate D,Democrat,Senate,1219.3083013929781,2024-07-03,Individual,CA,University,Retired
+223,Candidate E,Republican,Senate,362.9505514087637,2024-04-30,Individual,MS,Tech Company,Engineer
+224,Candidate B,Democrat,Senate,311.9316692109292,2024-03-15,Individual,MS,Various Corp,Engineer
+225,Candidate A,Democrat,Senate,212.36650077298387,2024-02-28,Individual,FL,Retired,Attorney
+226,Candidate H,Democrat,House,649.1290805437976,2024-10-06,Party Committee,ID,Self-Employed,Retired
+227,Candidate A,Republican,House,1968.4898079962284,2024-10-14,Individual,TN,Self-Employed,Engineer
+228,Candidate J,Democrat,Governor,292.07447716271616,2024-08-02,Individual,AK,University,Physician
+229,Candidate H,Republican,House,644.2655751739056,2024-10-02,Individual,VT,Retired,Retired
+230,Candidate C,Democrat,Senate,159.25970342801895,2024-08-17,Individual,OH,Self-Employed,Physician
+231,Candidate B,Democrat,House,990.2323547670385,2024-09-27,Individual,VT,Various Corp,Executive
+232,Candidate E,Republican,Governor,4099.957406919677,2024-07-30,Individual,CT,Retired,Engineer
+233,Candidate D,Democrat,Senate,353.91147539961787,2024-02-03,Individual,TN,Retired,Attorney
+234,Candidate H,Democrat,House,93.46735795524782,2024-08-01,Individual,WI,Retired,Physician
+235,Candidate G,Democrat,House,1240.6410059925897,2024-09-28,Party Committee,IL,Tech Company,Retired
+236,Candidate E,Democrat,House,64.2298829152153,2024-07-17,Party Committee,NM,Self-Employed,Physician
+237,Candidate H,Republican,Senate,60.62365788166682,2024-03-06,PAC,AR,Retired,Professor
+238,Candidate J,Republican,Senate,148.24054927373135,2024-06-03,Individual,NE,University,Retired
+239,Candidate A,Republican,Senate,473.46342866137087,2024-08-16,Individual,NH,Various Corp,Physician
+240,Candidate G,Democrat,House,270.47241943660214,2024-05-16,Individual,NY,Retired,Professor
+241,Candidate F,Democrat,Senate,30.8759306304864,2024-05-23,Individual,MD,Retired,Attorney
+242,Candidate D,Republican,House,152.0488129235304,2024-04-23,PAC,CO,Retired,Professor
+243,Candidate D,Republican,House,1248.4096544612,2024-03-28,Individual,WI,Self-Employed,Physician
+244,Candidate B,Republican,House,1440.9053774017805,2024-04-03,Party Committee,AK,University,Professor
+245,Candidate B,Democrat,House,818.2990755044628,2024-09-14,Individual,TX,Retired,Attorney
+246,Candidate B,Republican,Governor,706.081271856983,2024-10-16,Individual,KY,Retired,Retired
+247,Candidate A,Democrat,Governor,608.9988782730812,2024-01-20,PAC,KS,Retired,Executive
+248,Candidate F,Republican,House,239.2787453311141,2024-03-20,PAC,NC,University,Professor
+249,Candidate E,Republican,Governor,1340.9759974585963,2024-04-03,PAC,FL,University,Executive
+250,Candidate J,Democrat,House,955.9524622678069,2024-07-28,Individual,LA,Retired,Attorney
+251,Candidate J,Democrat,House,1168.0829272062501,2024-01-14,Individual,IA,Self-Employed,Attorney
+252,Candidate A,Republican,Governor,147.96998871277762,2024-02-09,Individual,WI,Various Corp,Physician
+253,Candidate J,Republican,Senate,401.9119642077573,2024-02-03,Party Committee,GA,Various Corp,Attorney
+254,Candidate B,Democrat,House,26.066908922805887,2024-06-15,Individual,MD,Retired,Retired
+255,Candidate I,Democrat,House,16.19335297213707,2024-04-12,Individual,ID,University,Executive
+256,Candidate J,Republican,Governor,336.74702431433695,2024-03-24,Individual,OK,Tech Company,Engineer
+257,Candidate H,Republican,House,109.29871697426904,2024-02-08,Individual,VT,Self-Employed,Physician
+258,Candidate A,Republican,Governor,148.30796246541473,2024-02-13,Individual,RI,Self-Employed,Retired
+259,Candidate D,Democrat,House,252.72680458220427,2024-09-03,Individual,MA,Tech Company,Attorney
+260,Candidate C,Democrat,Governor,1039.377557605997,2024-09-24,PAC,WA,Self-Employed,Executive
+261,Candidate E,Republican,Governor,762.5362211123352,2024-07-23,Individual,TN,Tech Company,Professor
+262,Candidate E,Republican,Senate,2341.506887272904,2024-06-24,Individual,NE,Tech Company,Attorney
+263,Candidate D,Democrat,Senate,31.05665617444526,2024-08-19,Individual,ND,Various Corp,Executive
+264,Candidate J,Democrat,House,805.7326045318791,2024-08-08,Individual,NV,Retired,Executive
+265,Candidate G,Republican,House,1818.1252206801864,2024-09-07,PAC,MS,University,Attorney
+266,Candidate F,Democrat,House,2156.0021775873834,2024-02-24,PAC,MD,University,Retired
+267,Candidate H,Republican,Senate,2037.3580252486631,2024-09-13,PAC,VT,Self-Employed,Executive
+268,Candidate A,Republican,House,218.49318810078864,2024-10-23,PAC,NY,Self-Employed,Engineer
+269,Candidate I,Republican,Governor,693.2702576315072,2024-09-05,Individual,PA,Various Corp,Retired
+270,Candidate A,Democrat,House,505.23879352207734,2024-07-17,Individual,OR,Self-Employed,Attorney
+271,Candidate A,Republican,House,5300.5519462267775,2024-07-27,Individual,DE,Various Corp,Engineer
+272,Candidate B,Democrat,House,1361.0677175018495,2024-07-26,Individual,OH,Retired,Attorney
+273,Candidate H,Republican,Governor,112.47965642858702,2024-04-24,Individual,AL,Various Corp,Retired
+274,Candidate E,Democrat,House,676.3879505248815,2024-02-24,PAC,AK,Retired,Professor
+275,Candidate H,Republican,House,106.53177027175482,2024-02-06,PAC,UT,Self-Employed,Physician
+276,Candidate E,Democrat,House,931.5764294152028,2024-06-18,Individual,WI,University,Executive
+277,Candidate C,Democrat,House,1580.8177700534898,2024-04-18,Individual,TX,Various Corp,Executive
+278,Candidate J,Democrat,House,94.34444644350246,2024-02-04,Individual,ID,Self-Employed,Physician
+279,Candidate J,Republican,House,199.06444671394263,2024-01-19,Individual,RI,Self-Employed,Engineer
+280,Candidate E,Democrat,House,963.3258271664602,2024-02-14,Individual,MD,Various Corp,Engineer
+281,Candidate D,Republican,Governor,554.7854019805696,2024-06-18,Individual,MO,Retired,Professor
+282,Candidate H,Republican,House,79.56652880099828,2024-07-13,Individual,NE,Various Corp,Engineer
+283,Candidate F,Democrat,Governor,60.12008950947727,2024-08-21,Individual,TN,Retired,Professor
+284,Candidate I,Republican,House,562.0032691473184,2024-01-30,Individual,DE,Self-Employed,Retired
+285,Candidate H,Democrat,House,626.3181707897329,2024-01-11,Individual,CT,Tech Company,Engineer
+286,Candidate A,Democrat,House,417.8351088930053,2024-07-13,Individual,CO,University,Engineer
+287,Candidate I,Democrat,House,5887.703450056038,2024-06-11,Individual,TN,University,Professor
+288,Candidate A,Republican,Governor,22752.53831547513,2024-01-14,Individual,MI,University,Engineer
+289,Candidate C,Republican,House,13167.035957062473,2024-09-24,Individual,ND,Self-Employed,Physician
+290,Candidate A,Democrat,House,30.038551735342164,2024-02-06,PAC,TN,Retired,Retired
+291,Candidate G,Republican,House,743.874509971717,2024-08-07,Party Committee,IA,Retired,Engineer
+292,Candidate J,Republican,Senate,277.3083296437942,2024-04-16,Individual,VA,Retired,Executive
+293,Candidate C,Republican,House,442.8406223073539,2024-03-31,Party Committee,ME,Various Corp,Executive
+294,Candidate E,Republican,Senate,396.5205041433815,2024-09-20,Individual,IA,Self-Employed,Professor
+295,Candidate E,Republican,Governor,1040.1620970160602,2024-04-25,PAC,SD,Self-Employed,Executive
+296,Candidate I,Republican,Senate,1895.9338344235482,2024-02-25,Individual,KS,Tech Company,Engineer
+297,Candidate A,Democrat,House,645.9537269289925,2024-02-14,Individual,ID,Retired,Physician
+298,Candidate F,Republican,House,1848.739346633838,2024-03-12,Individual,CA,Retired,Physician
+299,Candidate C,Democrat,House,623.8381711253985,2024-04-06,Individual,MN,University,Physician
+300,Candidate I,Democrat,House,1081.5944310280252,2024-08-13,PAC,IL,Tech Company,Professor
+301,Candidate I,Republican,House,345.56283211941815,2024-05-30,Individual,IL,Various Corp,Engineer
+302,Candidate I,Republican,House,586.376349899399,2024-02-15,Individual,MD,Tech Company,Retired
+303,Candidate F,Democrat,House,335.650304598411,2024-06-16,Individual,SC,Self-Employed,Retired
+304,Candidate G,Democrat,Senate,554.2712212932036,2024-06-24,Individual,GA,Various Corp,Attorney
+305,Candidate A,Republican,House,536.0951039374285,2024-08-30,Individual,HI,Retired,Retired
+306,Candidate F,Democrat,House,896.246994368437,2024-02-17,Individual,AR,Various Corp,Physician
+307,Candidate J,Democrat,House,507.1620920201988,2024-01-28,Individual,MA,Self-Employed,Physician
+308,Candidate D,Democrat,Senate,127.01853748567083,2024-04-12,Individual,AL,University,Engineer
+309,Candidate F,Democrat,House,827.6338961691753,2024-02-16,Individual,ME,Various Corp,Attorney
+310,Candidate G,Republican,House,143.30011093923065,2024-06-28,PAC,NH,Various Corp,Professor
+311,Candidate J,Republican,House,8153.527574326303,2024-02-24,Party Committee,MA,Tech Company,Attorney
+312,Candidate F,Republican,House,59.68184835902828,2024-08-22,Individual,AL,Tech Company,Physician
+313,Candidate F,Republican,House,7136.209495946528,2024-05-28,Individual,VA,Self-Employed,Engineer
+314,Candidate H,Republican,House,532.0136687399997,2024-05-03,PAC,NH,Tech Company,Engineer
+315,Candidate C,Democrat,Governor,303.43346742576455,2024-07-15,Individual,CO,Self-Employed,Physician
+316,Candidate E,Democrat,Senate,44.50366467560044,2024-05-04,Individual,VA,Various Corp,Executive
+317,Candidate I,Republican,House,145.99416735609472,2024-02-14,Individual,SD,University,Physician
+318,Candidate D,Democrat,House,277.3623589558094,2024-04-24,Party Committee,MN,Retired,Executive
+319,Candidate F,Democrat,House,116.96115355200666,2024-10-23,Individual,OR,Tech Company,Physician
+320,Candidate E,Democrat,Senate,356.39467142784645,2024-07-01,Individual,WI,Self-Employed,Professor
+321,Candidate I,Democrat,Senate,262.8217900840374,2024-08-31,Individual,TN,Various Corp,Retired
+322,Candidate J,Republican,House,37.27819288168227,2024-02-21,Individual,ID,Retired,Physician
+323,Candidate A,Democrat,Governor,2137.9064231074767,2024-07-02,Individual,SD,Various Corp,Professor
+324,Candidate E,Republican,House,568.1994658941993,2024-09-07,PAC,WI,Retired,Retired
+325,Candidate I,Republican,House,52.46234661785859,2024-03-25,Individual,FL,Self-Employed,Retired
+326,Candidate A,Republican,House,4010.929530479791,2024-04-04,PAC,MS,Retired,Attorney
+327,Candidate E,Democrat,House,469.70543758709937,2024-02-18,Individual,NM,Self-Employed,Engineer
+328,Candidate A,Republican,House,142.92760766656858,2024-06-07,Individual,TN,Self-Employed,Physician
+329,Candidate D,Republican,House,137.12006824918637,2024-01-22,Individual,NY,Various Corp,Physician
+330,Candidate A,Republican,House,450.1646672985995,2024-02-11,Individual,UT,University,Engineer
+331,Candidate C,Democrat,House,609.4506530065659,2024-05-16,Individual,AZ,Tech Company,Attorney
+332,Candidate G,Republican,House,27.19827490557929,2024-02-07,PAC,VA,Tech Company,Professor
+333,Candidate E,Republican,Senate,79.47499686647623,2024-02-12,Individual,IN,Retired,Professor
+334,Candidate G,Democrat,House,38.31232741049215,2024-01-23,Individual,NY,Various Corp,Professor
+335,Candidate E,Democrat,Senate,862.8131993803869,2024-02-13,Individual,AL,Self-Employed,Attorney
+336,Candidate G,Republican,Senate,993.9886971742045,2024-06-24,Individual,ND,Retired,Engineer
+337,Candidate B,Democrat,Senate,10984.485223230111,2024-07-19,Individual,VA,Tech Company,Engineer
+338,Candidate B,Democrat,House,1021.6456733469194,2024-04-04,Party Committee,AL,Tech Company,Attorney
+339,Candidate I,Republican,House,429.1688574376654,2024-03-01,PAC,VA,Tech Company,Professor
+340,Candidate E,Democrat,Senate,1034.53606430947,2024-04-26,Party Committee,GA,Self-Employed,Professor
+341,Candidate A,Democrat,Senate,615.5013993678825,2024-10-18,Individual,OK,University,Professor
+342,Candidate C,Democrat,House,227.44153800781802,2024-10-17,PAC,MN,Tech Company,Executive
+343,Candidate B,Republican,House,671.1998449268333,2024-08-11,Individual,SD,Tech Company,Physician
+344,Candidate A,Republican,Senate,1155.6817758729478,2024-10-20,Party Committee,AR,Various Corp,Physician
+345,Candidate D,Democrat,House,40.9942176417184,2024-06-20,Individual,IN,Self-Employed,Retired
+346,Candidate F,Democrat,House,112.36258267509538,2024-06-21,Individual,PA,Retired,Professor
+347,Candidate J,Democrat,House,234.75937891521767,2024-08-15,PAC,CT,Various Corp,Engineer
+348,Candidate A,Democrat,Governor,345.19716105109336,2024-05-22,Individual,NJ,Self-Employed,Retired
+349,Candidate A,Democrat,House,1666.0069313578651,2024-07-06,Individual,MS,Retired,Executive
+350,Candidate I,Republican,House,186.26223713484586,2024-10-26,Individual,MA,Various Corp,Engineer
+351,Candidate J,Democrat,Senate,86.08584916345718,2024-02-24,PAC,PA,Various Corp,Engineer
+352,Candidate B,Republican,Senate,262.5466686311204,2024-05-13,Individual,MT,Tech Company,Engineer
+353,Candidate G,Democrat,Senate,746.2729020771586,2024-05-11,Individual,AZ,Various Corp,Attorney
+354,Candidate I,Democrat,Senate,59.484512766839146,2024-02-11,Party Committee,LA,Various Corp,Professor
+355,Candidate F,Democrat,House,90.59313123277641,2024-04-23,Individual,MS,Various Corp,Professor
+356,Candidate H,Democrat,House,278.2967204323047,2024-01-28,Individual,TN,Tech Company,Professor
+357,Candidate J,Republican,Governor,66.54108750573091,2024-01-22,Individual,KS,Self-Employed,Professor
+358,Candidate D,Democrat,Senate,1160.5881652023993,2024-07-07,Individual,UT,Retired,Professor
+359,Candidate D,Republican,Governor,2830.8662077755466,2024-03-09,Individual,RI,Retired,Physician
+360,Candidate D,Democrat,House,385.5142422786846,2024-04-03,Individual,MA,Tech Company,Professor
+361,Candidate E,Republican,House,2314.642247681664,2024-03-03,Individual,GA,Various Corp,Executive
+362,Candidate J,Republican,Governor,1511.0580956049291,2024-10-23,PAC,SC,Tech Company,Attorney
+363,Candidate C,Republican,House,213.07169245679566,2024-06-09,Individual,IN,University,Executive
+364,Candidate D,Republican,Senate,730.9324196897677,2024-03-27,Individual,OR,Retired,Attorney
+365,Candidate D,Democrat,House,69.47591138485534,2024-05-24,Individual,HI,Retired,Retired
+366,Candidate C,Republican,House,3851.35586110371,2024-03-25,Individual,NJ,Self-Employed,Engineer
+367,Candidate A,Democrat,Senate,912.4886061602198,2024-01-20,Individual,MT,Self-Employed,Attorney
+368,Candidate C,Republican,House,2742.340834968604,2024-04-01,PAC,UT,Self-Employed,Professor
+369,Candidate F,Democrat,House,257.2359784372245,2024-01-31,Individual,NM,Retired,Physician
+370,Candidate F,Republican,House,14.438924372975745,2024-08-14,Individual,AK,Self-Employed,Professor
+371,Candidate F,Republican,Senate,353.06329744132466,2024-04-05,Individual,KY,University,Engineer
+372,Candidate G,Democrat,Senate,814.595784557469,2024-03-15,Individual,MT,Tech Company,Executive
+373,Candidate E,Democrat,House,1218.1464552298987,2024-04-19,Individual,IL,University,Retired
+374,Candidate J,Democrat,Senate,52.38316150736395,2024-04-08,PAC,CT,Various Corp,Executive
+375,Candidate F,Democrat,Governor,7937.874003896622,2024-07-18,Individual,NE,Various Corp,Physician
+376,Candidate H,Democrat,House,3938.421740771769,2024-02-08,PAC,NH,Various Corp,Physician
+377,Candidate D,Republican,House,84.32380093019732,2024-04-06,Individual,AZ,Self-Employed,Executive
+378,Candidate A,Democrat,Senate,403.0238742635436,2024-07-24,Party Committee,MI,Self-Employed,Retired
+379,Candidate H,Republican,House,214.53898249483711,2024-08-01,Individual,OR,Retired,Physician
+380,Candidate J,Republican,Senate,5350.394196747802,2024-06-09,Individual,MT,Self-Employed,Engineer
+381,Candidate B,Democrat,Senate,2234.9694745688116,2024-04-28,Individual,CO,Various Corp,Retired
+382,Candidate B,Republican,Governor,93.00138412743225,2024-08-20,Individual,NE,Self-Employed,Executive
+383,Candidate I,Democrat,Senate,2336.913803064456,2024-06-15,Individual,ID,Various Corp,Engineer
+384,Candidate B,Republican,House,759.9975490694054,2024-10-01,Individual,NC,Retired,Professor
+385,Candidate J,Republican,Senate,323.10834962522523,2024-02-26,Individual,MA,University,Engineer
+386,Candidate B,Democrat,Senate,915.1333882812975,2024-10-11,PAC,ME,Tech Company,Engineer
+387,Candidate G,Republican,Senate,990.6048172519078,2024-01-23,Individual,ND,Retired,Executive
+388,Candidate C,Republican,House,2824.0864250753907,2024-03-16,Individual,NC,Self-Employed,Executive
+389,Candidate J,Republican,House,39.127874326458155,2024-02-16,Individual,KS,Tech Company,Professor
+390,Candidate B,Republican,House,412.85697249494405,2024-08-28,Individual,CT,Tech Company,Engineer
+391,Candidate B,Democrat,Senate,237.91912705671345,2024-01-02,PAC,NV,University,Attorney
+392,Candidate I,Democrat,Senate,78.46118832965394,2024-04-05,Individual,ND,Tech Company,Attorney
+393,Candidate I,Democrat,House,817.1536550726905,2024-05-29,Individual,IN,Tech Company,Retired
+394,Candidate I,Republican,Governor,461.0862299652627,2024-08-10,Individual,SC,Various Corp,Retired
+395,Candidate B,Democrat,House,802.5188256618983,2024-09-08,Individual,NM,Various Corp,Attorney
+396,Candidate H,Democrat,House,2258.4245907785776,2024-10-12,Individual,DE,Retired,Engineer
+397,Candidate J,Republican,House,2489.017612814065,2024-06-14,Individual,IA,Self-Employed,Retired
+398,Candidate B,Democrat,Senate,1129.5039692508492,2024-02-18,Individual,ID,Tech Company,Engineer
+399,Candidate H,Republican,Senate,952.7569058344435,2024-09-14,Individual,RI,University,Engineer
+400,Candidate I,Democrat,House,72.72401441687585,2024-01-04,Party Committee,MD,Retired,Professor
+401,Candidate C,Republican,Senate,126.56518886418151,2024-04-05,Individual,TX,Various Corp,Attorney
+402,Candidate D,Republican,Senate,121.53884805817694,2024-07-26,Individual,LA,Various Corp,Physician
+403,Candidate J,Democrat,House,897.0805311775877,2024-01-13,Individual,MT,Various Corp,Executive
+404,Candidate G,Republican,Governor,1781.8467067792249,2024-04-23,Individual,AZ,Tech Company,Attorney
+405,Candidate D,Democrat,Governor,96.51806847605803,2024-01-03,Individual,NY,Tech Company,Attorney
+406,Candidate D,Republican,House,567.4456292518422,2024-06-13,Individual,RI,Retired,Retired
+407,Candidate H,Republican,House,2217.0109087194246,2024-09-17,Individual,NJ,Retired,Engineer
+408,Candidate I,Republican,Governor,4012.2953878681633,2024-09-14,Individual,UT,Retired,Retired
+409,Candidate A,Republican,House,911.6217471885263,2024-05-29,Party Committee,NE,Retired,Retired
+410,Candidate H,Republican,House,945.4204170764599,2024-07-20,PAC,GA,Self-Employed,Physician
+411,Candidate D,Democrat,House,544.8027043455924,2024-04-06,Individual,NY,Retired,Engineer
+412,Candidate J,Democrat,Governor,133.68314720271357,2024-01-19,PAC,ND,Retired,Retired
+413,Candidate F,Republican,Senate,285.3986216355222,2024-05-16,Individual,CO,Tech Company,Retired
+414,Candidate J,Republican,Governor,521.7651730667361,2024-04-14,PAC,VA,Retired,Engineer
+415,Candidate H,Republican,Governor,300.90893814904996,2024-08-03,Individual,OK,Retired,Attorney
+416,Candidate E,Democrat,House,155.00771133814126,2024-02-29,Individual,MI,Tech Company,Professor
+417,Candidate J,Democrat,House,251.13933025750262,2024-09-25,Individual,HI,Self-Employed,Engineer
+418,Candidate F,Democrat,House,10,2024-08-20,PAC,LA,Various Corp,Retired
+419,Candidate D,Republican,Senate,305.5410949427502,2024-09-10,Individual,OH,Self-Employed,Attorney
+420,Candidate G,Democrat,House,40.6189025323257,2024-05-14,Individual,KS,Various Corp,Engineer
+421,Candidate H,Democrat,Senate,67.273634869544,2024-07-20,Individual,NV,Various Corp,Engineer
+422,Candidate F,Democrat,Senate,1244.7200453175176,2024-05-26,PAC,NM,Retired,Engineer
+423,Candidate E,Democrat,House,122.12378887539234,2024-08-14,Individual,ID,Various Corp,Professor
+424,Candidate A,Republican,Governor,45.999364171889525,2024-08-18,Individual,MO,Retired,Executive
+425,Candidate B,Democrat,House,91.80852670759822,2024-03-28,Individual,RI,Tech Company,Physician
+426,Candidate B,Republican,House,2600.689025686747,2024-08-12,Individual,AL,University,Retired
+427,Candidate D,Republican,Senate,280.36566848922075,2024-04-19,Individual,ID,Various Corp,Retired
+428,Candidate H,Republican,Governor,1373.4285539515881,2024-05-18,Individual,ME,Retired,Executive
+429,Candidate B,Democrat,Governor,10,2024-02-24,PAC,IA,Retired,Attorney
+430,Candidate H,Democrat,House,507.5884088185647,2024-01-16,Individual,RI,Various Corp,Physician
+431,Candidate F,Republican,House,12.294048015919174,2024-04-15,Party Committee,RI,University,Executive
+432,Candidate H,Democrat,House,648.9068685043967,2024-08-06,Individual,CA,Tech Company,Physician
+433,Candidate E,Republican,House,397.02766588583245,2024-04-13,Individual,KS,Self-Employed,Professor
+434,Candidate G,Republican,House,16.769424261655423,2024-05-22,Individual,ND,Tech Company,Attorney
+435,Candidate H,Republican,Senate,4216.248069040949,2024-05-27,PAC,OH,Self-Employed,Physician
+436,Candidate F,Democrat,House,207.63452106270438,2024-07-19,Individual,MO,Tech Company,Executive
+437,Candidate B,Republican,House,56.331783936246964,2024-06-08,Individual,AZ,University,Engineer
+438,Candidate C,Democrat,House,859.0004580610864,2024-06-19,Party Committee,AZ,Self-Employed,Retired
+439,Candidate H,Republican,Governor,66.04352327850526,2024-01-26,Individual,VA,University,Engineer
+440,Candidate I,Republican,Senate,974.2932461382256,2024-09-13,Individual,OK,Retired,Professor
+441,Candidate J,Democrat,House,1252.5853891807135,2024-03-03,Individual,NM,Tech Company,Executive
+442,Candidate I,Democrat,House,1406.795872253884,2024-05-02,Individual,VA,Various Corp,Engineer
+443,Candidate C,Republican,Senate,1317.9695880283796,2024-04-06,Individual,IL,Self-Employed,Professor
+444,Candidate C,Democrat,House,184.2247699856664,2024-06-22,Individual,ME,Various Corp,Retired
+445,Candidate A,Republican,House,85.13611311552408,2024-04-17,PAC,OR,Various Corp,Engineer
+446,Candidate G,Democrat,Senate,258.90688547535524,2024-03-18,Individual,NY,University,Engineer
+447,Candidate A,Democrat,House,49.0751618258205,2024-02-15,Individual,WI,Various Corp,Professor
+448,Candidate B,Republican,House,280.3112478863964,2024-02-02,PAC,PA,Various Corp,Physician
+449,Candidate B,Republican,House,47.903584934851374,2024-06-22,Individual,NC,University,Retired
+450,Candidate F,Republican,House,1353.4284497192098,2024-09-01,Individual,MI,Tech Company,Executive
+451,Candidate F,Republican,House,382.35160449428247,2024-02-27,Individual,GA,Self-Employed,Physician
+452,Candidate I,Republican,House,160.31660706374313,2024-04-14,Individual,IA,Retired,Executive
+453,Candidate E,Republican,House,443.92931935570147,2024-07-02,Individual,NH,Self-Employed,Retired
+454,Candidate G,Democrat,Senate,2996.9120505212913,2024-05-05,Individual,WA,Tech Company,Attorney
+455,Candidate E,Democrat,House,88.47365929531018,2024-09-09,Party Committee,MI,Self-Employed,Retired
+456,Candidate A,Democrat,House,241.5116058158145,2024-05-04,Individual,AK,Tech Company,Executive
+457,Candidate E,Republican,Governor,12.15053085715588,2024-07-16,Individual,GA,Self-Employed,Executive
+458,Candidate F,Republican,House,635.1037904042348,2024-05-15,Individual,NH,Tech Company,Engineer
+459,Candidate G,Democrat,Senate,1528.9277515888532,2024-10-24,Individual,WI,Tech Company,Physician
+460,Candidate D,Democrat,Senate,1356.057962010661,2024-10-17,Individual,MO,Self-Employed,Physician
+461,Candidate F,Republican,House,359.929852277145,2024-03-26,PAC,NJ,University,Engineer
+462,Candidate G,Democrat,Governor,343.6572292255782,2024-10-26,Individual,ID,Tech Company,Retired
+463,Candidate C,Democrat,Governor,92.14880113932601,2024-10-06,Party Committee,OK,Retired,Executive
+464,Candidate C,Democrat,House,258.18792649627994,2024-10-22,Individual,WY,Retired,Executive
+465,Candidate E,Republican,Governor,1186.4098268929533,2024-01-04,Individual,CA,Tech Company,Physician
+466,Candidate E,Republican,House,10.956624457062498,2024-06-26,Individual,TN,Various Corp,Engineer
+467,Candidate H,Democrat,House,1426.9270987702785,2024-02-06,Individual,OR,Tech Company,Engineer
+468,Candidate D,Democrat,House,68.78194713368848,2024-10-26,Individual,GA,University,Physician
+469,Candidate I,Democrat,House,10281.185965887187,2024-05-13,Individual,WY,Retired,Engineer
+470,Candidate J,Republican,House,106.44433255235931,2024-01-23,Individual,IN,Retired,Executive
+471,Candidate B,Republican,House,554.2968595105308,2024-02-03,Individual,AK,Self-Employed,Engineer
+472,Candidate J,Democrat,Senate,613.2452256113384,2024-09-10,Individual,OH,Tech Company,Engineer
+473,Candidate G,Republican,Senate,3638.9071546073287,2024-05-09,Party Committee,CO,University,Executive
+474,Candidate B,Republican,House,17.26299177502344,2024-07-01,PAC,AK,Various Corp,Attorney
+475,Candidate F,Democrat,Senate,188.97571989597645,2024-03-15,Individual,CA,Retired,Retired
+476,Candidate B,Democrat,House,17.841708859967593,2024-10-05,PAC,VA,University,Professor
+477,Candidate G,Democrat,House,1420.5962732283165,2024-08-13,PAC,IN,Self-Employed,Engineer
+478,Candidate H,Republican,House,316.08862305163086,2024-07-07,Individual,SD,Various Corp,Professor
+479,Candidate F,Democrat,House,1087.7361132333183,2024-04-25,Individual,MS,University,Professor
+480,Candidate B,Republican,House,716.3718210997221,2024-01-29,Individual,PA,Various Corp,Attorney
+481,Candidate J,Democrat,Governor,118.15161841429283,2024-01-01,Individual,NH,Tech Company,Retired
+482,Candidate J,Republican,House,2949.5609476385466,2024-01-09,Individual,ME,Tech Company,Executive
+483,Candidate A,Democrat,Governor,1503.459801127232,2024-05-08,PAC,OH,Tech Company,Retired
+484,Candidate H,Republican,House,3476.142762481349,2024-06-30,Individual,CT,Various Corp,Executive
+485,Candidate A,Republican,Senate,817.5842012340089,2024-09-26,PAC,AZ,University,Retired
+486,Candidate I,Republican,House,991.7663305025122,2024-07-21,Individual,ND,University,Engineer
+487,Candidate A,Republican,Governor,218.13147959425962,2024-02-04,Individual,KY,Various Corp,Professor
+488,Candidate G,Republican,Governor,283.66114291930535,2024-09-09,Individual,NC,Tech Company,Retired
+489,Candidate F,Democrat,Senate,42.40714318803602,2024-07-05,PAC,IN,Retired,Executive
+490,Candidate B,Republican,House,363.39411811970865,2024-01-03,Individual,NV,Various Corp,Engineer
+491,Candidate C,Democrat,House,69.79959206284677,2024-09-22,Individual,KS,Self-Employed,Retired
+492,Candidate H,Democrat,Senate,355.5702080993821,2024-03-10,Individual,NH,University,Physician
+493,Candidate J,Democrat,House,1366.0419572286662,2024-01-27,Party Committee,RI,Self-Employed,Retired
+494,Candidate B,Republican,House,1151.7385996131452,2024-08-09,PAC,NM,Retired,Executive
+495,Candidate F,Republican,House,1634.919637118318,2024-09-04,Party Committee,SC,University,Retired
+496,Candidate H,Democrat,House,475.17915626200346,2024-08-03,Individual,AZ,University,Engineer
+497,Candidate F,Democrat,Senate,456.13387107150135,2024-09-28,Individual,CA,Self-Employed,Retired
+498,Candidate A,Democrat,House,75.954531714164375,2024-01-26,PAC,NY,Tech Company,Engineer
+499,Candidate G,Republican,Senate,2787.328819019815,2024-06-13,Party Committee,VT,Retired,Physician
+500,Candidate C,Republican,Senate,450.8815387662636,2024-05-28,Individual,OR,Tech Company,Attorney
