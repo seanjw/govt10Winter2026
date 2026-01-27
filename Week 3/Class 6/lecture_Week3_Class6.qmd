@@ -1,0 +1,923 @@
+---
+title: "Week 3, Class 6"
+subtitle: "Research Designs"
+author: "Sean Westwood"
+format:
+  revealjs:
+    theme: black
+    slide-number: true
+    preview-links: auto
+    html-math-method: katex
+    css: ../../styles/slides.css
+    transition: 'fade'
+    print-background: true
+    self-contained: true
+  pdf:
+    toc: false
+    number-sections: false
+    colorlinks: true
+---
+
+```{r setup}
+#| include: false
+#| eval: true
+library(tidyverse)
+set.seed(123)
+
+# Detect output format and set colors for plots
+is_pdf <- knitr::is_latex_output()
+text_col <- if(is_pdf) "black" else "white"
+bg_col <- if(is_pdf) "white" else "transparent"
+line_col <- if(is_pdf) "black" else "white"
+```
+
+## In Today's Class
+
+- Experimental and observational research designs
+- Natural experiments and their advantages
+- Cross-sectional vs. longitudinal data
+- Evaluating tradeoffs between different designs
+
+## Recap: Summarise v. Mutate
+
+![](../../images/summarise.v.mutate.png){fig-align="center"}
+
+# What Determines A Research Design?
+
+## Research Questions
+
+**Consider this question**: "Does Trump's anti-vaccine rhetoric reduce vaccination rates among his supporters?"
+
+**Three possible approaches:**
+
+-   **Approach 1**: Survey people about Trump and their vaccination status
+-   **Approach 2**: Compare vaccination rates in Trump vs. Biden counties
+-   **Approach 3**: Track the same people's vaccination status before and after seeing or not seeing Trump statements on vaccines
+
+::: highlight-box
+The design determines whether we can answer the question!
+:::
+
+# The Three Main Types of Research Designs
+
+## Research Design Taxonomy
+
+```{mermaid}
+graph TB
+    A["🔬 Research Designs<br/>for Political Science"]
+    
+    A --> B["🎯 Experimental<br/>Designs"]
+    A --> C["🔍 Observational<br/>Causal Designs"]
+    A --> D["📊 Observational<br/>Descriptive Designs"]
+    
+    B --> E["🎲 Survey<br/>Experiments"]
+    B --> F["⚖Lab<br/>Experiments"]
+    
+    C --> H["🌿 Natural<br/>Experiments"]
+    C --> I["📈 Regression<br/>Discontinuity"]
+    C --> J["⏱️ Difference-in-<br/>Differences"]
+    
+    D --> K["📋 Cross-sectional<br/>Surveys"]
+    D --> L["📚 Case<br/>Studies"]
+    D --> M["🔄 Panel<br/>Studies"]
+    
+    classDef startNode fill:#1a2332,stroke:#4fc3f7,stroke-width:3px,color:#e3f2fd
+    classDef easyNode fill:#1b2d1b,stroke:#4caf50,stroke-width:2px,color:#e8f5e8
+    classDef endNode fill:#1a2332,stroke:#00bcd4,stroke-width:3px,color:#e3f2fd
+    classDef difficultNode fill:#2d1b17,stroke:#ff9800,stroke-width:2px,color:#fff3e0
+    
+    class A startNode
+    class B,E,F,G easyNode
+    class C,H,I,J endNode
+    class D,K,L,M difficultNode
+```
+
+# Experimental Designs: The Gold Standard
+
+## What Makes an Experiment?
+
+**Two key features:**
+
+1.  **Random Assignment**: Researchers control who gets what treatment
+2.  **Control Groups**: Direct comparison between treated and untreated groups
+
+::: example-box
+**Example**: Testing whether voter reminders increase turnout
+
+-   **Random Assignment**: Flip a coin to decide who gets reminder calls
+-   **Control Group**: People who don't receive calls
+-   **Treatment Group**: People who receive calls
+-   **Comparison**: Turnout rates between the two groups
+:::
+
+## Why Random Assignment Matters
+
+**The Problem**: People are different in many ways
+
+-   Some people always vote, others never do
+-   Some are more politically engaged
+-   Some have more flexible schedules
+
+## Why Random Assignment
+
+**Without random assignment, groups can be very different:**
+
+::::: columns
+::: {.column width="50%"}
+```{r dev="png", bg="transparent", dev.args=list(bg="transparent")}
+#| echo: false
+#| eval: true
+#| fig-width: 8
+#| fig-height: 6
+
+library(tidyverse)
+
+# Create imbalanced groups to show the problem
+set.seed(123)
+imbalanced_data <- tibble(
+  group = c(rep("Group 1", 100), rep("Group 2", 100)),
+  # Treatment group has more men, higher income, more education
+  gender = c(
+    sample(c("Male", "Female"), 100, replace = TRUE, prob = c(0.73, 0.27)),  # Treatment: 70% male
+    sample(c("Male", "Female"), 100, replace = TRUE, prob = c(0.1, 0.9))   # Control: 40% male
+  )
+)
+
+# Create visualization showing the imbalance
+gender_summary <- imbalanced_data %>% 
+  count(group, gender) %>% 
+  group_by(group) %>% 
+  mutate(percentage = n / sum(n) * 100,
+         label = paste0(round(percentage, 0), "%"))
+
+gender_plot <- gender_summary %>% 
+  ggplot(aes(x = group, y = percentage, fill = gender)) +
+  geom_col(position = "stack", width = 0.6, alpha = 0.9) +
+  geom_text(aes(label = label), 
+            position = position_stack(vjust = 0.5), 
+            color = "white", 
+            size = 4, 
+            fontface = "bold") +
+  scale_fill_manual(values = c("Female" = "#e6308a", "Male" = "#0073e6")) +
+  labs(title = "",
+       x = "", y = "Percentage", fill = "Gender") +
+  scale_y_continuous(limits = c(0, 100), expand = c(0, 0)) +
+  theme_minimal() +
+  theme(plot.title = element_text(size = 16, color = "white", hjust = 0.5, face = "bold"),
+        axis.text.x = element_text(color = "white", size = 11, face = "bold"),
+        axis.text.y = element_text(color = "white", size = 10),
+        axis.title.y = element_text(color = "white", size = 11, face = "bold"),
+        legend.text = element_text(color = "white", size = 10),
+        legend.title = element_text(color = "white", size = 11, face = "bold"),
+        legend.position = "bottom",
+        panel.grid = element_blank(),
+        plot.background = element_rect(fill = "transparent", color = NA),
+        panel.background = element_rect(fill = "transparent", color = NA))
+
+gender_plot
+```
+:::
+
+::: {.column width="50%"}
+```{r dev="png", bg="transparent", dev.args=list(bg="transparent")}
+#| echo: false
+#| eval: true
+#| fig-width: 8
+#| fig-height: 6
+
+# Create major imbalance data
+set.seed(456)
+major_data <- tibble(
+  group = c(rep("Group A", 500), rep("Group B", 500)),
+  major = c(
+    # Group A: More STEM and Business
+    sample(c("Computer Science", "Biology", "Political Science", "Psychology", "English"), 
+           500, replace = TRUE, prob = c(0.35, 0.25, 0.20, 0.15, 0.05)),
+    # Group B: More Liberal Arts
+    sample(c("Computer Science", "Biology", "Political Science", "Psychology", "English"), 
+           500, replace = TRUE, prob = c(0.05, 0.10, 0.15, 0.30, 0.40))
+  )
+)
+
+# Create visualization
+major_summary <- major_data %>% 
+  count(group, major) %>% 
+  group_by(group) %>% 
+  mutate(percentage = n / sum(n) * 100,
+         label = paste0(round(percentage, 0), "%"))
+
+major_plot <- major_summary %>% 
+  ggplot(aes(x = group, y = percentage, fill = major)) +
+  geom_col(position = "stack", width = 0.6, alpha = 0.9) +
+  geom_text(aes(label = ifelse(percentage > 8, label, "")), 
+            position = position_stack(vjust = 0.5), 
+            color = "white", 
+            size = 3.5, 
+            fontface = "bold") +
+  scale_fill_manual(values = c("Computer Science" = "#5ba300", 
+                               "Biology" = "#89ce00", 
+                               "Political Science" = "#0073e6", 
+                               "Psychology" = "#e6308a", 
+                               "English" = "#b51963")) +
+  labs(title = "",
+       x = "", y = "Percentage", fill = "Major") +
+  scale_y_continuous(limits = c(0, 100), expand = c(0, 0)) +
+  theme_minimal() +
+  theme(plot.title = element_text(size = 16, color = "white", hjust = 0.5, face = "bold"),
+        axis.text.x = element_text(color = "white", size = 11, face = "bold"),
+        axis.text.y = element_text(color = "white", size = 10),
+        axis.title.y = element_text(color = "white", size = 11, face = "bold"),
+        legend.text = element_text(color = "white", size = 9),
+        legend.title = element_text(color = "white", size = 11, face = "bold"),
+        legend.position = "bottom",
+        panel.grid = element_blank(),
+        plot.background = element_rect(fill = "transparent", color = NA),
+        panel.background = element_rect(fill = "transparent", color = NA))
+
+major_plot
+```
+:::
+:::::
+
+## What is Experimental Control?
+
+-   **Control group**: A comparison group that doesn't receive the treatment
+
+**Without control, we cannot make causal claims**
+
+::: warning-box
+**The comparison problem:**
+
+-   **Without control**: We can't tell if changes are due to our treatment or something else
+
+-   **With control**: We can isolate the effect of our specific treatment (everything else should be the same)
+:::
+
+-   **Example**: If we only study people who received voter mobilization calls, we can't know if their high turnout was due to the calls or because they were already motivated voters (on the voter rolls)
+
+## What Are We Controlling For?
+
+**The threats to valid causal inference**
+
+::: example-box
+**Four major threats we control for:**
+
+-   **Confounding variables**: Other factors that might affect the outcome
+
+-   **Selection bias**: Differences between people who do/don't receive treatment
+
+-   **Time trends**: Changes that happen regardless of treatment
+
+-   **Measurement bias**: Differences in how we observe outcomes
+:::
+
+## How Random Assignment Works
+
+**Random assignment**: Each subject has an equal chance of being assigned to any group
+
+```{mermaid}
+flowchart TD
+    subgraph Initial["Initial Population"]
+        B1["🔵 Blue"] 
+        B2["🔵 Blue"]
+        R1["🔴 Red"]
+        B3["🔵 Blue"] 
+        R2["🔴 Red"]
+        R3["🔴 Red"]
+        R4["🔴 Red"]
+        B4["🔵 Blue"]
+    end
+    
+    Initial --> Coin["🪙 Coin Flip<br/>Each Person:<br/>Heads = Group 1<br/>Tails = Group 2"]
+    
+    Coin --> Group1["Group 1 (Treatment)<br/>🔵🔵🔴🔴"]
+    Coin --> Group2["Group 2 (Control)<br/>🔵🔵🔴🔴"]
+    
+    classDef startNode fill:#1a2332,stroke:#4fc3f7,color:#e3f2fd
+    classDef coinNode fill:#2d1b17,stroke:#ff9800,color:#fff3e0
+    classDef endNode fill:#1b2d1b,stroke:#4caf50,color:#e8f5e8
+    
+    class Initial startNode
+    class Coin coinNode
+    class Group1,Group2 endNode
+```
+
+::: highlight-box
+**Key insight**: Random assignment makes treatment and control groups statistically identical on average
+:::
+
+## Random Assignment: Unobserved Characteristics
+
+**In practice, we often don't know people's characteristics beforehand**
+
+```{mermaid}
+flowchart TD
+    subgraph Initial["Population (8 People)"]
+        U1["❓ Unknown"] 
+        U2["❓ Unknown"]
+        U3["❓ Unknown"] 
+        U4["❓ Unknown"]
+        U5["❓ Unknown"]
+        U6["❓ Unknown"]
+        U7["❓ Unknown"]
+        U8["❓ Unknown"]
+    end
+    
+    Initial --> Coin["🪙 Coin Flip<br/>Each Person:<br/>Heads = Group 1<br/>Tails = Group 2"]
+    
+    Coin --> Group1["Group 1 (Treatment)<br/>🟢🟢🟠🟠<br/>2 Green + 2 Orange"]
+    Coin --> Group2["Group 2 (Control)<br/>🟢🟢🟠🟠<br/>2 Green + 2 Orange"]
+    
+    classDef startNode fill:#1a2332,stroke:#4fc3f7,color:#e3f2fd
+    classDef coinNode fill:#2d1b17,stroke:#ff9800,color:#fff3e0
+    classDef endNode fill:#1b2d1b,stroke:#4caf50,color:#e8f5e8
+    
+    class Initial startNode
+    class Coin coinNode
+    class Group1,Group2 endNode
+```
+
+::: highlight-box
+**Key insight**: Random assignment works even when we don't know characteristics in advance - it automatically balances groups across all traits (known and unknown)!
+:::
+
+## Random Assignment: Individual Trial Variation
+
+Random assignment doesn't *guarantee* perfectly balanced characteristics in any single trial (100 people, 50 purple/50 pink, randomly assigned to groups of 50 each)
+
+```{r dev="png", bg="transparent", dev.args=list(bg="transparent")}
+#| echo: false
+#| eval: true
+#| fig-width: 15
+#| fig-height: 8
+#| layout-ncol: 5
+#| layout-nrow: 2
+
+library(tidyverse)
+library(patchwork)
+
+# Set seed for reproducibility
+set.seed(42)
+
+# Function to simulate one random assignment
+simulate_assignment <- function(trial_num) {
+  # Start with 100 people (50 purple, 50 pink)
+  population <- c(rep("Purple", 50), rep("Pink", 50))
+  
+  # Random assignment: randomly select exactly 50 people for Group 1
+  # The remaining 50 automatically go to Group 2
+  group1_indices <- sample(1:100, 50, replace = FALSE)
+  group2_indices <- setdiff(1:100, group1_indices)
+  
+  group1 <- population[group1_indices]
+  group2 <- population[group2_indices]
+  
+  # Count colors in each group
+  group1_purple <- sum(group1 == "Purple")
+  group1_pink <- sum(group1 == "Pink")
+  group2_purple <- sum(group2 == "Purple")  
+  group2_pink <- sum(group2 == "Pink")
+  
+  # Create summary
+  tibble(
+    trial = trial_num,
+    group = c("Group 1", "Group 2"),
+    purple = c(group1_purple, group2_purple),
+    pink = c(group1_pink, group2_pink),
+    total = c(length(group1), length(group2))
+  )
+}
+
+# Run 10 trials
+all_trials <- map_dfr(1:10, simulate_assignment)
+
+# Create function to generate individual plot
+create_trial_plot <- function(trial_num) {
+  trial_data <- all_trials %>% filter(trial == trial_num)
+  
+  # Reshape for plotting
+  plot_data <- trial_data %>%
+    pivot_longer(cols = c(purple, pink), names_to = "color", values_to = "count") %>%
+    mutate(color = case_when(
+      color == "purple" ~ "Purple",
+      color == "pink" ~ "Pink"
+    ))
+  
+  plot_data %>%
+    ggplot(aes(x = group, y = count, fill = color)) +
+    geom_col(width = 0.6, alpha = 0.9) +
+    geom_text(aes(label = count), 
+              position = position_stack(vjust = 0.5),
+              color = "white", size = 22, fontface = "bold") +
+    scale_fill_manual(values = c("Purple" = "#b51963", "Pink" = "#89ce00")) +
+    labs(title = paste("Trial", trial_num), x = "", y = "", fill = "") +
+    scale_y_continuous(limits = c(0, 50), expand = c(0, 0)) +
+    theme_minimal() +
+    theme(
+      plot.title = element_text(size = 60, color = "white", hjust = 0.5, face = "bold"),
+      axis.text.x = element_text(color = "white", size = 49, face = "bold"),
+      axis.text.y = element_text(color = "white", size = 48),
+      legend.position = "none",
+      panel.grid = element_blank(),
+      plot.background = element_rect(fill = "transparent", color = NA),
+      panel.background = element_rect(fill = "transparent", color = NA),
+      plot.margin = margin(5, 5, 5, 5)
+    )
+}
+
+# Generate all 10 plots individually using the layout options
+create_trial_plot(1)
+create_trial_plot(2)
+create_trial_plot(3)
+create_trial_plot(4)
+create_trial_plot(5)
+create_trial_plot(6)
+create_trial_plot(7)
+create_trial_plot(8)
+create_trial_plot(9)
+create_trial_plot(10)
+```
+
+::: warning-box
+Even with equal group sizes (50/50), the purple/pink balance varies by chance across individual trials. Each experiment produces different compositions! But this is okay! On average we will be close to 50/50/
+:::
+
+## The Law of Large Numbers
+
+**What happens when we run many random assignments?** (100 people, 50 purple/50 pink, groups of 50 each)
+
+```{r dev="png", bg="transparent", dev.args=list(bg="transparent")}
+#| echo: false
+#| eval: true
+#| fig-width: 4
+#| fig-height: 3
+#| layout-ncol: 3
+
+# Create histograms showing convergence
+set.seed(123)  # Different seed for convergence analysis
+convergence_data <- tibble(
+  n_trials = c(10, 100, 1000)
+) %>%
+  mutate(
+    simulations = map(n_trials, ~ {
+      map_dbl(1:.x, function(trial) {
+        population <- c(rep("Purple", 50), rep("Pink", 50))
+        group1_indices <- sample(1:100, 50, replace = FALSE)
+        group1 <- population[group1_indices]
+        sum(group1 == "Purple")  # Count purple in Group 1
+      })
+    })
+  )
+
+# Create function to generate individual convergence plot
+create_convergence_plot <- function(trial_index) {
+  titles <- c("10 Trials", "100 Trials", "1000 Trials")
+  data_i <- tibble(purple_count = convergence_data$simulations[[trial_index]])
+  
+  data_i %>%
+    ggplot(aes(x = purple_count)) +
+    geom_histogram(bins = 50, fill = "#b51963") +
+    geom_vline(xintercept = 25, color = "white", linetype = "dotted", linewidth = 1) +
+    labs(title = titles[trial_index], 
+         x = "Purple People in Group 1", 
+         y = "Frequency") +
+    scale_x_continuous(breaks = seq(10, 40, 5), limits = c(10, 40)) +
+    theme_minimal() +
+    theme(
+      plot.title = element_text(size = 14, color = "white", hjust = 0.5, face = "bold"),
+      axis.text = element_text(color = "white", size = 10),
+      axis.title = element_text(color = "white", size = 11, face = "bold"),
+      panel.grid = element_blank(),
+      plot.background = element_rect(fill = "transparent", color = NA),
+      panel.background = element_rect(fill = "transparent", color = NA)
+    )
+}
+
+# Generate the three plots individually
+create_convergence_plot(1)  # 10 Trials
+create_convergence_plot(2)  # 100 Trials  
+create_convergence_plot(3)  # 1000 Trials
+```
+
+::: highlight-box
+As we increase the number of trials, the distribution converges to the expected value (25 purple per group, white dotted line). Random assignment creates characteristic balance *on average* - the more trials, the closer we get to true balance!
+:::
+
+## Some Political Science Experiments
+
+**Political science has embraced experimental methods in recent decades**
+
+**Why experiments matter in political science:**
+
+-   **Causal claims**: Experiments allow us to make definitive statements about cause and effect
+-   **Policy relevance**: Results directly inform campaign strategies, government programs, and civic interventions
+-   **Theory testing**: Experiments can definitively test competing theoretical predictions
+-   **Real-world impact**: Experimental findings shape how campaigns run, how governments communicate, and how civic organizations operate
+
+## Experiment 1: Get Out The Vote
+
+**Gerber & Green (2000) - Do campaign methods actually work?**
+
+::: example-box
+**Research Question**: Does personal canvassing, direct mail, and phone calls increase voter turnout?
+
+Voters randomly assigned to get:
+
+1.  Personal canvassing
+2.  Direct mail\
+3.  Phone calls
+4.  No contact (control)
+:::
+
+**Results**: Personal canvassing increased turnout by 7-10 percentage points; phone calls and mail had minimal effects
+
+## Experiment 2: Media and Reconciliation in Rwanda
+
+**Paluck (2009) - Can media promote peace after conflict?**
+
+::: example-box
+**Research Question**: Can radio programming reduce intergroup prejudice and promote reconciliation?
+
+Communities randomly assigned to:
+
+1.  Educational radio soap opera promoting reconciliation
+2.  Control radio program about health
+:::
+
+**Results**: Educational radio soap opera significantly changed social norms and behaviors toward reconciliation
+
+## Experiment 3: Deep Canvassing and Transgender Rights
+
+**Broockman & Kalla (2016) - Can prejudice be changed through conversation?**
+
+::: example-box
+**Research Question**: Can brief conversations change deeply held prejudices about transgender people?
+
+Voters randomly assigned to:
+
+1.  10-minute conversation about transgender rights and experiences
+2.  Control conversation about recycling
+:::
+
+**Results**: 10-minute conversations reduced transgender prejudice for at least 3 months
+
+# Observational Designs: When Experiments Aren't Possible
+
+## When You Can't Randomly Assign
+
+**Some research questions involve things you can't control:**
+
+-   Constitutional changes (can't randomly assign constitutions to countries)
+-   Major life events (can't randomly assign parents to divorce)
+-   Policy implementations (can't randomly assign laws to states)
+
+**Solution**: Find situations where assignment was "as good as random"
+
+::: highlight-box
+**"As good as random" means:**
+
+-   Assignment to treatment/control wasn't controlled by researchers
+-   BUT the assignment process was effectively random
+-   No systematic bias determines who gets treated
+-   Creates similar groups, just like an experiment would
+:::
+
+## What Does "As Good As Random" Mean?
+
+**When nature or institutions create randomization for us**
+
+**Examples of "as good as random" assignment:**
+
+-   **Draft lottery**: Birthdays randomly determine military service
+-   **Policy rollout**: Budget constraints mean only some areas get new program first
+-   **Natural disasters**: Random timing affects some regions but not others\
+-   **Administrative cutoffs**: Arbitrary thresholds (age 65 for Medicare) create treatment groups
+
+::: warning-box
+**Key insight**: We're looking for situations where treatment assignment is **unrelated to potential outcomes**. If assignment is random (or effectively random), we can make causal claims even without controlling the assignment ourselves.
+:::
+
+## Natural Experiments
+
+**Three examples of "as good as random" assignment in the real world**
+
+## Natural Experiment 1: The Draft Lottery
+
+**Angrist (1990) - Does military service affect lifetime earnings?**
+
+::: example-box
+**Research Question**: Does military service hurt or help lifetime earnings and employment?
+
+**"As Good As Random" Assignment**: Vietnam-era draft lottery used birthdates to determine military service
+
+1.  Men born on certain dates were drafted
+2.  Men born on other dates were not drafted
+3.  Birthdate is effectively random with respect to earning potential
+:::
+
+**Results**: Military service reduced lifetime earnings by about 15% due to lost work experience
+
+## Natural Experiment 2: Rainfall and Economic Voting
+
+**Achen & Bartels (2016) - Do voters blame politicians for things beyond their control?**
+
+::: example-box
+**Research Question**: Do economic conditions that politicians can't control affect election outcomes?
+
+**"As Good As Random" Assignment**: Rainfall variation creates random economic conditions
+
+1.  Droughts randomly hurt local economies in farming areas
+2.  Floods randomly damage local economies
+3.  Weather is unrelated to politician quality or policies
+:::
+
+**Results**: Voters punish incumbent politicians for poor economic conditions caused by weather, not policy
+
+## Natural Experiment 3: Female Political Representation
+
+**Chattopadhyay & Duflo (2004) - Do female leaders prioritize different policies?**
+
+::: example-box
+**Research Question**: When women hold political office, do they invest more in policies that benefit women?
+
+**"As Good As Random" Assignment**: India's constitutional requirement for random rotation of reserved seats
+
+1.  Village councils randomly selected for female leadership requirements
+2.  Rotation schedule determined by lottery, not local preferences
+3.  Creates random assignment of female vs. male political leadership
+:::
+
+**Results**: Villages with female leaders invested significantly more in drinking water infrastructure and roads
+
+# When to Collect Data
+
+## Once? Multiple times?
+
+**How often can we collect data**: Once (cross-sectional) or multiple times (repeated cross-sectional or longitudinal)?
+
+::: example-box
+**Examples across research designs:**
+
+-   **Experiments**: Can measure participants once (post-treatment only) or multiple times (pre- and post-treatment)
+
+-   **Natural experiments**: Can compare groups at one time point or track them over multiple time points
+
+-   **Observational studies**: Can survey different people each year or follow the same people over time
+:::
+
+## Cross-Sectional Data: Snapshots in Time
+
+```{r dev="png", bg="transparent", dev.args=list(bg="transparent")}
+#| echo: false
+#| eval: true
+#| fig-width: 12
+#| fig-height: 4
+
+library(tidyverse)
+
+# Create visualization for cross-sectional data
+set.seed(42)
+cross_sectional_data <- tibble(
+  time_point = rep(c("2020", "2021", "2022"), each = 8),
+  person_id = c(paste0("A", 1:8), paste0("B", 1:8), paste0("C", 1:8)),
+  x_pos = rep(c(1, 2, 3, 4, 1, 2, 3, 4), 3),
+  y_pos = rep(c(1, 1, 1, 1, 2, 2, 2, 2), 3),
+  time_numeric = rep(c(1, 2, 3), each = 8)
+)
+
+cross_plot <- cross_sectional_data %>%
+  ggplot(aes(x = x_pos, y = y_pos, color = time_point)) +
+  geom_point(size = 24, alpha = 0.8) +
+  geom_text(aes(label = person_id), color = "white", size = 9, fontface = "bold") +
+  facet_wrap(~time_point, ncol = 3, scales = "free") +
+  scale_color_manual(values = c("2020" = "#e6308a", "2021" = "#0073e6", "2022" = "#5ba300")) +
+  labs(title = "Cross-Sectional Design: Different People Each Year",
+       subtitle = "Each survey uses a new random sample (notice different colors for each year)",
+       x = "", y = "") +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(size = 16, color = "white", hjust = 0.5, face = "bold"),
+    plot.subtitle = element_text(size = 12, color = "white", hjust = 0.5),
+    strip.text = element_text(size = 14, color = "white", face = "bold"),
+    axis.text = element_blank(),
+    axis.ticks = element_blank(),
+    panel.grid = element_blank(),
+    plot.background = element_rect(fill = "transparent", color = NA),
+    panel.background = element_rect(fill = "transparent", color = NA),
+    strip.background = element_rect(fill = "gray30", color = NA),
+    legend.position = "none"
+  ) +
+  scale_x_continuous(limits = c(0.5, 4.5)) +
+  scale_y_continuous(limits = c(0.5, 2.5))
+
+cross_plot
+```
+
+::: warning-box
+**Cross-sectional data limitations:**
+
+-   **Pros**: Quick, less expensive, good for current conditions
+-   **Cons**: Can't show causation, timing unclear, can't track individual change
+:::
+
+## Longitudinal Panel Data: Following the Same People
+
+```{r dev="png", bg="transparent", dev.args=list(bg="transparent")}
+#| echo: false
+#| eval: true
+#| fig-width: 12
+#| fig-height: 4
+
+# Create visualization for longitudinal panel data
+panel_data <- tibble(
+  time_point = rep(c("2020", "2021", "2022"), each = 8),
+  person_id = rep(paste0("Person ", 1:8), 3),
+  x_pos = rep(c(1, 2, 3, 4, 1, 2, 3, 4), 3),
+  y_pos = rep(c(1, 1, 1, 1, 2, 2, 2, 2), 3),
+  time_numeric = rep(c(1, 2, 3), each = 8),
+  person_number = rep(1:8, 3)
+)
+
+panel_plot <- panel_data %>%
+  ggplot(aes(x = x_pos, y = y_pos)) +
+  geom_point(size = 24, color = "#5ba300", alpha = 0.8) +
+  geom_text(aes(label = person_number), color = "white", size = 12, fontface = "bold") +
+  facet_wrap(~time_point, ncol = 3, scales = "free") +
+  labs(title = "Longitudinal Panel Design: Same People Each Year",
+       subtitle = "Each survey follows the exact same individuals over time",
+       x = "", y = "") +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(size = 16, color = "white", hjust = 0.5, face = "bold"),
+    plot.subtitle = element_text(size = 12, color = "white", hjust = 0.5),
+    strip.text = element_text(size = 14, color = "white", face = "bold"),
+    axis.text = element_blank(),
+    axis.ticks = element_blank(),
+    panel.grid = element_blank(),
+    plot.background = element_rect(fill = "transparent", color = NA),
+    panel.background = element_rect(fill = "transparent", color = NA),
+    strip.background = element_rect(fill = "gray30", color = NA)
+  ) +
+  scale_x_continuous(limits = c(0.5, 4.5)) +
+  scale_y_continuous(limits = c(0.5, 2.5))
+
+panel_plot
+```
+
+::: highlight-box
+**Longitudinal panel data advantages:**
+
+-   **Pros**: Can show change, establish timing, stronger causal inference, track individual trajectories
+-   **Cons**: Expensive, people drop out (attrition), takes years
+:::
+
+# A Story from 1662: John Graunt
+
+## The World's First Data Scientist/ founder of demography
+
+::::: columns
+::: {.column width="40%"}
+![](../../images/1606.jpg){width="100%"}
+:::
+
+::: {.column width="60%"}
+**John Graunt (1620-1674)**:
+
+London haberdasher who introduced systematic analysis of death and population
+
+**The Problem**:
+
+Data on death and population was not consistently collected and was error prone.
+
+**Graunt**:
+
+Comparing years in the Bills of Mortality, he able to make estimates about the size of the population of London and England, birth rates and mortality rates of males and females, and the rise and spread of certain diseases.
+:::
+:::::
+
+## What Graunt Discovered
+
+**Before Graunt**: People thought plague deaths were random acts of God
+
+**Simulation of Graunt's Analysis**:
+
+```{r dev="png", bg="transparent", dev.args=list(bg="transparent")}
+#| echo: false
+#| eval: true
+# Recreate Graunt's type of analysis with simulated seasonal data
+set.seed(123)
+london_deaths <- tibble(
+  parish = rep(paste("Parish", 1:20), each = 52),  # 20 parishes, 52 weeks
+  week = rep(1:52, 20)
+) %>%
+  mutate(
+    season = case_when(
+      week %in% 1:13 ~ "Winter",
+      week %in% 14:26 ~ "Spring", 
+      week %in% 27:39 ~ "Summer",
+      week %in% 40:52 ~ "Fall"
+    ),
+    # Create seasonal patterns: Winter lowest, Spring/Fall moderate, Summer highest
+    seasonal_multiplier = case_when(
+      season == "Winter" ~ 0.7,  # Lowest deaths
+      season == "Spring" ~ 1.1,  # Moderate deaths
+      season == "Summer" ~ 1.8,  # Highest deaths (plague season)
+      season == "Fall" ~ 1.0     # Moderate deaths
+    ),
+    plague_deaths = rpois(n(), 3 * seasonal_multiplier),
+    natural_deaths = rpois(n(), 8 * seasonal_multiplier),
+    total_deaths = plague_deaths + natural_deaths
+  )
+
+# Graunt's key insight: seasonal patterns
+seasonal_deaths <- london_deaths %>% 
+  group_by(season) %>% 
+  summarise(
+    avg_plague_deaths = round(mean(plague_deaths), 1),
+    avg_total_deaths = round(mean(total_deaths), 1),
+    total_parishes = n_distinct(parish),
+    .groups = "drop"
+  ) %>%
+  # Order seasons logically
+  mutate(season = factor(season, levels = c("Winter", "Spring", "Summer", "Fall"))) %>%
+  arrange(season)
+
+seasonal_deaths
+```
+
+1.  **Patterns exist**: Death rates weren't random - they followed predictable patterns
+2.  **Seasonal variation**: Clear seasonal patterns with highest deaths in summer (plague season), lowest in winter
+3.  **Demographic regularities**: Consistent ratios of male to female births across time
+4.  **Population estimation**: First systematic attempt to count London's population using data
+
+::: highlight-box
+Graunt invented the idea that social phenomena follow discoverable patterns - the foundation of all social science
+:::
+
+# Choosing the Right Design
+
+## Example: Voter Turnout Research
+
+**Question 1**: "What percentage of Americans vote in midterm elections?"
+
+-   **Best Design**: Descriptive survey or administrative data analysis
+-   **Why**: Simple descriptive question requiring representative data
+
+**Question 2**: "Do voter reminders increase turnout?"
+
+-   **Best Design**: Randomized field experiment
+-   **Why**: Can randomly assign reminders, ethical to do so, clear causal question
+
+**Question 3**: "Does early voting increase overall turnout?"
+
+-   **Best Design**: Natural experiment or difference-in-differences
+-   **Why**: Can't randomly assign electoral rules, but can compare before/after adoption
+
+# Tradeoffs Between Designs
+
+## Internal vs. External Validity
+
+**Internal Validity**: Are your results correct for your specific study?
+
+-   **Experiments**: High internal validity (random assignment eliminates confounding)
+-   **Observational studies**: Lower internal validity (many potential confounders)
+
+**External Validity**: Do your results apply to other people, places, times?
+
+-   **Experiments**: Often lower external validity (artificial settings, selected populations)
+-   **Observational studies**: Often higher external validity (real-world settings)
+
+## The Fundamental Tradeoff
+
+::: warning-box
+**No design is perfect**
+
+-   **Experiments**: Great for causation, limited for generalization
+-   **Natural experiments**: Balance of both, but rare
+-   **Observational studies**: Great for description, limited for causation
+:::
+
+**Your choice depends on your research question and what tradeoffs you're willing to accept**
+
+## In Our Next Class
+
+**Causality**
+
+- The three requirements for establishing causality
+- Distinguishing between association and causation
+- Temporal ordering in causal claims
+- Identifying confounding variables and spurious correlations
+
+## Key Concepts to Remember
+
+::: highlight-box
+-   **Research design drives everything** - your question determines your approach
+-   **Random assignment eliminates confounding** - the power of experiments
+-   **Natural experiments offer a middle ground** - when you can't randomly assign
+-   **All designs have tradeoffs** - choose based on your priorities
+-   **History matters** - Gaunt showed us that social patterns are discoverable
+:::
+
+# Questions?
+
+**Key takeaway**: The right research design is the one that best matches your research question while acknowledging the tradeoffs you're willing to accept.

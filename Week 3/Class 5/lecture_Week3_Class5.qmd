@@ -1,0 +1,1890 @@
+---
+title: "Week 3, Class 5"
+subtitle: "Transforming and Creating Variables"
+author: "Sean Westwood"
+format:
+  revealjs:
+    theme: black
+    slide-number: true
+    preview-links: auto
+    html-math-method: katex
+    css: ../../styles/slides.css
+    transition: 'fade'
+    print-background: true
+    self-contained: true
+  pdf:
+    toc: false
+    number-sections: false
+    colorlinks: true
+---
+
+```{r setup}
+#| include: false
+#| eval: true
+library(tidyverse)
+library(readr)
+set.seed(1989)
+
+# Detect output format and set colors for plots
+is_pdf <- knitr::is_latex_output()
+text_col <- if(is_pdf) "black" else "white"
+bg_col <- if(is_pdf) "white" else "transparent"
+line_col <- if(is_pdf) "black" else "white"
+```
+
+## In Today's Class
+
+- Creating new variables with `mutate()`
+- Understanding conditional logic and comparison operators
+- Variable recoding with `if_else()` and `case_when()`
+- Calculating proportions with `summarise()`
+- Extracting values with `pull()`
+
+```{r}
+#| include: false
+#| eval: true
+# Generate sample congressional data
+congress_data <- tibble(
+  member_id = 1:1000,
+  party_code = sample(c("Democrat", "Republican", "Independent"), 1000, 
+                     prob = c(0.446, 0.512, 0.042), replace = TRUE),
+  chamber = sample(c("House", "Senate"), 1000, replace = TRUE),
+  state = sample(state.abb, 1000, replace = TRUE)
+) %>%
+  mutate(
+    nominate_dim1 = case_when(
+      party_code == "Democrat" ~ rnorm(n(), -0.354, 0.25),
+      party_code == "Republican" ~ rnorm(n(), 0.421, 0.23),
+      party_code == "Independent" ~ rnorm(n(), -0.121, 0.35),
+      TRUE ~ 0
+    )
+  )
+
+# Generate voter turnout data
+voter_data <- tibble(
+  respondent_id = 1:1000,
+  education_level = sample(c("High School", "Some College", "College", "Graduate"), 
+                          1000, prob = c(0.398, 0.149, 0.267, 0.186), replace = TRUE),
+  voted = sample(c("Yes", "No"), 1000, prob = c(0.65, 0.35), replace = TRUE),
+  age = sample(18:85, 1000, replace = TRUE)
+) %>%
+  mutate(
+    voted = case_when(
+      education_level == "High School" ~ sample(c("Yes", "No"), n(), prob = c(0.55, 0.45), replace = TRUE),
+      education_level == "Some College" ~ sample(c("Yes", "No"), n(), prob = c(0.597, 0.403), replace = TRUE),
+      education_level == "College" ~ sample(c("Yes", "No"), n(), prob = c(0.753, 0.247), replace = TRUE),
+      education_level == "Graduate" ~ sample(c("Yes", "No"), n(), prob = c(0.839, 0.161), replace = TRUE)
+    )
+  )
+
+# Generate campaign data
+campaign_data <- tibble(
+  candidate_id = 1:1000,
+  candidate_name = paste(sample(c("Smith", "Johnson", "Williams", "Brown", "Davis", "Miller", "Wilson", "Moore", "Taylor", "Anderson"), 1000, replace = TRUE),
+                        sample(c("John", "Mary", "Bob", "Lisa", "Mike", "Sarah", "Tom", "Jennifer", "David", "Susan"), 1000, replace = TRUE), sep = ", "),
+  office_type = sample(c("House", "Senate", "Governor"), 1000, 
+                      prob = c(0.62, 0.10, 0.28), replace = TRUE),
+  party = sample(c("Democrat", "Republican"), 1000, replace = TRUE),
+  outcome = sample(c("Won", "Lost"), 1000, replace = TRUE),
+  vote_share = runif(1000, 0.25, 0.75)
+) %>%
+  mutate(
+    total_raised = case_when(
+      office_type == "House" ~ rnorm(n(), 240000, 80000),
+      office_type == "Senate" ~ rnorm(n(), 1800000, 500000),
+      office_type == "Governor" ~ rnorm(n(), 3100000, 800000),
+      TRUE ~ 240000
+    ),
+    total_spent = total_raised * runif(n(), 0.7, 1.2),
+    total_votes = round(vote_share * runif(n(), 50000, 200000))
+  )
+```
+
+# Why Must We Transform Data?
+
+## Real Political Science Data is Messy
+
+**Example: Survey responses about income**:
+
+- Raw: `$35,000`, `$45000`, `45k`, `forty-five thousand`
+- Analysis needs: `35000`, `45000`, `45000`, `45000`
+
+**Example: Education levels to numeric**:
+
+- Raw: `high school`, `HS grad`, `12 years`, `completed secondary`
+- Analysis needs: All coded as `12` (years of education)
+
+**Example: Age data**:
+
+- Raw: Birth years like `1985`, `1992`, `1967`
+- Analysis needs: Age groups like `"18-29"`, `"30-44"`, `"45-64"`
+
+## The transformation process
+
+1. **Clean** inconsistent formats
+2. **Recode** into meaningful categories  
+3. **Calculate** new measures (ratios, percentages)
+
+::: {.highlight-box}
+The majority of data analysis time is spent on data transformation!
+:::
+
+# Creating New Variables
+
+## Creating Variables with mutate()
+
+**The `mutate()` function adds new columns to your dataframe**
+
+**Basic syntax**:
+```r
+data %>%
+  mutate(
+    new_variable = calculation,
+    another_var = some_function(existing_var)
+  )
+```
+
+::: {.highlight-box}
+summarise() creates a new dataframe with new columns; mutate() alters the original dataframe
+:::
+
+**What mutate() does**:
+
+1. Takes your existing data
+2. Adds new column(s) based on calculations
+3. Keeps all original columns
+4. Returns the expanded dataset
+
+## Mathematical Operations in mutate()
+
+**Basic math**:
+```r
+mutate(
+  total = votes_dem + votes_rep,           # Addition
+  margin = votes_dem - votes_rep,          # Subtraction  
+  vote_share = votes_dem / total_votes,    # Division
+  doubled = approval_rating * 2            # Multiplication
+)
+```
+
+::: {.highlight-box}
+This is row-wise! Each calculation will be independent for each row.
+:::
+
+
+**Useful calculations for political science**:
+```r
+mutate(
+  turnout_rate = votes_cast / eligible_voters,
+  spending_per_vote = total_spent / votes_received,
+  ideology_squared = ideology_score^2,
+  log_income = log(household_income)
+)
+```
+
+
+# Understanding Conditional Logic
+
+## What is Conditional Logic?
+
+In order to create new variables that are useful for analysis, we often need to use conditional logic. 
+
+**Conditional logic**: Making decisions based on conditions
+
+**In everyday life**:
+
+- *If* it's raining, *then* bring an umbrella
+- *If* you're 21 or older, *then* you can drink alcohol
+- *If* it is after 6:00 AM and before 10:00AM, *then* you can order breakfast at McDonalds
+
+**In R**:
+
+- *If* `party == "Democrat"`, *then* assign `"Liberal"`
+- *If* `age >= 65`, *then* assign `"Senior"`
+- *If* `approval_rating > 50`, *then* assign `"Majority Approves"`
+
+## The Building Blocks: Comparison Operators
+
+**Comparison operators**:
+
+- `==` (equal to)
+- `!=` (not equal to)
+- `>` (greater than)
+- `>=` (greater than or equal to)
+- `<` (less than)
+- `<=` (less than or equal to)
+
+
+::: {.highlight-box}
+**The triad of 'equals'**
+
+-	`<-` used to assign values to objects (make a variable 'get' a value)
+- `=` Specify values when using a function (set an argumen to a value)
+- `==` Test whether two values are equal (returning a logical result: TRUE, FALSE, or NA)
+:::
+
+## Why We Want TRUE/FALSE Outcomes
+
+**TRUE/FALSE is the foundation of data transformation because**:
+
+- All data decisions can ultimately be reduced down to "yes" or "no" questions
+- We're essentially asking: "Does this observation meet our criteria?"
+- These logical outcomes let us sort, categorize, and transform our data
+- This binary logic is what allows us to create meaningful new variables from raw data with simple rules
+
+## Examples of TRUE/FALSE Outcomes
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+**Equal to**: `==`
+```r
+party_id == "Republican"  
+# TRUE if Republican, FALSE otherwise
+```
+
+**Not equal to**: `!=`
+```r
+education != "College"    
+# TRUE if not College, FALSE if College
+```
+
+**Greater than**: `>`
+```r
+age > 65                  
+# TRUE if older than 65
+```
+:::
+::: {.column width="50%"}
+
+**Greater than or equal**: `>=`
+```r
+income >= 50000          
+# TRUE if 50,000 or more
+```
+
+**Less than**: `<`
+```r
+approval < 40            
+# TRUE if less than 40
+```
+
+**Less than or equal**: `<=`
+```r
+years_in_office <= 2     
+# TRUE if 2 years or fewer
+```
+
+:::
+
+:::
+
+## Understanding TRUE and FALSE
+
+**Every comparison returns TRUE or FALSE**:
+
+```r
+# Examples with actual values
+age <- 25
+age >= 18        # Returns: TRUE
+age >= 65        # Returns: FALSE
+
+party <- "Democrat"
+party == "Republican"    # Returns: FALSE
+party != "Republican"    # Returns: TRUE
+```
+
+**R treats TRUE as 1 and FALSE as 0**:
+
+::: {.highlight-box}
+**We can apply mathimatical operators with TRUE/FALSE**:
+
+- `sum(TRUE, FALSE, TRUE)` = 2 (counts the TRUEs)
+- `mean(TRUE, FALSE, TRUE)` = 0.67 (proportion that are TRUE)
+
+**Why mean() gives proportions**: Since TRUE = 1 and FALSE = 0, the mean is the sum divided by the total count, which is exactly what a proportion is!
+:::
+
+
+# Detailed Operator Examples
+
+## Example 1: Creating a New Variable with `==` (Equal To)
+
+**Question**: How many survey respondents identify as Democrats?
+
+```{r demo-equal}
+#| eval: true
+#| echo: true
+# Sample data
+survey_sample <- tibble(
+  respondent = 1:8,
+  party_id = c("Democrat", "Republican", "Democrat", "Independent", 
+               "Democrat", "Republican", "Democrat", "Independent")
+)
+
+# Show the data
+survey_sample
+```
+
+## Using `==` to Find Democrats
+
+```{r demo-equal-usage}
+#| eval: true
+#| echo: true
+# Test each row: is party_id equal to "Democrat"?
+survey_sample %>%
+  mutate(
+    is_democrat = party_id == "Democrat"
+  ) 
+```
+
+**What happened**:
+
+- Row 1: `"Democrat" == "Democrat"` → `TRUE`
+- Row 2: `"Republican" == "Democrat"` → `FALSE`  
+- Row 3: `"Democrat" == "Democrat"` → `TRUE`
+- And so on...
+
+## Counting with `==` 
+
+```{r demo-equal-count}
+#| eval: true
+#| echo: true
+
+survey_sample %>%
+  summarise(
+    total_respondents = n(),
+    democrats = sum(party_id == "Democrat"),
+    democrat_percentage = mean(party_id == "Democrat") * 100
+  )
+```
+
+- `sum(party_id == "Democrat")` counts TRUE values
+- `mean(party_id == "Democrat") * 100` gives the proportion of Democrats
+
+## Example 2: The `!=` (Not Equal To) Operator
+
+**Question**: How many respondents are NOT Republicans?
+
+```{r demo-not-equal-count}
+#| eval: true
+#| echo: true
+# Count non-Republicans
+survey_sample %>%
+  summarise(
+    non_republicans = sum(party_id != "Republican"),
+    non_republican_pct = mean(party_id != "Republican") * 100
+  )
+```
+
+## Using `>=` to Find Seniors
+
+```{r create-age-sample}
+#| eval: true
+#| echo: true
+# Create age sample data
+age_sample <- tibble(
+  voter_id = 1:10,
+  age = c(22, 35, 67, 45, 72, 29, 81, 55, 19, 65)
+)
+
+# Show the data
+age_sample
+```
+
+```{r demo-gte-count}
+#| eval: true
+#| echo: true
+# Count seniors
+age_sample %>%
+  summarise(
+    total_voters = n(),
+    seniors = sum(age >= 65),
+    senior_percentage = mean(age >= 65) * 100
+  )
+```
+
+## Example 4: The `<=` (Less Than or Equal) Operator
+
+**Question**: How many voters are young adults (30 or younger)?
+
+```{r demo-lte-count}
+#| eval: true
+#| echo: true
+# Count young adults
+age_sample %>%
+  summarise(
+    young_adults = sum(age <= 30),
+    young_adult_pct = mean(age <= 30) * 100
+  )
+```
+
+## Multiple Conditions
+
+**The world is complex - we often need to examine multiple variables simultaneously**
+
+**Real-world questions require multiple conditions:**
+
+::: {.highlight-box}
+- Young AND Democrat voters (age < 30 AND party == "Democrat")
+- High achievers (high IQ AND admitted to Dartmouth)
+- At-risk populations (low income AND poor health)
+- Swing voters (independent AND frequent voters)
+:::
+
+
+## Combining Conditions with AND (&) and OR (|)
+
+**AND (`&`)**: Both conditions must be TRUE
+```r
+age >= 18 & age < 65    # Working age adults
+```
+
+**OR (`|`)**: Either condition can be TRUE  
+```r
+party == "Democrat" | party == "Republican"    # Major party members
+```
+
+## Example of multiple conditions with real data
+
+```{r demo-combined}
+#| eval: true
+#| echo: true
+# Complex conditions
+age_sample %>%
+  mutate(
+    working_age = age >= 18 & age < 65,
+    voting_age = age >= 18
+  ) %>%
+  summarise(
+    working_age_count = sum(working_age),
+    voting_age_count = sum(voting_age)
+  )
+```
+
+# Putting This All Together
+
+## Logical Operations in mutate()
+
+**Creating TRUE/FALSE variables**:
+```r
+mutate(
+  is_competitive = vote_margin < 0.05,     # TRUE if close race
+  high_turnout = turnout > 0.7,            # TRUE if high turnout
+  experienced = years_in_office >= 4,      # TRUE if experienced
+  young_high_turnout = age < 30 & turnout > 0.7,        # Young AND high turnout
+  major_party_experienced = (party == "Democrat" | party == "Republican") & years_in_office >= 4 # Major party AND experienced
+)
+```
+
+**Why create logical variables?**:
+
+- Easy to count: `sum(is_competitive)` 
+- Easy to get percentages: `mean(high_turnout)`
+- Clear for analysis: `filter(major_party)`
+
+## The if_else() Function
+
+**What if we want to create a new variable that is a categorical variable (e.g., "Senior", "Non-Senior")?**
+
+Instead of creating a variable that shows is someone is young or not, we can create a varaible that calls them "Young" or "Old".
+
+**For simple binary decisions**:
+
+```r
+mutate(
+  age_group = if_else(age >= 65, "Senior", "Non-Senior"),
+  result = if_else(vote_share > 0.5, "Won", "Lost"),
+  income_level = if_else(income >= 50000, "High", "Low")
+)
+```
+
+**Syntax**: `if_else(condition, value_if_true, value_if_false)`
+
+**When to use if_else()**:
+
+- Only two possible outcomes
+- Simple, clear conditions where the labels are sensible
+
+## The case_when() Function
+
+Real political data often has **multiple meaningful categories** that can't be captured with simple TRUE/FALSE:
+
+**Example 1: Education levels**:
+
+- Raw data: Years of education (8, 12, 14, 16, 18, 20)
+- Need categories: "Less than HS", "High School", "Some College", "Bachelor's", "Graduate"
+
+**Example 2: Congressional ideology scores**:
+
+- Raw data: DW-NOMINATE scores (-0.8, -0.2, 0.1, 0.6, 0.9)
+- Need categories: "Very Liberal", "Liberal", "Moderate", "Conservative", "Very Conservative"
+
+**case_when() handles multiple conditions in order**:
+
+## Using case_when()
+
+**For multiple conditions and outcomes**:
+
+What if we wanted to make a new variable called "age_category" by checking each person's age and assigning them to one of four age groups based on which condition they meet first?
+
+```r
+
+mutate(
+  age_category = case_when(
+    age < 30 ~ "Young",
+    age < 50 ~ "Middle-aged", 
+    age < 70 ~ "Older",
+    TRUE ~ "Senior"  # catch-all for age >= 70
+  )
+)
+```
+
+**Key rules for case_when()**:
+
+1. Conditions are tested **in order**
+2. First TRUE condition wins
+3. Use `~` to separate condition from result
+4. Always end with `TRUE ~ "catch-all"` for safety
+
+## Understanding the ~ Symbol
+
+**The tilde (`~`) means "then"**:
+
+- `age < 30 ~ "Young"` means "if age < 30, then assign 'Young'"
+- `income >= 100000 ~ "High"` means "if income >= 100000, then assign 'High'"
+
+**Think of it as an arrow**:
+
+- `condition ~ result`
+- "When this condition is TRUE, give this result"
+
+**Only used in case_when()**, not in if_else()
+
+## case_when() vs if_else()
+
+**Use if_else() for 2 categories**:
+```r
+party_type = if_else(party == "Independent", "Independent", "Major Party")
+```
+
+**Use case_when() for 3+ categories**:
+```r
+party_group = case_when(
+  party == "Democrat" ~ "Democrat",
+  party == "Republican" ~ "Republican", 
+  party == "Independent" ~ "Independent",
+  TRUE ~ "Other"
+)
+```
+
+**Both create new columns, but case_when() is more flexible**
+
+## Common case_when() Patterns
+
+**Age groups**:
+```r
+age_group = case_when(
+  age < 25 ~ "18-24",
+  age < 35 ~ "25-34",
+  age < 50 ~ "35-49", 
+  age < 65 ~ "50-64",
+  TRUE ~ "65+"
+)
+```
+
+**Income brackets**:
+```r
+income_bracket = case_when(
+  income < 25000 ~ "Low",
+  income < 75000 ~ "Middle",
+  TRUE ~ "High"
+)
+```
+
+**Performance ratings**:
+```r
+rating = case_when(
+  score >= 90 ~ "Excellent",
+  score >= 80 ~ "Good",
+  score >= 70 ~ "Fair", 
+  TRUE ~ "Poor"
+)
+```
+
+# Examples: Summarize Without Mutate
+
+## Example 1: Congressional Voting Patterns Analysis
+
+**Research Question**: What are the basic characteristics of congressional voting behavior by party?
+
+**Data**: DW-NOMINATE dataset with 1,000 members of Congress, including ideology scores, party affiliation, chamber, and state information.
+
+::: {.columns}
+::: {.column width="50%"}
+**Code**:
+```{r congress-summary}
+#| eval: false
+#| echo: true
+congress_data %>%
+  group_by(party_code) %>%
+  summarise(
+    count = n(),
+    mean_ideology = mean(nominate_dim1, na.rm = TRUE),
+    median_ideology = median(nominate_dim1, na.rm = TRUE),
+    percentage = n() / nrow(congress_data) * 100
+  )
+
+```
+:::
+::: {.column width="50%"}
+**Results**:
+```{r congress-summary_result}
+#| eval: true
+#| echo: false
+congress_data %>%
+  group_by(party_code) %>%
+  summarise(
+    count = n(),
+    mean_ideology = mean(nominate_dim1, na.rm = TRUE),
+    median_ideology = median(nominate_dim1, na.rm = TRUE),
+    percentage = n() / nrow(congress_data) * 100
+  )
+
+```
+:::
+:::
+
+## AI Prompts for This Congressional Analysis
+
+::: {.columns}
+::: {.column width="50%"}
+**Prompt to Create Code**:
+```
+"I have congressional data that look like this: 
+
+Rows: 1000Rows: 1,000
+Columns: 5
+$ member_id     <int> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 1…
+$ party_code    <chr> "Democrat", "Republican", "Democrat", "Democrat", "Repub…
+...
+
+Create tidyverse code to summarize by party: count of members, mean and median ideology scores, and percentage of total for each party."
+```
+:::
+::: {.column width="50%"}
+**AI Response**:
+```
+I'll help you create a summary by party using group_by() and summarise(). Here's the code:
+
+[code provided above]
+
+```
+:::
+:::
+
+::: {.columns}
+::: {.column width="50%"}
+**Prompt to Explain Code**:
+```
+"Explain this summarise code step by step. What does each function do and why do we use na.rm = TRUE for the mean and median calculations?"
+```
+:::
+::: {.column width="50%"}
+**AI Response**:
+```
+Let me break this down:
+
+1. group_by(party_code): Creates separate 
+   groups for each party
+2. n(): Counts rows in each group
+3. mean(nominate_dim1, na.rm=TRUE): Calculates 
+   average ideology, ignoring missing values
+4. na.rm=TRUE prevents errors if any ideology 
+   scores are missing (NA)
+5. percentage calculation: n() divided by 
+   total dataset size * 100
+```
+:::
+:::
+
+## Example 2: Election Turnout Demographics Analysis
+
+**Research Question**: How does voter turnout vary across different demographic groups?
+
+**Data**: Simulated voter turnout dataset with 1,000 respondents, including age groups, education levels, income brackets, and turnout status.
+
+::: {.columns}
+::: {.column width="50%"}
+**Code**:
+```{r voter-summary}
+#| eval: false
+#| echo: true
+voter_data %>%
+  group_by(education_level) %>%
+  summarise(
+    total_respondents = n(),
+    voters = sum(voted == "Yes"),
+    non_voters = sum(voted == "No"),
+    turnout_rate = mean(voted == "Yes"),
+    median_age = median(age)
+  )
+```
+:::
+::: {.column width="50%"}
+**Results**:
+```{r voter-summary_result}
+#| eval: true
+#| echo: false
+voter_data %>%
+  group_by(education_level) %>%
+  summarise(
+    total_respondents = n(),
+    voters = sum(voted == "Yes"),
+    non_voters = sum(voted == "No"),
+    turnout_rate = mean(voted == "Yes"),
+    median_age = median(age)
+  )
+```
+:::
+:::
+
+## AI Prompts for Turnout Analysis
+
+::: {.columns}
+::: {.column width="50%"}
+**Prompt to Create Code**:
+```
+"I have voter data tha tlook liek this
+
+Rows: 1,000
+Columns: 4
+$ respondent_id   <int> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,…
+$ education_level <chr> "High School", "Graduate", "College", "High School", "…
+...
+
+Using tidyverse Create a summary by education level showing: total respondents, number who voted, number who didn't vote, turnout rate, and median age."
+```
+:::
+::: {.column width="50%"}
+**AI Response**:
+```
+I'll create a grouped summary that analyzes turnout by education level:
+
+[code provided above]
+
+This uses:
+- group_by() to analyze each education level
+- sum(voted == "Yes") to count "Yes" responses
+- mean(voted == "Yes") for turnout percentage
+- median() for typical age in each group
+```
+:::
+:::
+
+::: {.columns}
+::: {.column width="50%"}
+**Prompt to Explain Code**:
+```
+"Explain how sum(voted == 'Yes') works to count voters and how mean(voted == 'Yes') calculates the turnout rate. Why does this work?"
+```
+:::
+::: {.column width="50%"}
+**AI Response**:
+```
+Great question! This works because R treats TRUE/FALSE as 1/0:
+
+sum(voted == "Yes"): 
+- Creates TRUE/FALSE for each row
+- sum() treats TRUE as 1, FALSE as 0
+- Result: count of "Yes" responses
+
+mean(voted == "Yes"):
+- Same TRUE/FALSE creation
+- mean() of 1s and 0s = proportion
+- Result: percentage who voted
+```
+:::
+:::
+
+# More Conditional Logic Examples
+
+## Example: Income Analysis with Multiple Operators
+
+**Research Question**: How do income patterns vary in survey data?
+
+```{r income-demo-data}
+#| eval: true
+#| echo: false
+# Create income sample for demonstration
+income_demo <- tibble(
+  person_id = 1:12,
+  annual_income = c(25000, 75000, 45000, 120000, 35000, 95000,
+                    15000, 65000, 85000, 200000, 42000, 58000),
+  state = c("CA", "TX", "NY", "CA", "FL", "TX", 
+            "NY", "FL", "CA", "TX", "NY", "FL")
+)
+income_demo
+```
+
+## Using Different Operators on Income Data
+
+```{r income-operators}
+#| eval: true
+#| echo: true
+income_demo %>%
+  mutate(
+    low_income = annual_income <= 30000,        # <= operator
+    high_income = annual_income >= 100000,      # >= operator  
+    middle_income = annual_income > 30000 & annual_income < 100000,  # Combined
+    not_wealthy = annual_income != 200000,      # != operator
+    exactly_median = annual_income == 60000     # == operator (approximately)
+  ) %>%
+  select(person_id, annual_income, low_income, high_income, middle_income)
+```
+
+## Income Analysis Summary
+
+```{r income-summary}
+#| eval: true
+#| echo: true
+income_demo %>%
+  summarise(
+    total_people = n(),
+    low_income_count = sum(annual_income <= 30000),
+    high_income_count = sum(annual_income >= 100000), 
+    middle_income_count = sum(annual_income > 30000 & annual_income < 100000),
+    median_income = median(annual_income),
+    avg_income = mean(annual_income)
+  )
+```
+
+
+## AI Prompts for Income Analysis
+
+::: {.columns}
+::: {.column width="50%"}
+**Prompt to Create Code**:
+```
+"I have income data with person_id, annual_income, and state variables. I want to create logical variables that categorize people as: low income (≤30K), high income (≥100K), middle income (between 30K-100K), and identify anyone earning exactly the median. Then summarize the counts. The data looks like this:
+
+person_id annual_income state
+1         25000         CA  
+2         75000         TX
+3         45000         NY
+
+I want tidyverse code to do this."
+```
+:::
+::: {.column width="50%"}
+**Simulated AI Response**:
+```
+I'll help you create logical variables and summarize the income data:
+
+[code provided above]
+
+Key techniques used:
+- <= and >= operators for thresholds
+- Combined conditions with & operator  
+- != operator for exclusions
+- == operator for exact matches
+- sum() counts TRUE values
+```
+:::
+:::
+
+::: {.columns}
+::: {.column width="50%"}
+**Prompt to Explain Code**:
+```
+"Explain how the logical operators work in this income analysis. Why do we use sum() to count TRUE values? What's the difference between & and | in logical conditions?"
+```
+:::
+::: {.column width="50%"}
+**Simulated AI Response**:
+```
+Logical operators create TRUE/FALSE values:
+- <= 30000 checks if income is at or below threshold
+- >= 100000 checks if income meets high threshold
+- & requires BOTH conditions to be true
+- | requires at least ONE condition to be true
+
+sum() with logical variables:
+- TRUE = 1, FALSE = 0 in R
+- sum(condition) counts how many TRUEs
+- Efficient way to count observations meeting criteria
+```
+:::
+:::
+
+## Example 3: Campaign Spending Analysis
+
+**Research Question**: What are the spending patterns across different types of political campaigns?
+
+**Data**: Campaign finance dataset with 1,000 candidates, including office type, party, total raised, total spent, and campaign outcome.
+
+::: {.columns}
+::: {.column width="50%"}
+**Code**:
+```{r campaign-summary}
+#| eval: false
+#| echo: true
+campaign_data %>%
+  group_by(office_type, party) %>%
+  summarise(
+    num_candidates = n(),
+    avg_raised = mean(total_raised),
+    median_spent = median(total_spent),
+    win_rate = mean(outcome == "Won"),
+    total_spending = sum(total_spent),
+    .groups = "drop"
+  )
+```
+:::
+::: {.column width="50%"}
+**Results**:
+```{r campaign-summary_result}
+#| eval: true
+#| echo: false
+campaign_data %>%
+  group_by(office_type, party) %>%
+  summarise(
+    num_candidates = n(),
+    avg_raised = mean(total_raised),
+    median_spent = median(total_spent),
+    win_rate = mean(outcome == "Won"),
+    total_spending = sum(total_spent),
+    .groups = "drop"
+  )
+```
+:::
+:::
+
+## AI Prompts for Campaign Analysis
+
+::: {.columns}
+::: {.column width="50%"}
+**Prompt to Create Code**:
+```
+"I have campaign data with office_type, party, total_raised, total_spent, and outcome variables. Group by office type and party to show: candidate count, average raised, median spent, win rate, and total spending.  The data look like this: Rows: 12
+Columns: 3
+$ person_id     <int> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
+$ annual_income <dbl> 25000, 75000, 45000, 120000, 35000, 95000, 15000, 65000,…
+$ state         <chr> "CA", "TX", "NY", "CA", "FL", "TX", "NY", "FL", "CA", "T…"
+
+I want tidyverse code to do this.
+```
+:::
+::: {.column width="50%"}
+**Simulated AI Response**:
+```
+I'll create a grouped summary by office type and party. Here's the code:
+
+[code provided above]
+
+This groups by TWO variables simultaneously:
+- Each combination gets its own row
+- Calculations done within each group
+- .groups="drop" removes grouping after
+```
+:::
+:::
+
+::: {.columns}
+::: {.column width="50%"}
+**Prompt to Explain Code**:
+```
+"Walk me through this grouped summary. How does grouping by two variables work? Why might median be better than mean for spending analysis?"
+```
+:::
+::: {.column width="50%"}
+**Simulated AI Response**:
+```
+Multi-variable grouping creates subgroups:
+- group_by(office_type, party) creates 6 groups
+- Each office type + party combination
+- Statistics calculated within each subgroup
+
+Median vs Mean for spending:
+- Campaign spending often has outliers
+- Median less affected by extremely high spenders
+- Mean pulled up by billionaire self-funders
+- Median shows "typical" candidate spending
+```
+:::
+:::
+
+# Extracting Values with pull()
+
+## When to Use pull()
+
+**Purpose**: Extract a single column as a vector
+
+**Common use cases**:
+
+- Get a single statistic for further calculation
+- Extract values for comparison
+- Create variables from summary statistics
+
+**Basic syntax**:
+```r
+data %>%
+  pull(column_name)
+
+# Or extract calculated values
+data %>%
+  summarise(mean_value = mean(variable)) %>%
+  pull(mean_value)
+```
+
+## Example: Using pull() for Calculations
+
+```{r create-survey-data}
+#| eval: true
+#| echo: false
+# Create survey data for the pull example
+set.seed(123)
+survey_data <- tibble(
+  respondent_id = 1:1000,
+  age = sample(18:85, 1000, replace = TRUE),
+  income = rlnorm(1000, log(50000), 0.5),
+  education = sample(c("HS", "Some College", "Bachelor's", "Graduate"),
+                    1000, replace = TRUE,
+                    prob = c(0.3, 0.25, 0.3, 0.15)),
+  voted_2020 = sample(c(TRUE, FALSE), 1000, replace = TRUE, prob = c(0.66, 0.34))
+)
+```
+
+```{r pull-example}
+#| eval: true
+#| echo: true
+# Extract median income for threshold calculation
+median_income <- survey_data %>%
+  summarise(median_inc = median(income)) %>%
+  pull(median_inc)
+
+median_income
+
+# Use extracted value in new calculation
+survey_data %>%
+  mutate(
+    above_median = income > median_income,
+    income_ratio = income / median_income
+  ) %>%
+  select(respondent_id, income, above_median, income_ratio) %>%
+  slice_head(n = 5)
+```
+
+
+# Advanced Conditional Logic
+
+## Example: Complex Campaign Classifications  
+
+**Research Question**: How can we classify campaigns by competitiveness and resource level?
+
+```{r campaign-classification-data}
+#| eval: true
+#| echo: true
+# Create sample campaign data with more variables
+campaign_complex <- tibble(
+  candidate = paste("Candidate", 1:10),
+  vote_share = c(0.52, 0.48, 0.67, 0.33, 0.51, 0.49, 0.78, 0.22, 0.55, 0.45),
+  total_spent = c(150000, 145000, 300000, 100000, 180000, 175000, 500000, 80000, 200000, 190000),
+  incumbent = c(TRUE, FALSE, TRUE, FALSE, FALSE, TRUE, TRUE, FALSE, FALSE, TRUE)
+)
+
+campaign_complex
+```
+
+## Creating Complex Classifications with case_when()
+
+```{r campaign-classifications}
+#| eval: true
+#| echo: true
+campaign_complex %>%
+  mutate(
+    # Competitiveness based on vote margin
+    competitiveness = case_when(
+      abs(vote_share - 0.5) <= 0.02 ~ "Extremely Close",  # Within 2%
+      abs(vote_share - 0.5) <= 0.05 ~ "Competitive",      # Within 5%
+      abs(vote_share - 0.5) <= 0.10 ~ "Somewhat Safe",    # Within 10%
+      TRUE ~ "Safe"                                        # More than 10%
+    ),
+    
+    # Spending level 
+    spending_level = case_when(
+      total_spent >= 400000 ~ "High Budget",
+      total_spent >= 200000 ~ "Medium Budget",
+      total_spent >= 100000 ~ "Low Budget", 
+      TRUE ~ "Minimal Budget"
+    ),
+    
+    # Advantage type using multiple conditions
+    advantage = case_when(
+      incumbent == TRUE & total_spent >= 200000 ~ "Incumbent + Money",
+      incumbent == TRUE & total_spent < 200000 ~ "Incumbent Only",
+      incumbent == FALSE & total_spent >= 200000 ~ "Money Only",
+      TRUE ~ "Neither Advantage"
+    )
+  ) %>%
+  select(candidate, vote_share, competitiveness, spending_level, advantage)
+```
+
+## Understanding Complex Conditions
+
+**Breaking down the `advantage` classification**:
+
+1. `incumbent == TRUE & total_spent >= 200000`
+   - Must be incumbent AND high spending
+   - Both conditions must be TRUE
+
+2. `incumbent == TRUE & total_spent < 200000`  
+   - Must be incumbent AND low spending
+   - Checked only if #1 is FALSE
+
+3. `incumbent == FALSE & total_spent >= 200000`
+   - Must be challenger AND high spending
+   - Checked only if #1 and #2 are FALSE
+
+4. `TRUE`
+   - Catches all remaining cases
+   - Challenger with low spending
+
+## Example 4: Public Opinion Polling
+
+**Research Question**: How do approval ratings vary across different demographic and geographic groups?
+
+```{r polling-data}
+#| include: false
+polling_data <- tibble(
+  respondent_id = 1:1000,
+  region = sample(c("Northeast", "South", "Midwest", "West"), 1000, replace = TRUE),
+  party_id = sample(c("Democrat", "Republican", "Independent"), 1000, replace = TRUE)
+) %>%
+  mutate(
+    approval_rating = case_when(
+      party_id == "Democrat" ~ sample(20:95, n(), replace = TRUE),
+      party_id == "Republican" ~ sample(15:75, n(), replace = TRUE),
+      party_id == "Independent" ~ sample(25:85, n(), replace = TRUE),
+      TRUE ~ 50
+    )
+  )
+```
+
+::: {.columns}
+::: {.column width="50%"}
+**Code**:
+```{r polling-summary}
+#| eval: true
+#| echo: true
+polling_data %>%
+  group_by(region, party_id) %>%
+  summarise(
+    sample_size = n(),
+    avg_approval = mean(approval_rating),
+    approval_range = max(approval_rating) - min(approval_rating),
+    high_approval_pct = mean(approval_rating > 50),
+    response_rate = mean(!is.na(approval_rating)),
+    .groups = "drop"
+  )
+```
+:::
+::: {.column width="50%"}
+
+**AI Prompt to Create**:
+```
+"I have polling data with region, party_id, and approval_rating variables. Create a summary by region and party showing: sample size, average approval, approval range, percentage with high approval (>50), and response rate with tidyverse.  Here is what the data look like <insert glimpse>"
+```
+
+**AI Prompt to Explain**:
+```
+"<Paste the results from R.>
+
+Explain how mean(approval_rating > 50) calculates the percentage with high approval, and how mean(!is.na(approval_rating)) calculates response rate."
+```
+:::
+:::
+
+# Examples: Mutate Operations
+
+## Example 5: Creating Campaign Efficiency Metrics
+
+**Research Question**: How can we create meaningful efficiency metrics for campaign spending?
+
+::: {.columns}
+::: {.column width="50%"}
+```{r campaign-mutate}
+#| eval: true
+#| echo: true
+campaign_data %>%
+  mutate(
+    spending_efficiency = vote_share / (total_spent / 1000),
+    fundraising_ratio = total_raised / total_spent,
+    cost_per_vote = total_spent / total_votes,
+    budget_category = case_when(
+      total_spent < 100000 ~ "Low Budget",
+      total_spent < 500000 ~ "Medium Budget",
+      TRUE ~ "High Budget"
+    )
+  ) %>%
+  select(candidate_name, spending_efficiency, fundraising_ratio, 
+         cost_per_vote, budget_category) %>%
+  slice_head(n = 5)
+```
+:::
+::: {.column width="50%"}
+
+**AI Prompt to Create**:
+```
+"I have campaign data with vote_share, total_spent, total_raised, and total_votes. Create new variables for: spending efficiency(vote share per $1000 spent), fundraising ratio, cost per vote, and budget categories with tidyverse.  Here is what the data look like <insert glimpse>"
+```
+
+**AI Prompt to Explain**:
+```
+"Explain each mutate calculation. Why divide total_spent by 1000 for efficiency? How does case_when work for creating budget categories?"
+```
+:::
+:::
+
+## Example 6: Demographic Recoding and Analysis
+
+**Research Question**: How can we create standardized demographic categories for analysis?
+
+```{r survey-data}
+#| include: false
+survey_data <- tibble(
+  respondent_id = 1:1000,
+  age = sample(18:85, 1000, replace = TRUE),
+  income = rlnorm(1000, log(50000), 0.5),
+  education_years = sample(8:20, 1000, replace = TRUE),
+  political_interest = sample(1:10, 1000, replace = TRUE),
+  civic_participation = sample(1:10, 1000, replace = TRUE)
+)
+```
+
+::: {.columns}
+::: {.column width="50%"}
+```{r survey-mutate}
+#| eval: true
+#| echo: true
+survey_data %>%
+  mutate(
+    age_group = case_when(
+      age < 30 ~ "18-29",
+      age < 45 ~ "30-44", 
+      age < 65 ~ "45-64",
+      TRUE ~ "65+"
+    ),
+    income_quintile = ntile(income, 5),
+    education_years_std = (education_years - mean(education_years)) / sd(education_years),
+    high_earner = income > median(income),
+    political_engagement = (political_interest + civic_participation) / 2
+  ) %>%
+  select(respondent_id, age_group, income_quintile, education_years_std, 
+         high_earner, political_engagement) %>%
+  slice_head(n = 5)
+```
+:::
+::: {.column width="50%"}
+
+**AI Prompt to Create**:
+```
+"I have survey data with age, income, education_years, political_interest, and civic_participation. Create: age groups, income quintiles, standardized education, high earner indicator, and political engagement score with tidyverse.  Here is what the data look like <insert glimpse>"
+```
+
+**AI Prompt to Explain**:
+```
+"Explain how ntile() creates quintiles, what standardization does to education_years, and how the political engagement score is calculated."
+```
+:::
+:::
+
+## Example 7: Electoral Performance Metrics
+
+**Research Question**: How can we measure electoral competitiveness and performance?
+
+```{r election-data}
+#| include: false
+election_data <- tibble(
+  district = paste0(sample(state.abb, 1000, replace = TRUE), "-", sprintf("%02d", sample(1:20, 1000, replace = TRUE))),
+  dem_votes = sample(20000:80000, 1000, replace = TRUE),
+  rep_votes = sample(20000:80000, 1000, replace = TRUE),
+  total_votes = dem_votes + rep_votes,
+  eligible_voters = total_votes * runif(1000, 1.2, 1.8),
+  incumbent_party = sample(c("Democrat", "Republican"), 1000, replace = TRUE),
+  winner = sample(c("Democrat", "Republican"), 1000, replace = TRUE),
+  dem_expected_share = runif(1000, 0.3, 0.7)
+)
+```
+
+::: {.columns}
+::: {.column width="50%"}
+```{r election-mutate}
+#| eval: true
+#| echo: true
+election_data %>%
+  mutate(
+    vote_margin = abs(dem_votes - rep_votes),
+    competitive_race = vote_margin < (total_votes * 0.05),
+    dem_vote_share = dem_votes / total_votes,
+    turnout_rate = total_votes / eligible_voters,
+    incumbent_advantage = if_else(incumbent_party == winner, 1, 0),
+    upset_victory = (dem_vote_share > 0.5 & dem_expected_share < 0.5) |
+                   (dem_vote_share < 0.5 & dem_expected_share > 0.5)
+  ) %>%
+  select(district, competitive_race, dem_vote_share, turnout_rate, 
+         incumbent_advantage, upset_victory) %>%
+  slice_head(n = 5)
+```
+:::
+::: {.column width="50%"}
+
+**AI Prompt to Create**:
+```
+"I have election data with dem_votes, rep_votes, total_votes, eligible_voters, incumbent_party, winner, and expected vote shares. Create metrics for: vote margin, competitive races, vote shares, turnout, incumbent advantage, and upsets with tidyverse.  Here is what the data look like <insert glimpse>"
+```
+
+**AI Prompt to Explain**:
+```
+"Explain the logic for identifying competitive races and upset victories. How do the logical operators & and | work in the upset_victory calculation?"
+```
+:::
+:::
+
+## Example 8: Policy Position Scaling
+
+**Research Question**: How can we create meaningful scales from multiple policy positions?
+
+```{r legislator-data}
+#| include: false
+legislator_data <- tibble(
+  legislator_name = paste(
+    sample(c("Rep.", "Sen."), 1000, replace = TRUE),
+    sample(c("Anderson", "Brooks", "Carter", "Davis", "Evans", "Foster", "Garcia", "Harris", "Irving", "Jackson"), 1000, replace = TRUE)
+  ),
+  tax_cuts_score = sample(1:10, 1000, replace = TRUE),
+  deregulation_score = sample(1:10, 1000, replace = TRUE),
+  anti_union_score = sample(1:10, 1000, replace = TRUE),
+  abortion_restrictions = sample(1:10, 1000, replace = TRUE),
+  traditional_marriage = sample(1:10, 1000, replace = TRUE),
+  religious_freedom = sample(1:10, 1000, replace = TRUE)
+)
+```
+
+::: {.columns}
+::: {.column width="50%"}
+```{r legislator-mutate}
+#| eval: true
+#| echo: true
+legislator_data %>%
+  mutate(
+    economic_conservatism = (tax_cuts_score + deregulation_score + 
+                           anti_union_score) / 3,
+    social_conservatism = (abortion_restrictions + traditional_marriage + 
+                          religious_freedom) / 3,
+    overall_ideology = (economic_conservatism + social_conservatism) / 2,
+    ideology_category = case_when(
+      overall_ideology < 3 ~ "Liberal",
+      overall_ideology < 7 ~ "Moderate", 
+      TRUE ~ "Conservative"
+    ),
+    extreme_position = overall_ideology < 2 | overall_ideology > 8,
+    policy_consistency = abs(economic_conservatism - social_conservatism)
+  ) %>%
+  select(legislator_name, economic_conservatism, social_conservatism, 
+         overall_ideology, ideology_category, policy_consistency) %>%
+  slice_head(n = 5)
+```
+:::
+::: {.column width="50%"}
+
+**AI Prompt to Create**:
+```
+"I have legislator data with multiple policy voting scores (1-10 scale). Create composite scores for economic and social conservatism, overall ideology, ideology categories, extreme position indicators, and policy consistency measures with tidyverse.  Here is what the data look like <insert glimpse>"
+```
+
+**AI Prompt to Explain**:
+```
+"Explain how averaging creates composite scores and how policy_consistency measures the difference between economic and social positions. Why use abs()?"
+```
+:::
+:::
+
+# Examples: Variable Recoding
+
+## Example 9: Income Bracket Recoding
+
+**Research Question**: How can we create meaningful income categories from continuous income data?
+
+```{r income-data}
+#| include: false
+income_data <- tibble(
+  household_id = 1:1000,
+  household_income = rlnorm(1000, log(60000), 0.6),
+  savings = rlnorm(1000, log(15000), 0.8)
+)
+```
+
+::: {.columns}
+::: {.column width="50%"}
+```{r income-recode}
+#| eval: true
+#| echo: true
+income_data %>%
+  mutate(
+    income_bracket = case_when(
+      household_income < 25000 ~ "Low Income",
+      household_income < 50000 ~ "Lower Middle",
+      household_income < 75000 ~ "Middle Class",
+      household_income < 100000 ~ "Upper Middle",
+      household_income < 150000 ~ "High Income",
+      TRUE ~ "Very High Income"
+    ),
+    poverty_status = case_when(
+      household_income < 15000 ~ "Below Poverty",
+      household_income < 30000 ~ "Near Poverty", 
+      TRUE ~ "Above Poverty"
+    ),
+    economic_security = if_else(
+      household_income > 75000 & savings > 10000, 
+      "Secure", "Insecure"
+    )
+  ) %>%
+  count(income_bracket, poverty_status, economic_security) %>%
+  slice_head(n = 10)
+```
+:::
+::: {.column width="50%"}
+
+**AI Prompt to Create**:
+```
+"I have household income and savings data. 
+Create income brackets (6 categories), poverty 
+status (3 categories), and economic security 
+(combining income and savings thresholds). 
+Show the distribution across all categories."
+```
+
+**AI Prompt to Explain**:
+```
+"Explain how case_when processes conditions 
+in order and why TRUE is used as the final 
+condition. How does the compound condition 
+in economic_security work?"
+```
+:::
+:::
+
+## Example 10: Geographic Region Consolidation
+
+**Research Question**: How can we group states into meaningful political regions?
+
+```{r state-data}
+#| include: false
+state_data <- tibble(
+  state = rep(state.abb, 20),
+  year = rep(2004:2023, each = 50),
+  electoral_votes = rep(c(9, 3, 11, 6, 54, 10, 7, 3, 3, 29, 16, 4, 4, 19, 11, 6, 6, 8, 8, 4, 10, 11, 15, 10, 6, 10, 3, 5, 6, 4, 14, 5, 3, 17, 7, 7, 20, 4, 9, 3, 8, 11, 38, 6, 3, 13, 12, 5, 10, 3), 20),
+  vote_margin = runif(1000, 0.01, 0.15)
+)
+```
+
+::: {.columns}
+::: {.column width="50%"}
+```{r state-recode}
+#| eval: true
+#| echo: true
+state_data %>%
+  mutate(
+    political_region = case_when(
+      state %in% c("CA", "OR", "WA", "HI") ~ "Pacific Coast",
+      state %in% c("NY", "NJ", "CT", "MA", "RI", "VT", "NH", "ME") ~ "Northeast",
+      state %in% c("TX", "FL", "GA", "NC", "SC", "VA", "TN", "KY", "WV", 
+                   "AL", "MS", "LA", "AR", "OK") ~ "South",
+      state %in% c("IL", "IN", "OH", "MI", "WI", "MN", "IA", "MO", 
+                   "ND", "SD", "NE", "KS") ~ "Midwest",
+      state %in% c("CO", "UT", "NV", "AZ", "NM", "WY", "MT", "ID") ~ "Mountain West",
+      TRUE ~ "Other"
+    ),
+    battleground_state = state %in% c("PA", "MI", "WI", "AZ", "GA", "NC", "FL"),
+    electoral_votes_category = case_when(
+      electoral_votes >= 20 ~ "Large State",
+      electoral_votes >= 10 ~ "Medium State",
+      TRUE ~ "Small State"
+    )
+  ) %>%
+  count(political_region, battleground_state, electoral_votes_category) %>%
+  slice_head(n = 10)
+```
+:::
+::: {.column width="50%"}
+
+**AI Prompt to Create**:
+```
+"I have state-level data with state abbreviations and electoral_votes. Create political regions (5 main regions), identify battleground states, and categorize states by electoral vote count with tidyverse.  Here is what the data look like <insert glimpse>"
+```
+
+**AI Prompt to Explain**:
+```
+"Explain how %in% works to check if a state belongs to a vector of states. Why is this more efficient than multiple | (OR) conditions?"
+```
+:::
+:::
+
+## Example 11: Survey Response Cleaning
+
+**Research Question**: How can we clean and standardize survey response data?
+
+```{r survey-clean-data}
+#| include: false
+survey_clean_data <- tibble(
+  respondent_id = 1:1000,
+  party_id = sample(c("Democrat", "dem", "Democratic", "Republican", "rep", "GOP", 
+                     "Independent", "ind", "none", "other", "conservative", "liberal", NA), 
+                   1000, replace = TRUE),
+  approval = sample(c("Strongly Approve", "Approve", "Neither", "Disapprove", 
+                     "Strongly Disapprove", NA), 1000, replace = TRUE),
+  education = sample(8:20, 1000, replace = TRUE)
+)
+```
+
+::: {.columns}
+::: {.column width="50%"}
+```{r survey-clean}
+#| eval: true
+#| echo: true
+survey_clean_data %>%
+  mutate(
+    party_clean = case_when(
+      str_detect(party_id, regex("dem|liberal", ignore_case = TRUE)) ~ "Democrat",
+      str_detect(party_id, regex("rep|conserv|gop", ignore_case = TRUE)) ~ "Republican", 
+      str_detect(party_id, regex("ind|none|other", ignore_case = TRUE)) ~ "Independent",
+      is.na(party_id) ~ "Unknown",
+      TRUE ~ "Other"
+    ),
+    approval_numeric = case_when(
+      approval %in% c("Strongly Approve", "Approve") ~ 1,
+      approval %in% c("Strongly Disapprove", "Disapprove") ~ 0,
+      approval == "Neither" ~ 0.5,
+      TRUE ~ NA_real_
+    ),
+    education_level = case_when(
+      education < 12 ~ "Less than High School",
+      education == 12 ~ "High School Graduate",
+      education %in% 13:15 ~ "Some College",
+      education == 16 ~ "College Graduate",
+      education > 16 ~ "Post-Graduate",
+      TRUE ~ "Unknown"
+    )
+  ) %>%
+  count(party_clean, education_level) %>%
+  slice_head(n = 10)
+```
+:::
+::: {.column width="50%"}
+
+**AI Prompt to Create**:
+```
+"I have messy survey data with party_id (text), approval (categories), and education (years). Clean party affiliations using text detection, convert approval to numeric (1=approve, 0=disapprove, 0.5=neutral), and create education levels with tidyverse.  Here is what the data look like <insert glimpse>"
+```
+
+**AI Prompt to Explain**:
+```
+"Explain how str_detect with regex works for party identification and why ignore_case = TRUE is important. How does NA_real_ differ from just NA?"
+```
+:::
+:::
+
+## Example 12: Policy Position Recoding
+
+**Research Question**: How can we simplify complex policy positions into analyzable categories?
+
+```{r voting-data}
+#| include: false
+voting_data <- tibble(
+  legislator_id = 1:1000,
+  healthcare_vote = sample(c("Yes", "No", "Abstain"), 1000, replace = TRUE),
+  medicare_expansion = sample(c("Yes", "No", "Abstain"), 1000, replace = TRUE),
+  climate_action = sample(c("Yes", "No", "Abstain"), 1000, replace = TRUE),
+  clean_energy = sample(c("Yes", "No", "Abstain"), 1000, replace = TRUE),
+  tax_cuts = sample(c("Yes", "No", "Abstain"), 1000, replace = TRUE),
+  spending_cuts = sample(c("Yes", "No", "Abstain"), 1000, replace = TRUE)
+)
+```
+
+::: {.columns}
+::: {.column width="50%"}
+```{r voting-recode}
+#| eval: true
+#| echo: true
+voting_data %>%
+  mutate(
+    healthcare_position = case_when(
+      healthcare_vote == "Yes" & medicare_expansion == "Yes" ~ "Progressive",
+      healthcare_vote == "Yes" & medicare_expansion == "No" ~ "Moderate",
+      healthcare_vote == "No" & medicare_expansion == "No" ~ "Conservative", 
+      healthcare_vote == "Abstain" | medicare_expansion == "Abstain" ~ "Unclear",
+      TRUE ~ "Mixed"
+    ),
+    environmental_stance = case_when(
+      climate_action == "Yes" & clean_energy == "Yes" ~ "Pro-Environment",
+      climate_action == "No" & clean_energy == "No" ~ "Anti-Environment",
+      TRUE ~ "Mixed Environment"
+    ),
+    fiscal_ideology = case_when(
+      tax_cuts == "Yes" & spending_cuts == "Yes" ~ "Fiscal Conservative",
+      tax_cuts == "No" & spending_cuts == "No" ~ "Fiscal Liberal",
+      tax_cuts == "Yes" & spending_cuts == "No" ~ "Tax Cutter",
+      tax_cuts == "No" & spending_cuts == "Yes" ~ "Spending Cutter",
+      TRUE ~ "Fiscal Moderate"
+    )
+  ) %>%
+  count(healthcare_position, environmental_stance, fiscal_ideology) %>%
+  slice_head(n = 10)
+```
+:::
+::: {.column width="50%"}
+
+**AI Prompt to Create**:
+```
+"I have legislator voting data with Yes/No/Abstain votes on healthcare, medicare_expansion, climate_action, clean_energy, tax_cuts, and spending_cuts. Create position categories combining related votes into meaningful ideological groups with tidyverse.  Here is what the data look like <insert glimpse>"
+```
+
+**AI Prompt to Explain**:
+```
+"Explain how combining multiple vote conditions creates more nuanced categories than single votes. Why use 'Mixed' and 'Unclear' categories instead of forcing binary classifications?"
+```
+:::
+:::
+
+# Complex Examples
+
+## Complex Example 1: Comprehensive Electoral Analysis
+
+**Research Question**: What factors predict electoral success across different types of races and regions?
+
+```{r complex-election-data}
+#| include: false
+complex_election_data <- tibble(
+  race_id = 1:1000,
+  region = sample(c("Northeast", "South", "Midwest", "West"), 1000, replace = TRUE),
+  office_type = sample(c("House", "Senate", "Governor"), 1000, replace = TRUE),
+  vote_margin = runif(1000, 0.01, 0.25),
+  candidate_spending = rlnorm(1000, log(200000), 1),
+  opponent_spending = rlnorm(1000, log(180000), 1),
+  prior_office = sample(c("None", "Local", "County", "State", "Federal"), 1000, replace = TRUE),
+  candidate_race = sample(c("White", "Black", "Hispanic", "Asian", "Other"), 1000, replace = TRUE),
+  district_majority_race = sample(c("White", "Black", "Hispanic", "Asian", "Other"), 1000, replace = TRUE),
+  total_raised = candidate_spending * runif(1000, 0.8, 1.3),
+  campaign_days = sample(300:600, 1000, replace = TRUE),
+  polling_deficit = rnorm(1000, 0, 8),
+  outcome = sample(c("Won", "Lost"), 1000, replace = TRUE),
+  vote_share = runif(1000, 0.35, 0.65)
+)
+```
+
+::: {.columns}
+::: {.column width="50%"}
+```{r complex-analysis}
+#| eval: true
+#| echo: true
+electoral_analysis <- complex_election_data %>%
+  # Filter to competitive races only
+  filter(vote_margin < 0.1) %>%
+  
+  # Create new variables
+  mutate(
+    spending_advantage = (candidate_spending - opponent_spending) / 
+                        (candidate_spending + opponent_spending),
+    experience_level = case_when(
+      prior_office == "None" ~ "Newcomer",
+      prior_office %in% c("Local", "County") ~ "Local Experience", 
+      prior_office %in% c("State", "Federal") ~ "Experienced",
+      TRUE ~ "Other"
+    ),
+    demographic_match = case_when(
+      candidate_race == district_majority_race ~ "Matches District",
+      TRUE ~ "Different from District"
+    ),
+    upset_potential = if_else(
+      polling_deficit > 5 & spending_advantage > 0.2, 
+      "High", "Low"
+    )
+  ) %>%
+  
+  # Group analysis by region and office type
+  group_by(region, office_type, experience_level) %>%
+  summarise(
+    total_races = n(),
+    avg_spending_advantage = mean(spending_advantage, na.rm = TRUE),
+    win_rate = mean(outcome == "Won"),
+    upset_rate = mean(upset_potential == "High", na.rm = TRUE),
+    .groups = "drop"
+  ) %>%
+  arrange(desc(win_rate))
+
+electoral_analysis %>% slice_head(n = 8)
+```
+:::
+::: {.column width="50%"}
+
+**AI Prompt to Create**:
+```
+"I have comprehensive election data with candidate info, spending, demographics, and results. Create an analysis that: 1) filters to competitive races, 2) creates spending advantage and experience metrics, 3) groups by region/office/experience, 4) calculates win rates and other success metrics with tidyverse.  Here is what the data look like <insert glimpse>"
+```
+
+**AI Prompt to Explain**:
+```
+"Explain this complex analysis workflow. How do the filter, mutate, group_by, and summarise functions work together? Why use .groups = 'drop' and what does na.rm = TRUE do in the mean calculations?"
+```
+:::
+:::
+
+## Complex Example 2: Public Opinion Trend Analysis
+
+**Research Question**: How do public opinion trends vary across demographic groups?
+
+```{r complex-polling-data}
+#| include: false
+complex_polling_data <- tibble(
+  survey_date = rep(seq(as.Date("2023-01-01"), as.Date("2023-12-01"), by = "month"), each = 84),
+  age = rep(sample(18:85, 84, replace = TRUE), 12),
+  party_id = rep(sample(c("Democrat", "Republican", "Independent"), 84, replace = TRUE), 12),
+  approval_rating = sample(20:80, 1008, replace = TRUE),
+  top_issue = sample(c("Economy", "Healthcare", "Immigration", "Environment", "Crime"), 1008, replace = TRUE),
+  economic_outlook = sample(c("Positive", "Negative", "Neutral"), 1008, replace = TRUE),
+  policy_satisfaction = sample(1:10, 1008, replace = TRUE)
+) %>%
+  slice_head(n = 1000)
+```
+
+::: {.columns}
+::: {.column width="50%"}
+```{r complex-trends}
+#| eval: true
+#| echo: true
+opinion_trends <- complex_polling_data %>%
+  # Create time-based variables
+  mutate(
+    year_month = floor_date(survey_date, "month"),
+    approval_binary = if_else(approval_rating > 50, 1, 0),
+    issue_priority = case_when(
+      top_issue %in% c("Economy") ~ "Economic Issues",
+      top_issue %in% c("Healthcare") ~ "Social Issues",
+      top_issue %in% c("Immigration", "Crime") ~ "Security Issues",
+      top_issue %in% c("Environment") ~ "Environmental Issues",
+      TRUE ~ "Other Issues"
+    ),
+    age_generation = case_when(
+      age < 30 ~ "Gen Z",
+      age < 45 ~ "Millennial", 
+      age < 65 ~ "Gen X",
+      TRUE ~ "Boomer+"
+    )
+  ) %>%
+  
+  # Group by demographics and time
+  group_by(year_month, age_generation, party_id) %>%
+  summarise(
+    sample_size = n(),
+    avg_approval = mean(approval_rating),
+    approval_rate = mean(approval_binary),
+    economic_optimism = mean(economic_outlook == "Positive"),
+    .groups = "keep"
+  ) %>%
+  
+  # Calculate trends within groups
+  group_by(age_generation, party_id) %>%
+  mutate(
+    approval_trend = approval_rate - lag(approval_rate),
+    trend_direction = case_when(
+      approval_trend > 0.05 ~ "Rising",
+      approval_trend < -0.05 ~ "Falling", 
+      TRUE ~ "Stable"
+    )
+  ) %>%
+  ungroup() %>%
+  filter(year_month >= "2023-06-01")
+
+opinion_trends %>% slice_head(n = 8)
+```
+:::
+::: {.column width="50%"}
+
+**AI Prompt to Create**:
+```
+"I have longitudinal polling data with dates, demographics, approval ratings, and issue priorities. Create an analysis that: 1) creates time and demographic categories, 2) groups by multiple variables for monthly trends, 3) calculates trend changes with lag functions with tidyverse.  Here is what the data look like <insert glimpse>"
+```
+
+**AI Prompt to Explain**:
+```
+"Explain this complex analysis workflow. How do multiple group_by operations work? What does lag() do for trend calculation? How does the combination of filter, mutate, group_by, and summarise create this analysis?"
+```
+:::
+:::
+
+
+# Best Practices
+
+## Writing Effective AI Prompts
+
+**Structure your requests clearly**:
+
+1. **Data description**: "I have a dataset with variables X, Y, Z..."
+2. **Goal**: "I want to create/calculate/recode..."
+3. **Specific requirements**: "Show me the code and explain each step"
+
+**Example prompt structure**:
+```
+"I have campaign finance data with variables: candidate_name, total_spent, total_raised, vote_share, and outcome. I want to create efficiency metrics including cost per vote and spending per percentage point of vote share with tidyverse.  Here is what the data look like <insert glimpse>.  Show me the mutate code and explain how each calculation works."
+```
+
+## Common Mistakes to Avoid
+
+**Logical operator confusion**:
+
+- Use `&` for AND, `|` for OR in conditions
+- Remember operator precedence with parentheses
+
+**case_when() ordering**:
+
+- Conditions are evaluated in order
+- More specific conditions should come first
+- Always include a catch-all with `TRUE`
+
+**Missing value handling**:
+
+- Use `na.rm = TRUE` in summary functions when needed
+- Consider `is.na()` for missing value conditions
+
+# Summary
+
+## Key Functions Learned
+
+**Variable creation**:
+
+- `mutate()`: Create new variables with calculations
+- `case_when()`: Complex conditional recoding
+- `if_else()`: Simple binary recoding
+
+**Advanced summarization**:
+
+- `summarise()` with proportions and percentages
+- `group_by()` with multiple grouping variables
+- `pull()` for extracting single values
+
+**Mathematical and logical operations**:
+
+- Arithmetic calculations and ratios
+- Logical comparisons and boolean logic
+- Text pattern matching with `str_detect()`
+
+## In Our Next Class
+
+**Research Designs**
+
+- Experimental vs. observational research designs
+- Natural experiments and their advantages
+- Cross-sectional vs. longitudinal data
+- Evaluating tradeoffs between different designs

@@ -1,0 +1,1001 @@
+voter_id,treatment,age_group,education,voted_2022
+1,Phone,18-29,BA,TRUE
+2,Canvass,30-44,BA,TRUE
+3,Canvass,18-29,Graduate,TRUE
+4,Control,45-64,BA,TRUE
+5,Control,18-29,High School,FALSE
+6,Canvass,65+,High School,FALSE
+7,Canvass,18-29,Graduate,FALSE
+8,Canvass,65+,Some College,FALSE
+9,Control,65+,High School,FALSE
+10,Phone,30-44,High School,TRUE
+11,Canvass,65+,High School,FALSE
+12,Mail,65+,Graduate,FALSE
+13,Canvass,30-44,BA,TRUE
+14,Canvass,65+,BA,TRUE
+15,Control,45-64,BA,TRUE
+16,Control,18-29,High School,FALSE
+17,Phone,18-29,BA,FALSE
+18,Phone,65+,Some College,FALSE
+19,Control,45-64,BA,FALSE
+20,Control,45-64,BA,TRUE
+21,Mail,30-44,Some College,FALSE
+22,Canvass,30-44,Some College,TRUE
+23,Canvass,45-64,High School,FALSE
+24,Canvass,30-44,Graduate,TRUE
+25,Canvass,30-44,Graduate,FALSE
+26,Phone,65+,Some College,TRUE
+27,Mail,18-29,BA,TRUE
+28,Canvass,45-64,Graduate,TRUE
+29,Mail,65+,Some College,FALSE
+30,Control,30-44,High School,FALSE
+31,Control,45-64,High School,FALSE
+32,Mail,18-29,Some College,TRUE
+33,Canvass,65+,BA,FALSE
+34,Phone,65+,High School,TRUE
+35,Canvass,65+,Some College,FALSE
+36,Control,65+,BA,TRUE
+37,Canvass,65+,Graduate,FALSE
+38,Mail,65+,BA,TRUE
+39,Mail,65+,Graduate,TRUE
+40,Mail,30-44,Graduate,FALSE
+41,Control,45-64,BA,TRUE
+42,Canvass,30-44,Graduate,TRUE
+43,Phone,45-64,BA,FALSE
+44,Mail,65+,Graduate,TRUE
+45,Control,65+,High School,TRUE
+46,Control,45-64,Graduate,FALSE
+47,Mail,45-64,Graduate,FALSE
+48,Control,65+,Graduate,TRUE
+49,Control,45-64,Some College,FALSE
+50,Mail,45-64,Some College,TRUE
+51,Mail,45-64,High School,FALSE
+52,Mail,45-64,Some College,FALSE
+53,Canvass,30-44,Some College,TRUE
+54,Control,18-29,High School,FALSE
+55,Phone,65+,Some College,TRUE
+56,Control,18-29,BA,TRUE
+57,Control,18-29,BA,TRUE
+58,Control,45-64,High School,TRUE
+59,Control,30-44,Some College,FALSE
+60,Phone,30-44,High School,FALSE
+61,Control,45-64,BA,FALSE
+62,Phone,65+,BA,TRUE
+63,Phone,45-64,Some College,TRUE
+64,Phone,65+,BA,TRUE
+65,Control,18-29,BA,FALSE
+66,Canvass,45-64,Graduate,FALSE
+67,Canvass,45-64,High School,FALSE
+68,Phone,45-64,Some College,TRUE
+69,Mail,45-64,High School,FALSE
+70,Control,30-44,High School,TRUE
+71,Mail,65+,High School,FALSE
+72,Canvass,30-44,High School,FALSE
+73,Phone,18-29,Some College,FALSE
+74,Phone,30-44,BA,FALSE
+75,Control,65+,BA,TRUE
+76,Mail,30-44,Some College,FALSE
+77,Mail,65+,Graduate,FALSE
+78,Phone,65+,Graduate,TRUE
+79,Canvass,18-29,High School,TRUE
+80,Mail,45-64,Some College,TRUE
+81,Canvass,45-64,High School,TRUE
+82,Phone,65+,Graduate,TRUE
+83,Mail,45-64,Graduate,TRUE
+84,Canvass,18-29,BA,FALSE
+85,Control,30-44,Graduate,TRUE
+86,Mail,30-44,Some College,TRUE
+87,Phone,18-29,BA,FALSE
+88,Canvass,30-44,BA,FALSE
+89,Canvass,18-29,High School,FALSE
+90,Mail,18-29,High School,TRUE
+91,Phone,30-44,High School,FALSE
+92,Control,18-29,High School,TRUE
+93,Mail,18-29,Graduate,FALSE
+94,Mail,65+,BA,FALSE
+95,Mail,30-44,Graduate,FALSE
+96,Mail,65+,High School,FALSE
+97,Control,45-64,BA,TRUE
+98,Control,65+,Some College,TRUE
+99,Phone,18-29,BA,TRUE
+100,Control,65+,Graduate,FALSE
+101,Mail,18-29,Some College,TRUE
+102,Control,30-44,Some College,FALSE
+103,Mail,45-64,Some College,TRUE
+104,Canvass,45-64,High School,FALSE
+105,Control,65+,Some College,FALSE
+106,Mail,45-64,Graduate,FALSE
+107,Canvass,65+,Graduate,TRUE
+108,Phone,65+,High School,TRUE
+109,Phone,65+,Graduate,TRUE
+110,Mail,18-29,BA,FALSE
+111,Canvass,65+,BA,FALSE
+112,Mail,30-44,BA,FALSE
+113,Mail,65+,High School,FALSE
+114,Control,45-64,High School,FALSE
+115,Canvass,18-29,BA,TRUE
+116,Control,18-29,BA,FALSE
+117,Canvass,65+,High School,FALSE
+118,Control,65+,High School,FALSE
+119,Control,18-29,Graduate,FALSE
+120,Phone,65+,BA,TRUE
+121,Mail,30-44,High School,FALSE
+122,Control,30-44,Graduate,FALSE
+123,Mail,30-44,Some College,FALSE
+124,Canvass,65+,Graduate,TRUE
+125,Mail,65+,Graduate,TRUE
+126,Phone,30-44,Graduate,FALSE
+127,Canvass,30-44,Graduate,TRUE
+128,Control,45-64,Graduate,TRUE
+129,Phone,45-64,Some College,TRUE
+130,Control,65+,Graduate,TRUE
+131,Control,45-64,Some College,FALSE
+132,Phone,30-44,Some College,FALSE
+133,Mail,65+,High School,FALSE
+134,Phone,30-44,Graduate,TRUE
+135,Phone,18-29,Some College,TRUE
+136,Phone,45-64,BA,TRUE
+137,Control,30-44,Graduate,TRUE
+138,Phone,18-29,Some College,TRUE
+139,Phone,18-29,BA,TRUE
+140,Control,45-64,Graduate,FALSE
+141,Mail,18-29,Some College,FALSE
+142,Canvass,65+,Some College,FALSE
+143,Control,45-64,High School,FALSE
+144,Phone,18-29,Some College,TRUE
+145,Mail,65+,BA,FALSE
+146,Mail,65+,Some College,FALSE
+147,Canvass,65+,Some College,FALSE
+148,Canvass,65+,BA,TRUE
+149,Phone,30-44,Graduate,TRUE
+150,Canvass,30-44,Graduate,TRUE
+151,Canvass,65+,Some College,FALSE
+152,Phone,45-64,High School,FALSE
+153,Mail,18-29,BA,FALSE
+154,Canvass,45-64,High School,FALSE
+155,Canvass,45-64,BA,TRUE
+156,Control,65+,Graduate,FALSE
+157,Canvass,30-44,High School,FALSE
+158,Mail,45-64,Some College,TRUE
+159,Mail,45-64,Some College,FALSE
+160,Mail,45-64,High School,FALSE
+161,Control,30-44,High School,TRUE
+162,Canvass,30-44,BA,TRUE
+163,Control,18-29,Some College,FALSE
+164,Mail,45-64,High School,FALSE
+165,Canvass,30-44,High School,TRUE
+166,Mail,30-44,Graduate,TRUE
+167,Mail,45-64,Graduate,FALSE
+168,Control,45-64,Graduate,TRUE
+169,Phone,18-29,High School,TRUE
+170,Mail,30-44,Graduate,TRUE
+171,Control,18-29,Graduate,FALSE
+172,Canvass,18-29,Some College,TRUE
+173,Control,30-44,BA,TRUE
+174,Phone,30-44,Graduate,FALSE
+175,Canvass,18-29,BA,TRUE
+176,Phone,18-29,High School,FALSE
+177,Mail,65+,High School,FALSE
+178,Phone,65+,High School,FALSE
+179,Mail,45-64,High School,TRUE
+180,Mail,65+,High School,FALSE
+181,Canvass,65+,Some College,FALSE
+182,Canvass,30-44,Graduate,FALSE
+183,Control,45-64,High School,FALSE
+184,Control,30-44,Some College,FALSE
+185,Canvass,30-44,High School,FALSE
+186,Mail,18-29,Graduate,FALSE
+187,Control,18-29,Graduate,FALSE
+188,Phone,45-64,BA,FALSE
+189,Control,30-44,BA,TRUE
+190,Phone,45-64,Graduate,FALSE
+191,Phone,30-44,Graduate,TRUE
+192,Control,45-64,Some College,TRUE
+193,Canvass,30-44,High School,TRUE
+194,Phone,30-44,BA,TRUE
+195,Control,45-64,Graduate,TRUE
+196,Control,18-29,Some College,TRUE
+197,Canvass,18-29,BA,TRUE
+198,Phone,45-64,Graduate,FALSE
+199,Phone,65+,Some College,TRUE
+200,Mail,30-44,BA,FALSE
+201,Mail,45-64,Some College,TRUE
+202,Control,18-29,Graduate,TRUE
+203,Phone,18-29,High School,FALSE
+204,Phone,30-44,Graduate,TRUE
+205,Canvass,18-29,Graduate,FALSE
+206,Phone,45-64,BA,FALSE
+207,Phone,30-44,High School,TRUE
+208,Control,65+,BA,FALSE
+209,Canvass,30-44,BA,FALSE
+210,Phone,30-44,Some College,FALSE
+211,Canvass,18-29,High School,TRUE
+212,Mail,30-44,High School,FALSE
+213,Phone,65+,High School,FALSE
+214,Control,45-64,Some College,TRUE
+215,Phone,18-29,High School,TRUE
+216,Control,30-44,BA,FALSE
+217,Control,45-64,Some College,TRUE
+218,Control,30-44,Graduate,FALSE
+219,Canvass,30-44,Some College,TRUE
+220,Control,65+,High School,FALSE
+221,Canvass,18-29,Graduate,FALSE
+222,Phone,18-29,High School,TRUE
+223,Mail,65+,Graduate,FALSE
+224,Control,30-44,High School,FALSE
+225,Mail,30-44,High School,FALSE
+226,Control,18-29,BA,FALSE
+227,Canvass,65+,Graduate,TRUE
+228,Phone,18-29,Some College,TRUE
+229,Mail,45-64,Some College,TRUE
+230,Canvass,30-44,Graduate,FALSE
+231,Canvass,45-64,BA,FALSE
+232,Phone,65+,Graduate,TRUE
+233,Canvass,65+,BA,TRUE
+234,Phone,30-44,Graduate,FALSE
+235,Mail,18-29,BA,FALSE
+236,Control,18-29,High School,FALSE
+237,Mail,65+,Some College,FALSE
+238,Mail,18-29,High School,FALSE
+239,Control,65+,High School,TRUE
+240,Control,65+,High School,FALSE
+241,Control,65+,Graduate,TRUE
+242,Canvass,45-64,BA,FALSE
+243,Mail,65+,Graduate,TRUE
+244,Control,18-29,Some College,FALSE
+245,Canvass,30-44,High School,TRUE
+246,Control,18-29,Some College,FALSE
+247,Canvass,45-64,High School,FALSE
+248,Control,45-64,High School,FALSE
+249,Canvass,65+,Some College,TRUE
+250,Control,18-29,BA,TRUE
+251,Canvass,65+,BA,TRUE
+252,Phone,18-29,Some College,TRUE
+253,Canvass,18-29,Graduate,FALSE
+254,Phone,18-29,High School,FALSE
+255,Mail,30-44,BA,FALSE
+256,Phone,65+,Some College,TRUE
+257,Control,45-64,High School,FALSE
+258,Canvass,30-44,Graduate,FALSE
+259,Control,65+,Some College,TRUE
+260,Canvass,45-64,High School,TRUE
+261,Mail,30-44,Graduate,FALSE
+262,Mail,18-29,Graduate,FALSE
+263,Mail,30-44,Graduate,FALSE
+264,Mail,30-44,High School,FALSE
+265,Mail,65+,Graduate,TRUE
+266,Control,30-44,Graduate,FALSE
+267,Canvass,30-44,High School,FALSE
+268,Mail,30-44,BA,TRUE
+269,Mail,65+,BA,FALSE
+270,Mail,30-44,BA,FALSE
+271,Control,30-44,High School,TRUE
+272,Phone,18-29,High School,FALSE
+273,Mail,30-44,Some College,FALSE
+274,Mail,30-44,High School,TRUE
+275,Mail,18-29,Some College,FALSE
+276,Canvass,45-64,Some College,FALSE
+277,Phone,65+,Some College,TRUE
+278,Control,18-29,High School,TRUE
+279,Mail,18-29,High School,FALSE
+280,Canvass,30-44,High School,FALSE
+281,Mail,45-64,Graduate,FALSE
+282,Phone,65+,Some College,FALSE
+283,Canvass,30-44,High School,FALSE
+284,Control,45-64,BA,FALSE
+285,Control,30-44,Some College,TRUE
+286,Control,65+,BA,FALSE
+287,Phone,65+,High School,FALSE
+288,Mail,65+,BA,TRUE
+289,Control,30-44,BA,TRUE
+290,Mail,65+,BA,TRUE
+291,Control,18-29,High School,FALSE
+292,Phone,18-29,Graduate,TRUE
+293,Mail,45-64,BA,FALSE
+294,Control,30-44,Graduate,TRUE
+295,Mail,45-64,High School,FALSE
+296,Canvass,65+,Graduate,FALSE
+297,Canvass,45-64,High School,TRUE
+298,Canvass,45-64,High School,FALSE
+299,Canvass,45-64,Graduate,FALSE
+300,Phone,65+,Some College,FALSE
+301,Canvass,18-29,High School,FALSE
+302,Control,18-29,BA,TRUE
+303,Control,18-29,Some College,TRUE
+304,Mail,30-44,BA,TRUE
+305,Mail,30-44,Some College,FALSE
+306,Canvass,18-29,Graduate,TRUE
+307,Control,18-29,BA,FALSE
+308,Canvass,65+,Some College,FALSE
+309,Phone,30-44,BA,FALSE
+310,Canvass,18-29,Some College,FALSE
+311,Control,45-64,High School,TRUE
+312,Mail,65+,Graduate,FALSE
+313,Control,18-29,Graduate,TRUE
+314,Canvass,30-44,High School,TRUE
+315,Canvass,30-44,Some College,TRUE
+316,Canvass,45-64,High School,FALSE
+317,Phone,45-64,High School,FALSE
+318,Control,18-29,BA,FALSE
+319,Mail,65+,Some College,FALSE
+320,Mail,18-29,High School,TRUE
+321,Mail,65+,BA,TRUE
+322,Control,45-64,High School,FALSE
+323,Phone,45-64,Some College,TRUE
+324,Control,65+,Some College,TRUE
+325,Control,30-44,High School,FALSE
+326,Canvass,65+,High School,FALSE
+327,Control,18-29,BA,TRUE
+328,Canvass,18-29,Some College,TRUE
+329,Control,65+,BA,FALSE
+330,Canvass,45-64,Some College,TRUE
+331,Control,30-44,Graduate,TRUE
+332,Canvass,30-44,BA,TRUE
+333,Control,30-44,High School,TRUE
+334,Mail,18-29,High School,FALSE
+335,Control,30-44,Some College,FALSE
+336,Canvass,30-44,BA,FALSE
+337,Canvass,18-29,Graduate,TRUE
+338,Control,18-29,BA,TRUE
+339,Control,18-29,Graduate,TRUE
+340,Canvass,65+,Graduate,TRUE
+341,Control,18-29,High School,TRUE
+342,Mail,30-44,High School,TRUE
+343,Control,18-29,High School,TRUE
+344,Canvass,18-29,High School,FALSE
+345,Phone,30-44,Graduate,TRUE
+346,Control,65+,Some College,TRUE
+347,Mail,65+,High School,FALSE
+348,Phone,65+,BA,TRUE
+349,Phone,45-64,BA,FALSE
+350,Control,65+,High School,TRUE
+351,Mail,30-44,Some College,TRUE
+352,Mail,45-64,BA,TRUE
+353,Canvass,45-64,High School,FALSE
+354,Phone,18-29,Graduate,FALSE
+355,Canvass,18-29,Some College,TRUE
+356,Canvass,65+,High School,FALSE
+357,Phone,18-29,Some College,TRUE
+358,Control,18-29,Some College,TRUE
+359,Mail,18-29,BA,FALSE
+360,Control,30-44,Some College,FALSE
+361,Control,30-44,Graduate,TRUE
+362,Phone,18-29,Graduate,TRUE
+363,Phone,45-64,BA,FALSE
+364,Canvass,18-29,High School,TRUE
+365,Canvass,30-44,Some College,FALSE
+366,Phone,65+,High School,FALSE
+367,Phone,18-29,BA,TRUE
+368,Phone,65+,Graduate,FALSE
+369,Mail,45-64,Graduate,TRUE
+370,Phone,45-64,BA,FALSE
+371,Phone,45-64,BA,FALSE
+372,Control,18-29,BA,FALSE
+373,Mail,30-44,BA,FALSE
+374,Control,45-64,BA,FALSE
+375,Phone,65+,BA,TRUE
+376,Canvass,30-44,High School,FALSE
+377,Mail,18-29,BA,TRUE
+378,Control,65+,BA,FALSE
+379,Phone,30-44,High School,TRUE
+380,Control,18-29,Some College,FALSE
+381,Mail,30-44,BA,FALSE
+382,Phone,45-64,Some College,FALSE
+383,Mail,18-29,High School,FALSE
+384,Phone,45-64,High School,FALSE
+385,Canvass,18-29,Some College,FALSE
+386,Phone,65+,Graduate,TRUE
+387,Mail,65+,BA,TRUE
+388,Phone,30-44,High School,FALSE
+389,Control,30-44,Some College,FALSE
+390,Control,18-29,BA,FALSE
+391,Canvass,45-64,Some College,TRUE
+392,Mail,30-44,Graduate,TRUE
+393,Canvass,65+,Graduate,TRUE
+394,Mail,45-64,Some College,FALSE
+395,Phone,65+,Graduate,TRUE
+396,Canvass,65+,High School,TRUE
+397,Control,65+,High School,TRUE
+398,Canvass,18-29,Graduate,TRUE
+399,Phone,65+,High School,TRUE
+400,Control,45-64,High School,FALSE
+401,Phone,30-44,Some College,FALSE
+402,Control,18-29,Some College,TRUE
+403,Mail,18-29,Graduate,FALSE
+404,Canvass,45-64,BA,TRUE
+405,Mail,45-64,Some College,FALSE
+406,Phone,45-64,Some College,FALSE
+407,Phone,45-64,Some College,FALSE
+408,Control,30-44,Graduate,TRUE
+409,Phone,65+,Graduate,FALSE
+410,Control,30-44,Some College,FALSE
+411,Control,45-64,High School,FALSE
+412,Mail,45-64,High School,TRUE
+413,Canvass,18-29,Some College,TRUE
+414,Canvass,65+,Graduate,FALSE
+415,Mail,30-44,BA,TRUE
+416,Canvass,65+,Graduate,FALSE
+417,Canvass,45-64,Graduate,TRUE
+418,Phone,65+,High School,FALSE
+419,Phone,18-29,Graduate,FALSE
+420,Canvass,30-44,Some College,FALSE
+421,Mail,65+,Graduate,TRUE
+422,Mail,18-29,Some College,TRUE
+423,Canvass,65+,Some College,FALSE
+424,Control,65+,Some College,TRUE
+425,Canvass,30-44,Some College,FALSE
+426,Canvass,30-44,BA,FALSE
+427,Control,65+,High School,TRUE
+428,Phone,45-64,BA,TRUE
+429,Canvass,30-44,High School,TRUE
+430,Phone,45-64,BA,FALSE
+431,Control,18-29,High School,TRUE
+432,Control,45-64,Graduate,FALSE
+433,Canvass,18-29,High School,TRUE
+434,Mail,45-64,BA,TRUE
+435,Phone,45-64,BA,TRUE
+436,Control,65+,BA,FALSE
+437,Mail,45-64,Some College,FALSE
+438,Canvass,18-29,Graduate,TRUE
+439,Mail,65+,Graduate,TRUE
+440,Canvass,18-29,High School,TRUE
+441,Canvass,30-44,BA,FALSE
+442,Mail,45-64,Graduate,FALSE
+443,Canvass,45-64,High School,FALSE
+444,Canvass,18-29,BA,TRUE
+445,Canvass,65+,Graduate,FALSE
+446,Phone,45-64,Graduate,TRUE
+447,Phone,18-29,Some College,TRUE
+448,Canvass,18-29,Some College,FALSE
+449,Canvass,65+,Some College,FALSE
+450,Control,45-64,Graduate,FALSE
+451,Canvass,45-64,Some College,FALSE
+452,Mail,45-64,BA,FALSE
+453,Mail,45-64,High School,TRUE
+454,Mail,45-64,BA,TRUE
+455,Mail,18-29,Some College,TRUE
+456,Phone,65+,Graduate,FALSE
+457,Phone,65+,Graduate,TRUE
+458,Phone,30-44,High School,TRUE
+459,Mail,65+,Some College,TRUE
+460,Canvass,30-44,Graduate,TRUE
+461,Control,45-64,Some College,FALSE
+462,Control,18-29,BA,TRUE
+463,Control,45-64,High School,TRUE
+464,Mail,45-64,BA,FALSE
+465,Canvass,18-29,Graduate,TRUE
+466,Phone,65+,Graduate,TRUE
+467,Phone,18-29,Some College,TRUE
+468,Canvass,65+,BA,FALSE
+469,Phone,18-29,High School,TRUE
+470,Phone,30-44,Some College,TRUE
+471,Mail,18-29,Graduate,TRUE
+472,Phone,30-44,Some College,FALSE
+473,Mail,18-29,BA,FALSE
+474,Mail,18-29,Some College,FALSE
+475,Canvass,18-29,Graduate,FALSE
+476,Control,65+,Some College,TRUE
+477,Control,65+,BA,FALSE
+478,Canvass,30-44,BA,FALSE
+479,Phone,45-64,Some College,FALSE
+480,Control,65+,Some College,FALSE
+481,Mail,30-44,Graduate,FALSE
+482,Canvass,65+,Graduate,TRUE
+483,Canvass,45-64,Some College,FALSE
+484,Canvass,30-44,Graduate,FALSE
+485,Control,18-29,Some College,TRUE
+486,Control,65+,BA,TRUE
+487,Mail,30-44,Graduate,FALSE
+488,Phone,30-44,BA,FALSE
+489,Control,65+,BA,TRUE
+490,Control,45-64,BA,TRUE
+491,Control,45-64,BA,TRUE
+492,Mail,65+,Graduate,FALSE
+493,Phone,65+,Graduate,TRUE
+494,Phone,45-64,Some College,FALSE
+495,Canvass,65+,Graduate,TRUE
+496,Canvass,65+,Some College,FALSE
+497,Canvass,30-44,Graduate,FALSE
+498,Mail,45-64,Some College,TRUE
+499,Phone,45-64,Some College,FALSE
+500,Mail,30-44,BA,TRUE
+501,Phone,30-44,Graduate,TRUE
+502,Control,18-29,Some College,TRUE
+503,Mail,18-29,BA,TRUE
+504,Mail,45-64,BA,TRUE
+505,Control,18-29,Graduate,TRUE
+506,Control,30-44,Some College,FALSE
+507,Control,30-44,High School,TRUE
+508,Canvass,45-64,High School,FALSE
+509,Control,30-44,Some College,TRUE
+510,Mail,45-64,Some College,TRUE
+511,Control,45-64,Some College,FALSE
+512,Control,65+,BA,TRUE
+513,Canvass,30-44,Some College,TRUE
+514,Phone,30-44,Graduate,FALSE
+515,Phone,45-64,Graduate,FALSE
+516,Phone,65+,High School,TRUE
+517,Control,45-64,Some College,FALSE
+518,Canvass,30-44,Some College,TRUE
+519,Phone,45-64,High School,FALSE
+520,Control,18-29,BA,TRUE
+521,Canvass,18-29,BA,FALSE
+522,Mail,18-29,Some College,FALSE
+523,Control,65+,BA,TRUE
+524,Control,30-44,Graduate,FALSE
+525,Phone,45-64,BA,FALSE
+526,Canvass,45-64,Graduate,TRUE
+527,Control,30-44,High School,TRUE
+528,Canvass,45-64,High School,TRUE
+529,Control,45-64,Some College,TRUE
+530,Phone,65+,High School,FALSE
+531,Control,18-29,Graduate,TRUE
+532,Mail,45-64,BA,FALSE
+533,Mail,18-29,BA,FALSE
+534,Phone,65+,Some College,TRUE
+535,Phone,30-44,Some College,TRUE
+536,Control,18-29,Some College,TRUE
+537,Phone,30-44,Graduate,TRUE
+538,Control,18-29,Graduate,FALSE
+539,Mail,18-29,BA,TRUE
+540,Control,65+,BA,FALSE
+541,Control,30-44,Graduate,TRUE
+542,Mail,45-64,High School,TRUE
+543,Mail,45-64,High School,TRUE
+544,Canvass,45-64,High School,TRUE
+545,Phone,65+,BA,FALSE
+546,Mail,45-64,Some College,TRUE
+547,Mail,30-44,Some College,TRUE
+548,Mail,18-29,High School,FALSE
+549,Phone,45-64,High School,FALSE
+550,Control,18-29,High School,FALSE
+551,Phone,45-64,Some College,TRUE
+552,Phone,65+,Graduate,FALSE
+553,Phone,65+,BA,FALSE
+554,Canvass,45-64,Some College,FALSE
+555,Control,65+,BA,TRUE
+556,Canvass,18-29,Graduate,TRUE
+557,Control,30-44,High School,FALSE
+558,Phone,45-64,High School,TRUE
+559,Canvass,18-29,High School,FALSE
+560,Phone,18-29,High School,TRUE
+561,Phone,30-44,BA,TRUE
+562,Phone,30-44,Some College,FALSE
+563,Mail,30-44,Some College,FALSE
+564,Phone,30-44,High School,TRUE
+565,Phone,30-44,Some College,FALSE
+566,Mail,30-44,BA,TRUE
+567,Canvass,65+,High School,TRUE
+568,Canvass,45-64,BA,FALSE
+569,Control,30-44,Some College,FALSE
+570,Phone,18-29,High School,FALSE
+571,Mail,45-64,High School,TRUE
+572,Canvass,30-44,High School,TRUE
+573,Phone,18-29,High School,FALSE
+574,Control,18-29,Some College,TRUE
+575,Mail,65+,Graduate,TRUE
+576,Control,65+,High School,FALSE
+577,Phone,30-44,BA,TRUE
+578,Phone,65+,Some College,TRUE
+579,Phone,45-64,High School,FALSE
+580,Mail,45-64,BA,FALSE
+581,Canvass,30-44,BA,TRUE
+582,Mail,45-64,BA,FALSE
+583,Control,30-44,Some College,FALSE
+584,Canvass,18-29,High School,FALSE
+585,Mail,65+,High School,FALSE
+586,Canvass,65+,BA,FALSE
+587,Mail,45-64,Some College,FALSE
+588,Canvass,30-44,High School,FALSE
+589,Canvass,30-44,Some College,FALSE
+590,Canvass,65+,BA,TRUE
+591,Canvass,65+,BA,TRUE
+592,Phone,18-29,Graduate,TRUE
+593,Canvass,45-64,Graduate,TRUE
+594,Control,65+,Some College,TRUE
+595,Canvass,18-29,Some College,TRUE
+596,Phone,30-44,BA,FALSE
+597,Canvass,45-64,Graduate,FALSE
+598,Control,18-29,Graduate,FALSE
+599,Mail,18-29,Some College,FALSE
+600,Canvass,30-44,Some College,TRUE
+601,Control,45-64,Some College,TRUE
+602,Control,45-64,Graduate,TRUE
+603,Mail,65+,BA,FALSE
+604,Canvass,45-64,BA,TRUE
+605,Control,18-29,Graduate,TRUE
+606,Canvass,30-44,Some College,FALSE
+607,Mail,18-29,BA,TRUE
+608,Phone,45-64,BA,TRUE
+609,Control,18-29,Graduate,TRUE
+610,Mail,18-29,High School,FALSE
+611,Control,45-64,Some College,TRUE
+612,Phone,65+,High School,TRUE
+613,Control,65+,High School,FALSE
+614,Mail,18-29,Some College,FALSE
+615,Mail,65+,Graduate,TRUE
+616,Control,65+,Graduate,TRUE
+617,Mail,65+,High School,TRUE
+618,Mail,65+,Some College,FALSE
+619,Control,18-29,Graduate,TRUE
+620,Canvass,45-64,BA,TRUE
+621,Mail,30-44,BA,FALSE
+622,Phone,18-29,Some College,FALSE
+623,Phone,18-29,BA,TRUE
+624,Mail,30-44,BA,FALSE
+625,Mail,65+,BA,FALSE
+626,Control,65+,BA,TRUE
+627,Phone,65+,Graduate,FALSE
+628,Mail,45-64,Some College,FALSE
+629,Control,65+,BA,FALSE
+630,Mail,18-29,Graduate,FALSE
+631,Control,65+,Graduate,TRUE
+632,Control,45-64,Graduate,FALSE
+633,Control,65+,BA,TRUE
+634,Phone,18-29,High School,FALSE
+635,Mail,65+,Graduate,FALSE
+636,Mail,65+,BA,TRUE
+637,Canvass,65+,High School,TRUE
+638,Mail,18-29,BA,TRUE
+639,Mail,65+,Some College,TRUE
+640,Mail,18-29,Graduate,FALSE
+641,Control,30-44,Some College,TRUE
+642,Canvass,18-29,Graduate,TRUE
+643,Control,45-64,High School,TRUE
+644,Control,18-29,BA,TRUE
+645,Mail,65+,High School,TRUE
+646,Control,65+,BA,TRUE
+647,Mail,65+,Graduate,FALSE
+648,Canvass,30-44,High School,TRUE
+649,Mail,30-44,Graduate,FALSE
+650,Control,18-29,BA,TRUE
+651,Phone,30-44,BA,FALSE
+652,Mail,30-44,Some College,TRUE
+653,Phone,45-64,Graduate,FALSE
+654,Phone,45-64,BA,FALSE
+655,Control,18-29,Some College,FALSE
+656,Phone,30-44,BA,FALSE
+657,Phone,65+,Graduate,FALSE
+658,Canvass,65+,Some College,TRUE
+659,Canvass,45-64,High School,FALSE
+660,Mail,30-44,Some College,TRUE
+661,Mail,45-64,BA,FALSE
+662,Control,45-64,High School,FALSE
+663,Phone,30-44,BA,TRUE
+664,Phone,18-29,BA,TRUE
+665,Control,45-64,Some College,FALSE
+666,Mail,45-64,BA,FALSE
+667,Mail,30-44,Some College,TRUE
+668,Mail,30-44,BA,FALSE
+669,Canvass,18-29,Graduate,FALSE
+670,Phone,30-44,Graduate,FALSE
+671,Phone,65+,BA,FALSE
+672,Mail,18-29,Some College,TRUE
+673,Canvass,65+,Graduate,FALSE
+674,Canvass,18-29,Some College,TRUE
+675,Canvass,18-29,Graduate,TRUE
+676,Control,18-29,BA,TRUE
+677,Mail,30-44,High School,FALSE
+678,Control,30-44,BA,TRUE
+679,Phone,18-29,Graduate,FALSE
+680,Phone,30-44,High School,FALSE
+681,Phone,65+,Some College,TRUE
+682,Control,65+,High School,FALSE
+683,Mail,45-64,Some College,FALSE
+684,Control,65+,Some College,FALSE
+685,Phone,45-64,Graduate,TRUE
+686,Mail,65+,BA,FALSE
+687,Phone,18-29,Graduate,TRUE
+688,Canvass,45-64,High School,TRUE
+689,Mail,30-44,Graduate,FALSE
+690,Mail,45-64,Some College,TRUE
+691,Control,45-64,Graduate,TRUE
+692,Mail,30-44,BA,TRUE
+693,Canvass,65+,High School,FALSE
+694,Control,18-29,BA,TRUE
+695,Control,18-29,BA,TRUE
+696,Mail,45-64,BA,TRUE
+697,Mail,30-44,High School,FALSE
+698,Mail,45-64,Some College,TRUE
+699,Canvass,18-29,BA,FALSE
+700,Phone,45-64,Some College,TRUE
+701,Phone,18-29,BA,FALSE
+702,Canvass,65+,High School,FALSE
+703,Mail,65+,Some College,FALSE
+704,Canvass,65+,Graduate,FALSE
+705,Phone,45-64,Graduate,TRUE
+706,Control,45-64,BA,FALSE
+707,Control,65+,Some College,FALSE
+708,Control,65+,High School,TRUE
+709,Canvass,45-64,Graduate,FALSE
+710,Canvass,18-29,BA,FALSE
+711,Control,65+,High School,TRUE
+712,Control,30-44,Some College,TRUE
+713,Canvass,30-44,Some College,TRUE
+714,Phone,65+,High School,TRUE
+715,Phone,30-44,Graduate,FALSE
+716,Phone,45-64,BA,TRUE
+717,Phone,65+,BA,FALSE
+718,Mail,65+,Graduate,FALSE
+719,Mail,30-44,High School,FALSE
+720,Control,18-29,Graduate,FALSE
+721,Phone,30-44,Some College,FALSE
+722,Mail,18-29,Graduate,FALSE
+723,Phone,65+,High School,TRUE
+724,Canvass,18-29,High School,FALSE
+725,Mail,30-44,High School,TRUE
+726,Mail,30-44,High School,FALSE
+727,Mail,45-64,Graduate,FALSE
+728,Control,18-29,BA,TRUE
+729,Mail,18-29,Graduate,FALSE
+730,Control,65+,High School,FALSE
+731,Phone,45-64,High School,FALSE
+732,Phone,30-44,BA,TRUE
+733,Phone,45-64,Graduate,FALSE
+734,Canvass,30-44,High School,TRUE
+735,Canvass,18-29,Some College,TRUE
+736,Mail,30-44,BA,TRUE
+737,Mail,65+,High School,TRUE
+738,Phone,18-29,Some College,FALSE
+739,Phone,65+,Some College,TRUE
+740,Phone,30-44,BA,TRUE
+741,Canvass,45-64,Some College,TRUE
+742,Canvass,45-64,BA,TRUE
+743,Phone,18-29,Graduate,FALSE
+744,Control,18-29,Some College,FALSE
+745,Phone,18-29,Graduate,FALSE
+746,Mail,18-29,Graduate,FALSE
+747,Control,65+,Some College,FALSE
+748,Phone,45-64,BA,FALSE
+749,Mail,18-29,BA,FALSE
+750,Mail,65+,High School,TRUE
+751,Phone,30-44,Graduate,FALSE
+752,Canvass,65+,Graduate,TRUE
+753,Mail,30-44,Graduate,FALSE
+754,Phone,65+,BA,FALSE
+755,Mail,18-29,Some College,TRUE
+756,Canvass,45-64,Some College,FALSE
+757,Control,45-64,Graduate,FALSE
+758,Mail,45-64,BA,FALSE
+759,Phone,65+,BA,TRUE
+760,Phone,65+,BA,TRUE
+761,Canvass,18-29,Graduate,FALSE
+762,Control,45-64,BA,TRUE
+763,Control,65+,Some College,TRUE
+764,Canvass,45-64,Graduate,FALSE
+765,Mail,45-64,Graduate,FALSE
+766,Mail,65+,BA,FALSE
+767,Control,65+,High School,TRUE
+768,Mail,30-44,Graduate,FALSE
+769,Canvass,65+,Graduate,TRUE
+770,Control,45-64,Graduate,FALSE
+771,Phone,30-44,Some College,TRUE
+772,Canvass,45-64,High School,FALSE
+773,Canvass,18-29,BA,TRUE
+774,Phone,18-29,BA,FALSE
+775,Mail,30-44,BA,FALSE
+776,Phone,18-29,Some College,TRUE
+777,Mail,45-64,Graduate,TRUE
+778,Phone,30-44,Some College,FALSE
+779,Control,30-44,Some College,FALSE
+780,Canvass,65+,High School,FALSE
+781,Canvass,18-29,Graduate,FALSE
+782,Mail,30-44,Some College,FALSE
+783,Control,45-64,BA,TRUE
+784,Phone,30-44,BA,TRUE
+785,Mail,65+,Some College,FALSE
+786,Mail,18-29,BA,TRUE
+787,Phone,45-64,High School,FALSE
+788,Control,45-64,High School,TRUE
+789,Mail,18-29,High School,FALSE
+790,Mail,45-64,BA,TRUE
+791,Canvass,65+,BA,FALSE
+792,Control,65+,Graduate,FALSE
+793,Control,18-29,Some College,TRUE
+794,Mail,18-29,High School,TRUE
+795,Control,30-44,High School,FALSE
+796,Phone,30-44,Graduate,FALSE
+797,Mail,65+,Some College,FALSE
+798,Phone,65+,High School,FALSE
+799,Canvass,65+,BA,TRUE
+800,Phone,65+,High School,TRUE
+801,Phone,18-29,BA,FALSE
+802,Phone,18-29,High School,TRUE
+803,Mail,18-29,High School,TRUE
+804,Phone,18-29,Graduate,TRUE
+805,Phone,18-29,High School,TRUE
+806,Mail,18-29,Some College,FALSE
+807,Mail,30-44,Some College,FALSE
+808,Mail,18-29,Some College,FALSE
+809,Mail,30-44,Graduate,FALSE
+810,Control,18-29,Some College,TRUE
+811,Phone,65+,Graduate,FALSE
+812,Control,65+,Some College,TRUE
+813,Phone,30-44,Some College,FALSE
+814,Control,30-44,Some College,TRUE
+815,Phone,18-29,Some College,FALSE
+816,Phone,30-44,Some College,TRUE
+817,Phone,45-64,Some College,TRUE
+818,Canvass,18-29,BA,TRUE
+819,Phone,65+,Graduate,TRUE
+820,Control,18-29,Some College,FALSE
+821,Canvass,45-64,BA,TRUE
+822,Control,65+,High School,FALSE
+823,Phone,45-64,BA,FALSE
+824,Phone,45-64,Some College,FALSE
+825,Phone,65+,BA,TRUE
+826,Phone,30-44,Some College,TRUE
+827,Phone,45-64,High School,FALSE
+828,Mail,18-29,High School,FALSE
+829,Canvass,18-29,Some College,TRUE
+830,Mail,30-44,Some College,FALSE
+831,Control,18-29,BA,TRUE
+832,Phone,45-64,BA,FALSE
+833,Mail,30-44,High School,FALSE
+834,Phone,18-29,Some College,FALSE
+835,Mail,30-44,BA,FALSE
+836,Mail,30-44,High School,FALSE
+837,Canvass,30-44,BA,TRUE
+838,Phone,65+,High School,FALSE
+839,Canvass,18-29,Graduate,TRUE
+840,Control,30-44,Some College,FALSE
+841,Phone,30-44,Graduate,TRUE
+842,Mail,65+,BA,FALSE
+843,Phone,45-64,Some College,FALSE
+844,Control,18-29,High School,TRUE
+845,Control,65+,BA,FALSE
+846,Mail,18-29,Some College,TRUE
+847,Control,65+,Some College,TRUE
+848,Mail,18-29,Graduate,FALSE
+849,Control,65+,High School,FALSE
+850,Canvass,30-44,Graduate,TRUE
+851,Mail,30-44,BA,TRUE
+852,Phone,45-64,BA,FALSE
+853,Control,45-64,High School,FALSE
+854,Control,45-64,Some College,FALSE
+855,Mail,45-64,BA,FALSE
+856,Mail,30-44,Some College,FALSE
+857,Phone,18-29,High School,FALSE
+858,Mail,45-64,Some College,FALSE
+859,Phone,65+,BA,FALSE
+860,Phone,65+,High School,FALSE
+861,Mail,45-64,BA,FALSE
+862,Mail,18-29,BA,FALSE
+863,Phone,45-64,Some College,TRUE
+864,Mail,45-64,Graduate,TRUE
+865,Phone,18-29,BA,TRUE
+866,Phone,30-44,BA,TRUE
+867,Phone,65+,Some College,TRUE
+868,Mail,30-44,Graduate,FALSE
+869,Mail,30-44,Graduate,TRUE
+870,Control,30-44,BA,TRUE
+871,Phone,18-29,High School,TRUE
+872,Canvass,65+,Graduate,FALSE
+873,Control,45-64,High School,TRUE
+874,Mail,18-29,Graduate,FALSE
+875,Canvass,18-29,Some College,FALSE
+876,Control,65+,Graduate,FALSE
+877,Phone,18-29,BA,FALSE
+878,Mail,45-64,High School,FALSE
+879,Mail,30-44,Some College,FALSE
+880,Phone,18-29,High School,FALSE
+881,Mail,65+,High School,FALSE
+882,Control,65+,BA,FALSE
+883,Control,45-64,Graduate,TRUE
+884,Phone,30-44,BA,FALSE
+885,Phone,65+,High School,TRUE
+886,Mail,18-29,BA,FALSE
+887,Control,30-44,High School,FALSE
+888,Mail,18-29,BA,TRUE
+889,Canvass,18-29,Some College,FALSE
+890,Phone,65+,BA,TRUE
+891,Control,30-44,High School,TRUE
+892,Control,30-44,BA,FALSE
+893,Control,45-64,Graduate,FALSE
+894,Canvass,65+,BA,FALSE
+895,Canvass,30-44,Graduate,TRUE
+896,Canvass,30-44,BA,TRUE
+897,Control,30-44,Graduate,FALSE
+898,Phone,30-44,Some College,FALSE
+899,Mail,45-64,High School,FALSE
+900,Canvass,65+,High School,FALSE
+901,Mail,18-29,Some College,FALSE
+902,Phone,18-29,Graduate,FALSE
+903,Phone,65+,High School,TRUE
+904,Phone,18-29,BA,TRUE
+905,Control,18-29,Some College,FALSE
+906,Phone,65+,Some College,FALSE
+907,Mail,30-44,Some College,TRUE
+908,Control,18-29,Some College,FALSE
+909,Phone,45-64,Some College,TRUE
+910,Phone,65+,BA,FALSE
+911,Mail,30-44,BA,FALSE
+912,Phone,18-29,High School,FALSE
+913,Phone,18-29,Some College,TRUE
+914,Canvass,45-64,Graduate,FALSE
+915,Control,30-44,High School,FALSE
+916,Phone,18-29,Graduate,TRUE
+917,Mail,30-44,Some College,TRUE
+918,Canvass,18-29,BA,TRUE
+919,Phone,45-64,Some College,FALSE
+920,Control,45-64,Graduate,TRUE
+921,Canvass,65+,BA,TRUE
+922,Phone,45-64,Graduate,TRUE
+923,Control,30-44,Some College,TRUE
+924,Canvass,18-29,Graduate,FALSE
+925,Mail,18-29,BA,FALSE
+926,Canvass,45-64,BA,FALSE
+927,Control,45-64,Graduate,FALSE
+928,Canvass,45-64,High School,FALSE
+929,Control,45-64,Some College,FALSE
+930,Canvass,30-44,Graduate,FALSE
+931,Phone,45-64,Graduate,TRUE
+932,Canvass,45-64,Graduate,TRUE
+933,Control,45-64,Graduate,TRUE
+934,Control,18-29,High School,FALSE
+935,Control,18-29,High School,FALSE
+936,Canvass,30-44,BA,FALSE
+937,Control,30-44,Graduate,FALSE
+938,Phone,65+,Some College,FALSE
+939,Control,45-64,Some College,TRUE
+940,Mail,18-29,Some College,FALSE
+941,Mail,30-44,BA,FALSE
+942,Canvass,30-44,Graduate,FALSE
+943,Canvass,45-64,High School,TRUE
+944,Mail,65+,Graduate,TRUE
+945,Canvass,30-44,Some College,TRUE
+946,Mail,30-44,High School,FALSE
+947,Canvass,18-29,High School,TRUE
+948,Mail,30-44,Graduate,TRUE
+949,Control,30-44,BA,FALSE
+950,Canvass,45-64,Graduate,TRUE
+951,Control,30-44,High School,FALSE
+952,Canvass,45-64,High School,FALSE
+953,Mail,65+,Some College,FALSE
+954,Mail,65+,BA,FALSE
+955,Control,65+,Graduate,TRUE
+956,Phone,45-64,High School,TRUE
+957,Canvass,30-44,Some College,FALSE
+958,Canvass,18-29,BA,FALSE
+959,Phone,30-44,Graduate,TRUE
+960,Canvass,18-29,Some College,FALSE
+961,Canvass,30-44,High School,FALSE
+962,Canvass,45-64,Some College,TRUE
+963,Phone,45-64,Graduate,TRUE
+964,Control,65+,Graduate,FALSE
+965,Canvass,30-44,Graduate,FALSE
+966,Phone,30-44,BA,TRUE
+967,Canvass,30-44,Graduate,FALSE
+968,Control,18-29,Some College,FALSE
+969,Canvass,30-44,Graduate,FALSE
+970,Mail,30-44,Graduate,TRUE
+971,Canvass,45-64,High School,FALSE
+972,Mail,45-64,BA,FALSE
+973,Control,30-44,Graduate,FALSE
+974,Mail,45-64,Some College,TRUE
+975,Phone,30-44,Some College,TRUE
+976,Control,18-29,BA,FALSE
+977,Control,45-64,BA,TRUE
+978,Mail,65+,Graduate,TRUE
+979,Canvass,45-64,BA,TRUE
+980,Phone,18-29,High School,TRUE
+981,Control,45-64,BA,FALSE
+982,Control,65+,Graduate,TRUE
+983,Mail,45-64,Graduate,FALSE
+984,Control,45-64,Graduate,TRUE
+985,Mail,65+,Graduate,TRUE
+986,Phone,45-64,BA,TRUE
+987,Control,18-29,High School,FALSE
+988,Control,30-44,Graduate,TRUE
+989,Phone,65+,Graduate,TRUE
+990,Phone,30-44,High School,FALSE
+991,Control,30-44,BA,FALSE
+992,Canvass,65+,Some College,TRUE
+993,Phone,45-64,Graduate,FALSE
+994,Control,18-29,Graduate,TRUE
+995,Control,30-44,Graduate,TRUE
+996,Mail,65+,High School,FALSE
+997,Mail,18-29,Graduate,TRUE
+998,Control,45-64,High School,FALSE
+999,Mail,30-44,High School,TRUE
+1000,Mail,45-64,BA,FALSE
